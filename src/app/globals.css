@@ -1,26 +1,143 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-navy-950: #04090f;
+  --color-navy-900: #060e1c;
+  --color-navy-800: #091525;
+  --color-navy-700: #0d1e33;
+  --font-sans: var(--font-dm-sans);
+  --font-serif: var(--font-playfair);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #060e1c;
+  color: #ffffff;
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  line-height: 1.6;
 }
+
+p { line-height: 1.75; }
+
+/* Noise texture */
+.noise::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Gold gradient text */
+.text-gold {
+  background: linear-gradient(135deg, #c9a840 0%, #e8d08a 50%, #c9a840 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Gold rule */
+.rule-gold {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #c9a840 40%, #c9a840 60%, transparent);
+}
+
+/* SA flag stripe */
+.sa-stripe {
+  height: 3px;
+  background: linear-gradient(90deg,
+    #007a4d 0%, #007a4d 28%,
+    #fff 28%, #fff 34%,
+    #ffb612 34%, #ffb612 66%,
+    #fff 66%, #fff 72%,
+    #de3831 72%, #de3831 100%
+  );
+}
+
+/* Overline label */
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+.eyebrow::before {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 1px;
+  background: #c9a840;
+  flex-shrink: 0;
+}
+.eyebrow span {
+  color: #c9a840;
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* Section anchor offset */
+section[id] { scroll-margin-top: 64px; }
+
+/* Data table */
+.data-table { width: 100%; border-collapse: collapse; }
+.data-table td,
+.data-table th {
+  padding: 14px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  font-size: 0.875rem;
+}
+.data-table th {
+  color: rgba(255,255,255,0.3);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.65rem;
+}
+.data-table tbody tr:last-child td { border-bottom: none; }
+.data-table tbody tr:hover { background: rgba(255,255,255,0.02); }
+
+/* Callout box */
+.callout {
+  border: 1px solid rgba(201,168,64,0.2);
+  background: rgba(201,168,64,0.04);
+  border-radius: 2px;
+  padding: 1.5rem 2rem;
+}
+
+/* Section panel */
+.panel {
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+/* Scroll fade-in (legacy) */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fadeUp 0.7s ease both; }
+
+/* Scroll-triggered animations */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+[data-animate].in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+[data-animate][data-delay="1"] { transition-delay: 100ms; }
+[data-animate][data-delay="2"] { transition-delay: 200ms; }
+[data-animate][data-delay="3"] { transition-delay: 320ms; }
+[data-animate][data-delay="4"] { transition-delay: 440ms; }
+[data-animate][data-delay="5"] { transition-delay: 560ms; }
