@@ -86,7 +86,7 @@ export default function RevenueModelSection() {
         </div>
 
         {/* SA local sponsorship already validated */}
-        <div className="mb-16 p-8 rounded-sm" style={{ background: "linear-gradient(135deg, rgba(201,168,64,0.06) 0%, #ffffff 70%)", border: "1px solid rgba(201,168,64,0.2)" }}>
+        <div data-animate className="mb-16 p-8 rounded-sm" style={{ background: "linear-gradient(135deg, rgba(201,168,64,0.06) 0%, #ffffff 70%)", border: "1px solid rgba(201,168,64,0.2)" }}>
           <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
             <div className="lg:max-w-lg">
               <div className="text-[#c9a840] text-[10px] tracking-widest uppercase mb-3 font-medium">Local SA Sponsorship — Already Validated</div>
@@ -162,7 +162,7 @@ export default function RevenueModelSection() {
         </div>
 
         {/* NBA Operational Support */}
-        <div className="mt-16 bg-[#080d14] p-8 lg:p-12 rounded-sm">
+        <div data-animate className="mt-16 bg-[#080d14] p-8 lg:p-12 rounded-sm">
           <div className="flex items-center gap-3 mb-6">
             <div className="h-[2px] w-8 bg-[#c9a840]" />
             <span className="text-[#c9a840] text-[10px] tracking-[0.25em] uppercase font-medium">NBA Operational Support</span>

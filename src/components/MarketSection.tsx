@@ -85,7 +85,7 @@ export default function MarketSection() {
           <div className="grid lg:grid-cols-2 gap-16 items-start">
 
             {/* Left: heading + concentration + Nigeria */}
-            <div>
+            <div data-animate>
               <div className="text-white/40 text-xs tracking-widest uppercase mb-3">Africa&apos;s Media Capital</div>
               <h3 className="text-4xl lg:text-5xl text-white font-light mb-8 leading-[0.92]" style={{ fontFamily: "var(--font-playfair)" }}>
                 Every major<br />pan-African broadcaster<br />is headquartered here.
@@ -96,7 +96,7 @@ export default function MarketSection() {
                 <div className="text-white/40 text-[9px] tracking-widest uppercase mb-3">South Africa share of total $699M BAL media market</div>
                 <div className="flex items-center gap-3 mb-2">
                   <div className="flex-1 h-[6px] rounded-full overflow-hidden" style={{ background: "rgba(255,255,255,0.07)" }}>
-                    <div className="h-full rounded-full" style={{ width: "58%", background: "linear-gradient(to right, #b8942e, #e8c84a)" }} />
+                    <div className="h-full rounded-full" data-bar-pct="58" style={{ width: "0%", background: "linear-gradient(to right, #b8942e, #e8c84a)" }} />
                   </div>
                   <span className="text-[#c9a840] text-sm font-light tabular-nums shrink-0" style={{ fontFamily: "var(--font-playfair)" }}>58%</span>
                 </div>
@@ -130,7 +130,7 @@ export default function MarketSection() {
             </div>
 
             {/* Right: stats + media company cards */}
-            <div>
+            <div data-animate data-delay="2">
               <div className="grid grid-cols-3 gap-6 mb-8">
                 {[
                   { v: "$403M", l: "Annual Media Revenue", s: "58% of total $699M BAL market" },
