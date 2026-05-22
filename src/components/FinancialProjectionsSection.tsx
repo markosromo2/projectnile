@@ -93,7 +93,7 @@ export default function FinancialProjectionsSection() {
                 {/* Year label */}
                 <div className="mt-2.5 text-center">
                   <div className={`text-[10px] font-medium ${b.highlight ? "text-[#0c1e32]" : "text-[#8aa0b5]"}`}>{b.year}</div>
-                  <div className="text-[9px] text-[#b0bec5] tracking-wide hidden sm:block">{b.note}</div>
+                  <div className="text-[9px] text-[#5a7898] tracking-wide hidden sm:block">{b.note}</div>
                 </div>
               </div>
             ))}
@@ -118,15 +118,15 @@ export default function FinancialProjectionsSection() {
                 {rows.map((r) => (
                   <tr key={r.year} className={r.highlight ? "bg-[#c9a840]/[0.05]" : ""}>
                     <td><span className={`font-medium text-sm ${r.highlight ? "text-[#c9a840]" : "text-[#0c1e32]"}`}>{r.year}</span></td>
-                    <td className="hidden sm:table-cell"><span className="text-[#8aa0b5] text-xs">{r.note}</span></td>
+                    <td className="hidden sm:table-cell"><span className="text-[#3a5a78] text-xs">{r.note}</span></td>
                     <td className="text-right"><span className={`font-medium ${r.highlight ? "text-[#c9a840]" : "text-[#0c1e32]"}`}>{r.rev}</span></td>
-                    <td className="text-right"><span className={`text-sm font-medium ${r.profit.startsWith("+") ? "text-emerald-600" : "text-[#8aa0b5]"}`}>{r.profit}</span></td>
-                    <td className="text-right hidden md:table-cell"><span className="text-[#8aa0b5] text-xs">{r.margin}</span></td>
+                    <td className="text-right"><span className={`text-sm font-medium ${r.profit.startsWith("+") ? "text-emerald-600" : "text-[#3a5a78]"}`}>{r.profit}</span></td>
+                    <td className="text-right hidden md:table-cell"><span className="text-[#3a5a78] text-xs">{r.margin}</span></td>
                   </tr>
                 ))}
               </tbody>
             </table>
-            <p className="text-[#94a3b8] text-[10px] mt-3">Source: BCG analysis, NBA Africa management, Moelis &amp; Company Fall 2025</p>
+            <p className="text-[#5a7898] text-[10px] mt-3">Source: BCG analysis, NBA Africa management, Moelis &amp; Company Fall 2025</p>
           </div>
 
           {/* Revenue breakdown */}

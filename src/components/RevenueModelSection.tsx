@@ -96,7 +96,7 @@ export default function RevenueModelSection() {
               <p className="text-[#3a5a78] text-sm leading-relaxed">
                 In Season 5 — with Cape Town still operating as a caravan franchise — three major global brands signed as BAL sponsors specifically targeting the South African market. The local sponsorship revenue line isn&apos;t a projection. The demand is already proven.
               </p>
-              <p className="text-[#94a3b8] text-[10px] mt-4">Source: BAL Historical Revenues · Moelis &amp; Company Data Room · Season 5</p>
+              <p className="text-[#5a7898] text-[10px] mt-4">Source: BAL Historical Revenues · Moelis &amp; Company Data Room · Season 5</p>
             </div>
             <div className="flex flex-col gap-2 lg:min-w-[180px]">
               <div className="text-[#8aa0b5] text-[10px] tracking-widest uppercase mb-1">Season 5 SA Sponsors</div>
@@ -133,7 +133,7 @@ export default function RevenueModelSection() {
                   </div>
                 ))}
               </div>
-              <p className="text-[#94a3b8] text-[10px] mt-5 tracking-wide">Source: NBA Africa management financials · Fiscal year ends September 30</p>
+              <p className="text-[#5a7898] text-[10px] mt-5 tracking-wide">Source: NBA Africa management financials · Fiscal year ends September 30</p>
             </div>
           </div>
 
@@ -153,7 +153,7 @@ export default function RevenueModelSection() {
                   <tr key={r.metric}>
                     <td><span className="text-[#3a5a78]">{r.metric}</span></td>
                     <td className="text-right"><span className="text-[#0c1e32] font-medium" style={{ fontFamily: "var(--font-playfair)" }}>{r.value}</span></td>
-                    <td className="text-right hidden sm:table-cell"><span className="text-[#8aa0b5] text-xs">{r.change}</span></td>
+                    <td className="text-right hidden sm:table-cell"><span className="text-[#3a5a78] text-xs">{r.change}</span></td>
                   </tr>
                 ))}
               </tbody>

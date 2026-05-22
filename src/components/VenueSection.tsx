@@ -90,12 +90,12 @@ export default function VenueSection() {
                   <tr key={z.zone}>
                     <td><span className="text-[#5a7898]">{z.zone}</span></td>
                     <td className="text-right"><span className="text-[#0c1e32] font-medium" style={{ fontFamily: "var(--font-playfair)" }}>{z.price}</span></td>
-                    <td className="text-right hidden sm:table-cell"><span className="text-[#8aa0b5] text-xs">{z.usd}</span></td>
+                    <td className="text-right hidden sm:table-cell"><span className="text-[#3a5a78] text-xs">{z.usd}</span></td>
                   </tr>
                 ))}
               </tbody>
             </table>
-            <p className="text-[#94a3b8] text-[10px] mt-3 tracking-wide">BAL average ticket 2025: $10.40 per game · Average BAL attendance: ~5,700 per game</p>
+            <p className="text-[#5a7898] text-[10px] mt-3 tracking-wide">BAL average ticket 2025: $10.40 per game · Average BAL attendance: ~5,700 per game</p>
           </div>
         </div>
 

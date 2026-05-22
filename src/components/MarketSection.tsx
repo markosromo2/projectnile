@@ -77,97 +77,86 @@ export default function MarketSection() {
         </div>
       </div>
 
-      {/* Split: photo + media capital */}
-      <div className="grid lg:grid-cols-2">
-        {/* Photo */}
-        <div className="img-zoom relative h-[520px] lg:h-auto min-h-[420px]">
-          <div className="zoom-target absolute inset-0">
-            <Image
-              src="/images/ct-waterfront-mountain.png"
-              alt="V&A Waterfront, Cape Town"
-              fill
-              className="object-cover object-center"
-            />
-          </div>
-          <div className="absolute inset-0" style={{
-            background: "linear-gradient(to right, transparent 50%, rgba(9,21,37,0.7) 100%)"
-          }} />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#091525]/80 via-transparent to-transparent" />
-          <div className="absolute bottom-8 left-8">
-          </div>
-        </div>
+      {/* Media capital — full width */}
+      <div className="px-6 lg:px-10 py-16 lg:py-20" style={{
+        background: "radial-gradient(ellipse 80% 60% at 100% 0%, rgba(26,107,168,0.09) 0%, transparent 60%), radial-gradient(ellipse 60% 40% at 0% 100%, rgba(0,122,77,0.06) 0%, transparent 50%), #081b2e"
+      }}>
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-16 items-start">
 
-        {/* Media capital */}
-        <div className="p-10 lg:p-16 flex flex-col justify-center" style={{
-          background: "radial-gradient(ellipse 80% 60% at 100% 0%, rgba(26,107,168,0.09) 0%, transparent 60%), radial-gradient(ellipse 60% 40% at 0% 100%, rgba(0,122,77,0.06) 0%, transparent 50%), #081b2e"
-        }}>
-          <div className="text-white/28 text-xs tracking-widest uppercase mb-3">Africa&apos;s Media Capital</div>
-          <h3 className="text-3xl text-white font-light mb-6 leading-snug" style={{ fontFamily: "var(--font-playfair)" }}>
-            Every major<br />pan-African broadcaster<br />is headquartered here.
-          </h3>
+            {/* Left: heading + concentration + Nigeria */}
+            <div>
+              <div className="text-white/40 text-xs tracking-widest uppercase mb-3">Africa&apos;s Media Capital</div>
+              <h3 className="text-4xl lg:text-5xl text-white font-light mb-8 leading-[0.92]" style={{ fontFamily: "var(--font-playfair)" }}>
+                Every major<br />pan-African broadcaster<br />is headquartered here.
+              </h3>
 
-
-          <div className="grid grid-cols-3 gap-6 mb-8">
-            {[
-              { v: "$403M", l: "Annual Media Revenue", s: "58% of total $699M BAL market" },
-              { v: "8.4M", l: "Pay-TV Subscribers", s: "45% of all 11-market subscribers" },
-              { v: "63%", l: "Pay-TV Penetration", s: "vs. 41% Sub-Saharan avg" },
-            ].map((m) => (
-              <div key={m.l}>
-                <div className="text-[#c9a840] text-2xl font-light tabular-nums" style={{ fontFamily: "var(--font-playfair)" }}>{m.v}</div>
-                <div className="text-white/48 text-[10px] mt-1 leading-tight">{m.l}</div>
-                <div className="text-white/24 text-[9px] mt-0.5">{m.s}</div>
+              {/* Market concentration bar */}
+              <div className="mb-6 p-5 rounded-sm" style={{ background: "rgba(10,25,46,0.65)", border: "1px solid rgba(80,140,200,0.12)" }}>
+                <div className="text-white/40 text-[9px] tracking-widest uppercase mb-3">South Africa share of total $699M BAL media market</div>
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="flex-1 h-[6px] rounded-full overflow-hidden" style={{ background: "rgba(255,255,255,0.07)" }}>
+                    <div className="h-full rounded-full" style={{ width: "58%", background: "linear-gradient(to right, #b8942e, #e8c84a)" }} />
+                  </div>
+                  <span className="text-[#c9a840] text-sm font-light tabular-nums shrink-0" style={{ fontFamily: "var(--font-playfair)" }}>58%</span>
+                </div>
+                <div className="flex justify-between text-[9px] text-white/40">
+                  <span>South Africa — $403M</span>
+                  <span>All other 10 BAL markets — $296M</span>
+                </div>
               </div>
-            ))}
-          </div>
 
-          {/* Market concentration bar */}
-          <div className="mb-6 p-5 rounded-sm" style={{ background: "rgba(10,25,46,0.65)", border: "1px solid rgba(80,140,200,0.12)" }}>
-            <div className="text-white/28 text-[9px] tracking-widest uppercase mb-3">South Africa share of total $699M BAL media market</div>
-            <div className="flex items-center gap-3 mb-2">
-              <div className="flex-1 h-[6px] rounded-full overflow-hidden" style={{ background: "rgba(255,255,255,0.07)" }}>
-                <div className="h-full rounded-full" style={{ width: "58%", background: "linear-gradient(to right, #b8942e, #e8c84a)" }} />
-              </div>
-              <span className="text-[#c9a840] text-sm font-light tabular-nums shrink-0" style={{ fontFamily: "var(--font-playfair)" }}>58%</span>
-            </div>
-            <div className="flex justify-between text-[9px] text-white/24">
-              <span>South Africa — $403M</span>
-              <span>All other 10 BAL markets — $296M</span>
-            </div>
-          </div>
-
-          {/* Nigeria quality-over-quantity contrast */}
-          <div className="mb-8">
-            <div className="text-white/28 text-[9px] tracking-widest uppercase mb-3">Quality market — not just large market</div>
-            <div className="grid grid-cols-2 gap-2 mb-2">
-              <div className="p-4 rounded-sm" style={{ background: "rgba(10,25,46,0.5)", border: "1px solid rgba(255,255,255,0.06)" }}>
-                <div className="text-white/30 text-[9px] tracking-widest uppercase mb-2">Nigeria</div>
-                <div className="text-white/55 text-xl font-light tabular-nums" style={{ fontFamily: "var(--font-playfair)" }}>242M</div>
-                <div className="text-white/24 text-[9px]">population</div>
-                <div className="mt-3 text-white/40 text-base font-light tabular-nums" style={{ fontFamily: "var(--font-playfair)" }}>$67M</div>
-                <div className="text-white/24 text-[9px]">media revenue</div>
-              </div>
-              <div className="p-4 rounded-sm" style={{ background: "rgba(201,168,64,0.07)", border: "1px solid rgba(201,168,64,0.25)" }}>
-                <div className="text-[#c9a840] text-[9px] tracking-widest uppercase mb-2">South Africa</div>
-                <div className="text-[#c9a840] text-xl font-light tabular-nums" style={{ fontFamily: "var(--font-playfair)" }}>65M</div>
-                <div className="text-white/24 text-[9px]">population</div>
-                <div className="mt-3 text-[#c9a840] text-base font-light tabular-nums" style={{ fontFamily: "var(--font-playfair)" }}>$403M</div>
-                <div className="text-white/24 text-[9px]">media revenue</div>
+              {/* Nigeria quality-over-quantity contrast */}
+              <div>
+                <div className="text-white/40 text-[9px] tracking-widest uppercase mb-3">Quality market — not just large market</div>
+                <div className="grid grid-cols-2 gap-2 mb-2">
+                  <div className="p-4 rounded-sm" style={{ background: "rgba(10,25,46,0.5)", border: "1px solid rgba(255,255,255,0.06)" }}>
+                    <div className="text-white/40 text-[9px] tracking-widest uppercase mb-2">Nigeria</div>
+                    <div className="text-white/70 text-xl font-light tabular-nums" style={{ fontFamily: "var(--font-playfair)" }}>242M</div>
+                    <div className="text-white/40 text-[9px]">population</div>
+                    <div className="mt-3 text-white/55 text-base font-light tabular-nums" style={{ fontFamily: "var(--font-playfair)" }}>$67M</div>
+                    <div className="text-white/40 text-[9px]">media revenue</div>
+                  </div>
+                  <div className="p-4 rounded-sm" style={{ background: "rgba(201,168,64,0.07)", border: "1px solid rgba(201,168,64,0.25)" }}>
+                    <div className="text-[#c9a840] text-[9px] tracking-widest uppercase mb-2">South Africa</div>
+                    <div className="text-[#c9a840] text-xl font-light tabular-nums" style={{ fontFamily: "var(--font-playfair)" }}>65M</div>
+                    <div className="text-white/40 text-[9px]">population</div>
+                    <div className="mt-3 text-[#c9a840] text-base font-light tabular-nums" style={{ fontFamily: "var(--font-playfair)" }}>$403M</div>
+                    <div className="text-white/40 text-[9px]">media revenue</div>
+                  </div>
+                </div>
+                <div className="text-white/35 text-[9px] text-center leading-snug">6× the media revenue · ¼ the population · Source: BCG Analysis, Winter 2026</div>
               </div>
             </div>
-            <div className="text-white/20 text-[9px] text-center leading-snug">6× the media revenue · ¼ the population · Source: BCG Analysis, Winter 2026</div>
-          </div>
 
-          <div className="grid grid-cols-2 gap-3">
-            {mediaCompanies.map((m) => (
-              <div key={m.name} className="card-hover p-5 rounded-sm" style={{ background: "rgba(10,25,46,0.7)", border: "1px solid rgba(80,140,200,0.1)" }}>
-                <div className="text-white/85 text-sm font-medium mb-1">{m.name}</div>
-                <div className="text-white/32 text-xs leading-relaxed">{m.desc}</div>
+            {/* Right: stats + media company cards */}
+            <div>
+              <div className="grid grid-cols-3 gap-6 mb-8">
+                {[
+                  { v: "$403M", l: "Annual Media Revenue", s: "58% of total $699M BAL market" },
+                  { v: "8.4M", l: "Pay-TV Subscribers", s: "45% of all 11-market subscribers" },
+                  { v: "63%", l: "Pay-TV Penetration", s: "vs. 41% Sub-Saharan avg" },
+                ].map((m) => (
+                  <div key={m.l}>
+                    <div className="text-[#c9a840] text-2xl font-light tabular-nums" style={{ fontFamily: "var(--font-playfair)" }}>{m.v}</div>
+                    <div className="text-white/60 text-[10px] mt-1 leading-tight">{m.l}</div>
+                    <div className="text-white/40 text-[9px] mt-0.5">{m.s}</div>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
 
-          <p className="text-white/18 text-[9px] mt-6 tracking-wide">Source: African Sports Market Intelligence Report · BCG Analysis · Key Market Statistics, Winter 2026</p>
+              <div className="grid grid-cols-2 gap-3">
+                {mediaCompanies.map((m) => (
+                  <div key={m.name} className="card-hover p-5 rounded-sm" style={{ background: "rgba(10,25,46,0.7)", border: "1px solid rgba(80,140,200,0.1)" }}>
+                    <div className="text-white/85 text-sm font-medium mb-1">{m.name}</div>
+                    <div className="text-white/50 text-xs leading-relaxed">{m.desc}</div>
+                  </div>
+                ))}
+              </div>
+
+              <p className="text-white/35 text-[9px] mt-6 tracking-wide">Source: African Sports Market Intelligence Report · BCG Analysis · Key Market Statistics, Winter 2026</p>
+            </div>
+          </div>
         </div>
       </div>
 
