@@ -58,7 +58,7 @@ export default function HeroSection() {
       }} />
 
       {/* Vertical photo strip — right side, xl screens only */}
-      <div className={`absolute top-16 right-10 bottom-28 hidden xl:flex items-stretch gap-3 z-10 pointer-events-none transition-opacity duration-1000 ${mounted ? "opacity-100" : "opacity-0"}`}>
+      <div className={`absolute top-16 right-10 bottom-28 hidden lg:flex items-stretch gap-3 z-10 pointer-events-none transition-opacity duration-1000 ${mounted ? "opacity-100" : "opacity-0"}`}>
 
         {/* Anchor rail: rotated label + gold rule */}
         <div className="flex flex-col items-center gap-4 py-8">
