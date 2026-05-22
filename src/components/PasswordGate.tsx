@@ -67,7 +67,7 @@ export default function PasswordGate({ children }: { children: React.ReactNode }
         </form>
 
         <p className="text-white/20 text-xs text-center mt-10 leading-relaxed">
-          Authorised recipients only.<br />Contact daniel.zweben@moelis.com for access.
+          Authorised recipients only.<br />Contact paul@bragielbros.com for access.
         </p>
       </div>
     </div>

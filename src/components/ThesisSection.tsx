@@ -2,7 +2,7 @@ const pillars = [
   {
     n: "I",
     title: "Proven Ownership",
-    body: "Paul Bragiel and Lari Kangas co-founded Cape Town Tigers from the BAL's inaugural season. Four national championships and three BAL Finals appearances later, this bid transfers that institutional knowledge directly — no learning curve, no execution risk.",
+    body: "Paul Bragiel and Lari Kangas co-founded the Cape Town franchise from the BAL's inaugural season. Four national championships and three BAL Finals appearances later, this bid transfers that institutional knowledge directly into the permanent franchise — the only bidding city with this level of proven track record on the ground.",
     stat: "4 Titles",
   },
   {
@@ -33,7 +33,7 @@ export default function ThesisSection() {
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row lg:items-end gap-6 lg:gap-20">
           <div className="lg:w-1/2">
             <div className="section-label">
-              <span className="text-[#c9a840] text-[10px] tracking-[0.3em] uppercase font-medium">Investment Thesis</span>
+              <span className="text-[#c9a840] text-[10px] tracking-[0.3em] uppercase font-medium">The Case for Cape Town</span>
             </div>
             <h2
               className="text-4xl sm:text-5xl lg:text-6xl text-white font-light leading-[0.92] tracking-tight"
@@ -44,7 +44,7 @@ export default function ThesisSection() {
             </h2>
           </div>
           <p className="lg:w-5/12 text-white/40 text-sm leading-relaxed font-light">
-            Four compounding advantages that position Cape Town as the most commercially viable permanent BAL franchise opportunity on the continent — each one already in place.
+            Four compounding advantages that make Cape Town the strongest permanent franchise application on the continent — each one already in place before this bid was filed.
           </p>
         </div>
       </div>

@@ -4,12 +4,17 @@ export default function CityViewSection() {
   return (
     <section className="relative h-[92vh] min-h-[620px] overflow-hidden">
       <Image
-        src="/images/cape-town-dusk.jpg"
-        alt="Cape Town — Table Mountain and Lion's Head at dusk"
+        src="/images/ct-basketball-court.png"
+        alt="Cape Town Basketball — practice court"
         fill
         className="object-cover object-center"
+        style={{ transform: "scale(1.02)" }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#060e1c]/25 via-transparent to-[#060e1c]/75" />
+      {/* Single crafted overlay — cinematic, not stacked */}
+      <div className="absolute inset-0" style={{
+        background: "linear-gradient(to bottom right, rgba(4,9,15,0.5) 0%, rgba(4,9,15,0.15) 50%, rgba(4,9,15,0.6) 100%)"
+      }} />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#04090f]/85" />
 
       <div className="absolute bottom-12 left-0 right-0">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-end justify-between gap-8">
@@ -24,15 +29,16 @@ export default function CityViewSection() {
             </h2>
           </div>
 
-          <div className="hidden lg:grid grid-cols-3 gap-px bg-white/[0.08] rounded-sm overflow-hidden shrink-0" data-animate data-delay="2">
+          {/* Glass stat block */}
+          <div className="hidden lg:grid grid-cols-3 divide-x divide-white/[0.07] glass rounded-sm overflow-hidden shrink-0" data-animate data-delay="2">
             {[
               { v: "$9,276", l: "#1 Purchasing Power" },
               { v: "4.9M", l: "Population" },
               { v: "$403M", l: "Media Market" },
             ].map((s) => (
-              <div key={s.l} className="bg-[#060e1c]/60 backdrop-blur-sm px-6 py-5">
+              <div key={s.l} className="px-7 py-6">
                 <div className="text-2xl font-light text-white tabular-nums" style={{ fontFamily: "var(--font-playfair)" }}>{s.v}</div>
-                <div className="text-white/40 text-[9px] tracking-widest uppercase mt-1">{s.l}</div>
+                <div className="text-white/38 text-[9px] tracking-widest uppercase mt-1">{s.l}</div>
               </div>
             ))}
           </div>

@@ -2,12 +2,23 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
+const stripPhotos = [
+  "/images/bal-court-logo.jpg",
+  "/images/ct-player-hero.jpg",
+  "/images/ct-city-sunset.jpg",
+  "/images/ct-clifton-beach.jpg",
+  "/images/ct-porsche-mountain.jpg",
+  "/images/ct-team-montage.jpg",
+  "/images/ct-tigers-team.png",
+  "/images/ct-paris-team.jpg",
+  "/images/ct-cbd-mountain.jpg",
+];
+
 const stats = [
-  { value: "#1", label: "Purchasing Power" },
-  { value: "4", label: "National Titles" },
-  { value: "Tier 1", label: "BAL Arena" },
-  { value: "$17.4M", label: "Yr. 10 Revenue" },
-  { value: "June 24", label: "Proposal Deadline" },
+  { value: "#1",    label: "Purchasing Power",  num: null,  pre: "",  suf: "",  dec: 0 },
+  { value: "4",     label: "National Titles",    num: 4,     pre: "",  suf: "",  dec: 0 },
+  { value: "Tier 1",label: "BAL Arena",          num: null,  pre: "",  suf: "",  dec: 0 },
+  { value: "$17.4M",label: "Yr. 10 Revenue",     num: 17.4,  pre: "$", suf: "M", dec: 1 },
 ];
 
 export default function HeroSection() {
@@ -20,72 +31,95 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative min-h-screen flex flex-col overflow-hidden bg-[#060e1c]">
-      {/* Background: Cape Town aerial */}
+    <section className="relative min-h-screen flex flex-col overflow-hidden" style={{ background: "#040d1c" }}>
+      {/* Background photo */}
       <div className="absolute inset-0">
         <Image
-          src="/images/cape-town-aerial.jpg"
-          alt="Cape Town, South Africa — Table Mountain aerial"
+          src="/images/ct-stadium-aerial.png"
+          alt="Cape Town — aerial with DHL Newlands and Table Mountain"
           fill
-          className="object-cover object-center opacity-55"
+          className="object-cover object-center"
+          style={{ opacity: 0.55 }}
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#060e1c] via-[#060e1c]/55 to-[#060e1c]/10" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#060e1c]/80 via-transparent to-[#060e1c]/30" />
+        {/* Vignette layers — cinematic, not muddy */}
+        <div className="absolute inset-0" style={{
+          background: "radial-gradient(ellipse 120% 100% at 50% 50%, transparent 30%, rgba(4,13,28,0.65) 100%)"
+        }} />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to top, #040d1c 0%, rgba(4,13,28,0.45) 40%, transparent 70%)" }} />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(4,13,28,0.78) 0%, transparent 55%, rgba(4,13,28,0.2) 100%)" }} />
       </div>
 
       {/* Subtle grid overlay */}
-      <div className="absolute inset-0 opacity-[0.02]" style={{
-        backgroundImage: "linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)",
+      <div className="absolute inset-0" style={{
+        backgroundImage: "linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)",
         backgroundSize: "80px 80px",
+        maskImage: "linear-gradient(to bottom, transparent, rgba(0,0,0,0.4) 30%, rgba(0,0,0,0.4) 70%, transparent)",
       }} />
 
-      {/* Top label */}
-      <div className="relative z-10 h-16 flex items-center justify-end px-6 lg:px-10">
-        <div className="flex items-center gap-4">
-          <span className="hidden sm:block text-white/20 text-[9px] tracking-[0.3em] uppercase">Highly Confidential</span>
-          <div className="h-3 w-px bg-white/10 hidden sm:block" />
-          <span className="text-[#c9a840]/50 text-[9px] tracking-[0.25em] uppercase">Moelis &amp; Company</span>
+      {/* Vertical photo strip — right side, xl screens only */}
+      <div className={`absolute top-16 right-10 bottom-28 hidden xl:flex items-stretch gap-3 z-10 pointer-events-none transition-opacity duration-1000 ${mounted ? "opacity-100" : "opacity-0"}`}>
+
+        {/* Anchor rail: rotated label + gold rule */}
+        <div className="flex flex-col items-center gap-4 py-8">
+          <div className="flex-1 w-px bg-gradient-to-b from-transparent via-[#c9a840]/50 to-transparent" />
+          <span
+            className="text-[#c9a840]/50 text-[8px] tracking-[0.35em] uppercase shrink-0"
+            style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
+          >
+            Cape Town Tigers
+          </span>
+          <div className="flex-1 w-px bg-gradient-to-b from-transparent via-[#c9a840]/50 to-transparent" />
         </div>
+
+        {/* Photos */}
+        <div className="relative overflow-hidden" style={{ width: "220px" }}>
+          <div className="absolute inset-x-0 top-0 h-24 z-10" style={{ background: "linear-gradient(to bottom, #040d1c, transparent)" }} />
+          <div className="absolute inset-x-0 bottom-0 h-24 z-10" style={{ background: "linear-gradient(to top, #040d1c, transparent)" }} />
+          <div style={{ animation: "marquee-vertical 42s linear infinite", willChange: "transform" }}>
+            {[...stripPhotos, ...stripPhotos].map((src, i) => (
+              <div key={i} className="relative mb-2 rounded-sm overflow-hidden" style={{ height: "175px" }}>
+                <Image src={src} alt="" fill className="object-cover object-center" style={{ opacity: 0.85 }} />
+              </div>
+            ))}
+          </div>
+        </div>
+
       </div>
 
       {/* Main content */}
-      <div className={`relative z-10 flex-1 max-w-7xl mx-auto w-full px-6 lg:px-10 flex flex-col justify-end pb-0 pt-8 transition-all duration-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
+      <div className={`relative z-10 flex-1 max-w-7xl mx-auto w-full px-6 lg:px-10 flex flex-col justify-end pb-0 pt-24 transition-all duration-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
         <div>
           <div className="flex items-center gap-5 mb-8">
             <div className="eyebrow mb-0">
               <span>Basketball Africa League · Permanent Team Bid · Cape Town</span>
             </div>
-            <Image
-              src="/images/ct-tigers-logo.jpeg"
-              alt="Cape Town Tigers Basketball Club"
-              width={44}
-              height={44}
-              className="hidden sm:block rounded-full opacity-85 shrink-0"
-            />
           </div>
 
-          <h1 className="text-[clamp(4rem,12vw,10rem)] font-light text-white leading-[0.88] tracking-[-0.02em] mb-8" style={{ fontFamily: "var(--font-playfair)" }}>
+          <h1 className="font-light text-white leading-[0.86] tracking-[-0.02em] mb-8" style={{
+            fontFamily: "var(--font-playfair)",
+            fontSize: "clamp(5.5rem, 14vw, 11.5rem)",
+          }}>
             Cape<br />
             <span className="text-gold">Town.</span>
           </h1>
 
-          <p className="text-white/55 text-base sm:text-lg max-w-2xl leading-relaxed mb-10">
-            Africa&apos;s highest purchasing-power city. A Tier 1, Finals-eligible arena already operational. Proven ownership with six years in the BAL and four national titles. The deadline is June 24.
+          <p className="text-white/72 text-base sm:text-lg max-w-2xl leading-relaxed mb-10 tracking-[0.01em]">
+            Africa&apos;s #1 purchasing-power market. A Tier 1, Finals-eligible arena already built and proven. Six seasons of uninterrupted operation by the same ownership group — submitting a permanent franchise bid backed by track record no other city in this process can match.
           </p>
 
           <div className="flex flex-wrap gap-3 mb-16">
             <button
               onClick={() => scrollTo("opportunity")}
-              className="text-xs text-[#060e1c] bg-[#c9a840] hover:bg-[#e8d08a] px-6 py-3 rounded-sm transition-colors font-medium tracking-wide"
+              className="btn-shimmer btn-magnetic text-xs text-[#060e1c] bg-[#c9a840] hover:bg-[#e8d08a] px-7 py-3 rounded-sm transition-colors font-medium tracking-wide"
             >
               View the Opportunity
             </button>
             <button
               onClick={() => scrollTo("contact")}
-              className="text-xs text-white/50 border border-white/15 hover:border-white/30 hover:text-white/70 px-6 py-3 rounded-sm transition-all tracking-wide"
+              className="btn-magnetic text-xs text-white/45 border border-white/12 hover:border-white/28 hover:text-white/65 px-7 py-3 rounded-sm transition-all tracking-wide"
             >
-              Contact Moelis &amp; Company
+              Contact Us
             </button>
           </div>
         </div>
@@ -94,14 +128,23 @@ export default function HeroSection() {
       {/* Stats strip */}
       <div className={`relative z-10 border-t border-white/[0.06] transition-all duration-1000 delay-300 ${mounted ? "opacity-100" : "opacity-0"}`}>
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
+          <div className="grid grid-cols-2 sm:grid-cols-4">
             {stats.map((s, i) => (
               <div
                 key={s.label}
-                className={`px-6 py-5 hover:bg-white/[0.03] transition-colors cursor-default ${i < stats.length - 1 ? "border-r border-white/[0.05]" : ""}`}
+                className={`px-6 py-5 hover:bg-white/[0.025] transition-colors cursor-default group ${i < stats.length - 1 ? "border-r border-white/[0.05]" : ""}`}
               >
-                <div className="text-xl sm:text-2xl font-light text-white mb-0.5 tabular-nums" style={{ fontFamily: "var(--font-playfair)" }}>{s.value}</div>
-                <div className="text-white/30 text-[9px] tracking-[0.2em] uppercase">{s.label}</div>
+                <div
+                  className="text-xl sm:text-2xl font-light text-white mb-0.5 tabular-nums group-hover:text-[#e8d08a] transition-colors"
+                  style={{ fontFamily: "var(--font-playfair)" }}
+                  {...(s.num !== null ? {
+                    "data-count": String(s.num),
+                    "data-count-prefix": s.pre,
+                    "data-count-suffix": s.suf,
+                    "data-count-decimals": String(s.dec),
+                  } : {})}
+                >{s.value}</div>
+                <div className="text-white/28 text-[9px] tracking-[0.2em] uppercase">{s.label}</div>
               </div>
             ))}
           </div>
@@ -109,6 +152,16 @@ export default function HeroSection() {
       </div>
 
       <div className="sa-stripe relative z-10" />
+
+      {/* Scroll indicator */}
+      <div className="scroll-indicator absolute bottom-28 right-8 hidden lg:flex flex-col items-center gap-2 z-10">
+        <svg width="1" height="40" viewBox="0 0 1 40" className="overflow-visible">
+          <line x1="0.5" y1="0" x2="0.5" y2="40" stroke="rgba(201,168,64,0.3)" strokeWidth="1"/>
+        </svg>
+        <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
+          <path d="M1 1l4 4 4-4" stroke="rgba(201,168,64,0.45)" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      </div>
     </section>
   );
 }
