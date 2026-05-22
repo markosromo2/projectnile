@@ -131,46 +131,23 @@ export default function FinancialProjectionsSection() {
 
           {/* Revenue breakdown */}
           <div>
-            <div className="text-[#8aa0b5] text-xs tracking-widest uppercase mb-5">2036E Revenue by Category</div>
-            <div className="space-y-5 mb-10">
-              {breakdown.map((r) => (
-                <div key={r.label}>
-                  <div className="flex items-center justify-between mb-2">
-                    <div className="flex items-center gap-3">
-                      <span className="text-[#3a5a78] text-sm">{r.label}</span>
-                      <span className="text-[10px] text-[#c9a840] border border-[#c9a840]/30 px-1.5 py-0.5 rounded-sm tracking-widest">{r.cagr} CAGR</span>
+            <div className="panel-light p-6">
+              <div className="text-[#8aa0b5] text-[10px] tracking-widest uppercase mb-5">2036E Revenue by Category</div>
+              <div className="space-y-5">
+                {breakdown.map((r) => (
+                  <div key={r.label}>
+                    <div className="flex items-center justify-between mb-2">
+                      <div className="flex items-center gap-3">
+                        <span className="text-[#3a5a78] text-sm">{r.label}</span>
+                        <span className="text-[10px] text-[#c9a840] border border-[#c9a840]/30 px-1.5 py-0.5 rounded-sm tracking-widest">{r.cagr} CAGR</span>
+                      </div>
+                      <span className="text-[#0c1e32] text-sm font-medium tabular-nums">{r.value}</span>
                     </div>
-                    <span className="text-[#0c1e32] text-sm font-medium tabular-nums">{r.value}</span>
+                    <div className="h-[3px] bg-black/[0.06] rounded-full overflow-hidden">
+                      <div className="h-full bg-gradient-to-r from-[#c9a840] to-[#e8c84a] rounded-full" data-bar-pct={r.pct} />
+                    </div>
                   </div>
-                  <div className="h-[3px] bg-black/[0.06] rounded-full overflow-hidden">
-                    <div className="h-full bg-gradient-to-r from-[#c9a840] to-[#e8c84a] rounded-full" data-bar-pct={r.pct} />
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="callout-light">
-              <div className="flex items-start gap-4">
-                <div className="w-px self-stretch bg-[#c9a840]/45 shrink-0" />
-                <div>
-                  <div className="text-[#c9a840] text-xs tracking-widest uppercase mb-2">Full Financials Available Under NDA</div>
-                  <p className="text-[#3a5a78] text-sm leading-relaxed mb-4 tracking-[0.01em]">
-                    Complete 10-year P&amp;L, team fee assumptions, sources of financing, venue cost model, and all due diligence materials are available in a structured data room managed by Moelis &amp; Company.
-                  </p>
-                  <ul className="space-y-1.5">
-                    {[
-                      "10-year P&L with annual detail: 2027–2036",
-                      "Sponsorship assumptions and African football benchmarks",
-                      "Venue and game day expense model",
-                      "League revenue distribution methodology",
-                    ].map((item) => (
-                      <li key={item} className="flex gap-2 text-[#5a7898] text-sm leading-relaxed">
-                        <span className="text-[#c9a840]/50 shrink-0">—</span>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                ))}
               </div>
             </div>
           </div>

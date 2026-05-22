@@ -61,24 +61,6 @@ export default function ContactSection() {
           ))}
         </div>
 
-        {/* Legal */}
-        <div className="panel-light p-8 mb-16 max-w-2xl">
-          <div className="text-[#8aa0b5] text-xs tracking-widest uppercase mb-5">Legal &amp; Process Notes</div>
-          <ul className="space-y-3">
-            {[
-              "Holding Company: Capewind Ltd. — 3500 S Dupont Hwy, Dover, Delaware 19901",
-              "BAL rules require Controlling Owner to hold a minimum 30% equity interest",
-              "All co-owners subject to BAL vetting: background, financial, and character review",
-              "Company reserves the right to reject any proposal without specifying reasons",
-            ].map((n) => (
-              <li key={n} className="flex gap-3 text-[#5a7898] text-sm leading-relaxed">
-                <span className="text-[#c9a840]/50 shrink-0">—</span>
-                {n}
-              </li>
-            ))}
-          </ul>
-        </div>
-
       </div>
 
       <div className="sa-stripe" />

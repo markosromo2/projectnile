@@ -112,27 +112,29 @@ export default function RevenueModelSection() {
         {/* BAL Revenue history */}
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           <div>
-            <div className="text-[#8aa0b5] text-xs tracking-widest uppercase mb-6">BAL League Revenue Growth (2021–2025)</div>
-            <div className="space-y-3 mb-4">
-              {[
-                { year: "2021", value: 5.8, max: 12.6 },
-                { year: "2022", value: 7.9, max: 12.6 },
-                { year: "2023", value: 8.1, max: 12.6 },
-                { year: "2024", value: 12.6, max: 12.6 },
-                { year: "2025", value: 12.6, max: 12.6, highlight: true },
-              ].map((r) => (
-                <div key={r.year}>
-                  <div className="flex items-center justify-between mb-1.5">
-                    <span className={`text-xs ${r.highlight ? "text-[#0c1e32] font-medium" : "text-[#5a7898]"}`}>{r.year}</span>
-                    <span className={`text-sm font-light tabular-nums ${r.highlight ? "text-[#c9a840]" : "text-[#5a7898]"}`} style={{ fontFamily: "var(--font-playfair)" }}>${r.value}M</span>
+            <div className="panel-light p-6">
+              <div className="text-[#8aa0b5] text-[10px] tracking-widest uppercase mb-5">BAL League Revenue Growth (2021–2025)</div>
+              <div className="space-y-4">
+                {[
+                  { year: "2021", value: 5.8, max: 12.6 },
+                  { year: "2022", value: 7.9, max: 12.6 },
+                  { year: "2023", value: 8.1, max: 12.6 },
+                  { year: "2024", value: 12.6, max: 12.6 },
+                  { year: "2025", value: 12.6, max: 12.6, highlight: true },
+                ].map((r) => (
+                  <div key={r.year}>
+                    <div className="flex items-center justify-between mb-1.5">
+                      <span className={`text-xs ${r.highlight ? "text-[#0c1e32] font-medium" : "text-[#5a7898]"}`}>{r.year}</span>
+                      <span className={`text-sm font-light tabular-nums ${r.highlight ? "text-[#c9a840]" : "text-[#5a7898]"}`} style={{ fontFamily: "var(--font-playfair)" }}>${r.value}M</span>
+                    </div>
+                    <div className="h-[2px] bg-black/[0.07] rounded-full overflow-hidden">
+                      <div className={`h-full rounded-full ${r.highlight ? "bg-gradient-to-r from-[#c9a840] to-[#e8c84a]" : "bg-[#1a5f8e]/30"}`} data-bar-pct={Math.round((r.value / r.max) * 100)} />
+                    </div>
                   </div>
-                  <div className="h-[2px] bg-black/[0.07] rounded-full overflow-hidden">
-                    <div className={`h-full rounded-full ${r.highlight ? "bg-gradient-to-r from-[#c9a840] to-[#e8c84a]" : "bg-[#1a5f8e]/30"}`} data-bar-pct={Math.round((r.value / r.max) * 100)} />
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
+              <p className="text-[#94a3b8] text-[10px] mt-5 tracking-wide">Source: NBA Africa management financials · Fiscal year ends September 30</p>
             </div>
-            <p className="text-[#94a3b8] text-[10px] mt-3 tracking-wide">Source: NBA Africa management financials · Fiscal year ends September 30</p>
           </div>
 
           <div>
