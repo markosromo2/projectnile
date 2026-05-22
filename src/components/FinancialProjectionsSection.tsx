@@ -100,6 +100,43 @@ export default function FinancialProjectionsSection() {
           </div>
         </div>
 
+        {/* Profitability milestone callout */}
+        <div className="mb-16 rounded-sm overflow-hidden" style={{ background: "#080d14" }}>
+          <div className="flex flex-col lg:flex-row">
+            <div className="lg:w-1.5 shrink-0" style={{ background: "linear-gradient(to bottom, #c9a840, #b8942e)" }} />
+            <div className="p-8 lg:p-10 flex flex-col lg:flex-row lg:items-center gap-10">
+              <div className="lg:flex-1">
+                <div className="text-[#c9a840] text-[10px] tracking-widest uppercase mb-3">Profitability Path</div>
+                <h3 className="text-2xl lg:text-3xl text-white font-light leading-snug mb-3" style={{ fontFamily: "var(--font-playfair)" }}>
+                  Year 4.<br />The turn to profit.
+                </h3>
+                <p className="text-white/45 text-sm leading-relaxed max-w-lg">
+                  The 2028 first year of Home/Away operations carries an expected ($0.6M) launch deficit — upfront investment in arena, staffing, and market establishment. By Year 4 the franchise turns its first operating surplus, then compounds to a 31% margin by Year 10.
+                </p>
+              </div>
+              <div className="shrink-0 grid grid-cols-3 gap-6">
+                {[
+                  { label: "Year 1 deficit", value: "($0.6M)", note: "2028 — launch" },
+                  { label: "Year 4 surplus", value: "+$0.3M", note: "2030 — breakeven+" },
+                  { label: "Year 10 surplus", value: "+$5.4M", note: "2036 — 31% margin" },
+                ].map((m) => (
+                  <div key={m.label} className="text-center">
+                    <div
+                      className="text-xl font-light tabular-nums mb-0.5"
+                      style={{
+                        fontFamily: "var(--font-playfair)",
+                        color: m.value.startsWith("+") ? "#c9a840" : "rgba(255,255,255,0.35)",
+                      }}
+                    >{m.value}</div>
+                    <div className="text-white/55 text-[10px] font-medium uppercase tracking-wide mb-0.5">{m.label}</div>
+                    <div className="text-white/25 text-[9px]">{m.note}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="grid lg:grid-cols-2 gap-14 mb-16">
           {/* P&L table */}
           <div>

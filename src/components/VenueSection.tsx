@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function VenueSection() {
   return (
     <section id="venue" className="py-32 border-t border-black/[0.06]" style={{
@@ -39,6 +41,22 @@ export default function VenueSection() {
 
           {/* Right: specs */}
           <div className="lg:col-span-7">
+
+            {/* Arena photo */}
+            <div className="relative rounded-sm overflow-hidden mb-8" style={{ height: "240px" }}>
+              <Image
+                src="/images/grand-arena.png"
+                alt="Grand Arena at GrandWest, Cape Town"
+                fill
+                className="object-cover object-center"
+              />
+              <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, transparent 45%, rgba(245,247,250,0.9) 100%)" }} />
+              <div className="absolute bottom-4 left-5 flex items-center gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-[#c9a840]" />
+                <span className="text-[#0c1e32] text-xs font-medium tracking-wide">Grand Arena at GrandWest, Cape Town</span>
+              </div>
+            </div>
+
             <div className="text-[#8aa0b5] text-xs tracking-widest uppercase mb-6">Arena Specifications</div>
             <table className="data-table-light panel-light mb-10">
               <tbody>
