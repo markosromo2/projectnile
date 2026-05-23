@@ -68,21 +68,17 @@ export default function TrackRecordSection() {
 
             {/* LEFT — Paul Bragiel */}
             <div data-animate>
-              {/* Profile photo placeholder — photo-ready frame */}
-              <div className="relative mb-8 rounded-sm overflow-hidden" style={{ height: "340px", background: "#080d14", border: "1px solid rgba(201,168,64,0.22)" }}>
-                {/* Corner bracket accents */}
-                <div className="absolute top-5 left-5 w-10 h-10" style={{ borderTop: "2px solid rgba(201,168,64,0.6)", borderLeft: "2px solid rgba(201,168,64,0.6)" }} />
-                <div className="absolute top-5 right-5 w-10 h-10" style={{ borderTop: "2px solid rgba(201,168,64,0.6)", borderRight: "2px solid rgba(201,168,64,0.6)" }} />
-                <div className="absolute bottom-5 left-5 w-10 h-10" style={{ borderBottom: "2px solid rgba(201,168,64,0.6)", borderLeft: "2px solid rgba(201,168,64,0.6)" }} />
-                <div className="absolute bottom-5 right-5 w-10 h-10" style={{ borderBottom: "2px solid rgba(201,168,64,0.6)", borderRight: "2px solid rgba(201,168,64,0.6)" }} />
-                {/* Subtle diagonal texture */}
-                <div className="absolute inset-0" style={{
-                  backgroundImage: "repeating-linear-gradient(-55deg, transparent 0, transparent 18px, rgba(201,168,64,0.03) 18px, rgba(201,168,64,0.03) 19px)"
-                }} />
-                {/* Monogram */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
-                  <div className="text-[96px] font-light leading-none tabular-nums" style={{ fontFamily: "var(--font-playfair)", color: "rgba(201,168,64,0.15)" }}>PB</div>
-                  <div className="text-[#c9a840]/40 text-[9px] tracking-[0.4em] uppercase">Paul Bragiel · Chairman</div>
+              {/* Profile photo */}
+              <div className="relative mb-8 rounded-sm overflow-hidden" style={{ height: "380px" }}>
+                <Image
+                  src="/images/ct-paul-headshot.png"
+                  alt="Paul Bragiel — Chairman, Capewind Ltd."
+                  fill
+                  className="object-cover object-top"
+                />
+                <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, transparent 55%, #0d1520 100%)" }} />
+                <div className="absolute inset-x-0 bottom-0 px-6 pb-5">
+                  <div className="text-[#c9a840]/60 text-[9px] tracking-[0.3em] uppercase">Paul Bragiel · Chairman, Capewind Ltd.</div>
                 </div>
               </div>
 
