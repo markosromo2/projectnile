@@ -4,8 +4,8 @@ export default function WaterfrontDividerSection() {
   return (
     <section className="relative h-[65vh] min-h-[440px] overflow-hidden">
       <Image
-        src="/images/ct-va-ferris.png"
-        alt="V&A Waterfront, Cape Town"
+        src="/images/ct-tigers-jersey.jpg"
+        alt="Cape Town Tigers player at the waterfront"
         fill
         className="object-cover object-center"
         style={{ transform: "scale(1.02)" }}

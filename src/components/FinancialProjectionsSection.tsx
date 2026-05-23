@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const rows = [
   { year: "2027E", note: "Caravan model", rev: "$1.6M", exp: "$1.0M", profit: "+$0.7M", margin: "41%", games: 6 },
   { year: "2028E", note: "Home / Away begins", rev: "$4.4M", exp: "$5.0M", profit: "($0.6M)", margin: "—", games: 22 },
@@ -133,6 +135,27 @@ export default function FinancialProjectionsSection() {
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Photo divider */}
+        <div className="relative rounded-sm overflow-hidden mb-16" style={{ height: "320px" }}>
+          <Image
+            src="/images/ct-player-mountain-kick.jpg"
+            alt="Cape Town Tigers athlete on Table Mountain"
+            fill
+            className="object-cover object-center"
+            style={{ opacity: 0.75 }}
+          />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(245,247,250,0.92) 0%, rgba(245,247,250,0.4) 40%, transparent 70%)" }} />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(245,247,250,0.5) 0%, transparent 40%, rgba(245,247,250,0.7) 100%)" }} />
+          <div className="relative h-full flex items-center px-10 lg:px-14">
+            <div className="max-w-md">
+              <div className="text-[#c9a840] text-[10px] tracking-widest uppercase mb-3">The Investment Case</div>
+              <p className="text-[#0c1e32] text-2xl font-light leading-snug" style={{ fontFamily: "var(--font-playfair)" }}>
+                Africa&apos;s #1 market. Tier 1 arena. Six seasons of operation. The infrastructure is already built.
+              </p>
             </div>
           </div>
         </div>
