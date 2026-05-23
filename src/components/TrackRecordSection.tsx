@@ -146,35 +146,6 @@ export default function TrackRecordSection() {
 
       </div>
 
-      {/* ── Ownership structure — light ── */}
-      <div style={{
-        background: "repeating-linear-gradient(-55deg, transparent 0, transparent 18px, rgba(0,0,0,0.028) 18px, rgba(0,0,0,0.028) 19px), #f5f7fa"
-      }} className="py-16 lg:py-20">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="callout-light">
-            <div className="flex items-start gap-6">
-              <div className="w-px self-stretch bg-[#c9a840]/40 shrink-0" />
-              <div>
-                <div className="text-[#c9a840] text-xs tracking-widest uppercase mb-3">Ownership Structure</div>
-                <div className="grid sm:grid-cols-3 gap-8">
-                  {[
-                    { label: "Holding Company", value: "Capewind Ltd.", sub: "3500 S Dupont Hwy, Dover, Delaware 19901" },
-                    { label: "BAL Minimum Stake", value: "30% Equity", sub: "Controlling owner requirement per BAL rules" },
-                    { label: "BAL Vetting", value: "BAL Approval", sub: "Background, financial & character review" },
-                  ].map((r) => (
-                    <div key={r.label}>
-                      <div className="text-[#8aa0b5] text-[10px] tracking-widest uppercase mb-1">{r.label}</div>
-                      <div className="text-[#0c1e32] font-medium text-sm">{r.value}</div>
-                      <div className="text-[#5a7898] text-xs mt-0.5 tracking-[0.01em]">{r.sub}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </section>
   );
 }
