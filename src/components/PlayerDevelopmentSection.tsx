@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function PlayerDevelopmentSection() {
   return (
     <section id="pipeline" className="py-32" style={{ background: "#080d14" }}>
@@ -17,6 +19,36 @@ export default function PlayerDevelopmentSection() {
           <p className="text-white/45 text-sm max-w-sm leading-relaxed lg:text-right tracking-[0.01em]">
             The NBA's stated ambition is to build a development pipeline from Africa into the league. A permanent Cape Town franchise sits at the centre of that pipeline — with two players already on the path.
           </p>
+        </div>
+
+        {/* Training photos row */}
+        <div className="grid grid-cols-2 gap-2 mb-14" style={{ height: "260px" }}>
+          <div className="relative overflow-hidden rounded-sm">
+            <Image
+              src="/images/ct-training-balls.jpg"
+              alt="Cape Town Tigers training drill"
+              fill
+              className="object-cover object-center"
+              style={{ opacity: 0.8 }}
+            />
+            <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(8,13,20,0.7) 0%, transparent 60%)" }} />
+            <div className="absolute bottom-4 left-4">
+              <span className="text-white/45 text-[9px] tracking-[0.25em] uppercase">Training · Cape Town</span>
+            </div>
+          </div>
+          <div className="relative overflow-hidden rounded-sm">
+            <Image
+              src="/images/ct-player-dunk.jpg"
+              alt="Cape Town Tigers player dunking"
+              fill
+              className="object-cover object-center"
+              style={{ opacity: 0.8 }}
+            />
+            <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(8,13,20,0.7) 0%, transparent 60%)" }} />
+            <div className="absolute bottom-4 left-4">
+              <span className="text-white/45 text-[9px] tracking-[0.25em] uppercase">Development · Cape Town Tigers</span>
+            </div>
+          </div>
         </div>
 
         {/* Contract economics callout */}

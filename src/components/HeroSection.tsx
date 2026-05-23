@@ -3,15 +3,15 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const stripPhotos = [
-  "/images/bal-court-logo.jpg",
-  "/images/ct-player-hero.jpg",
-  "/images/ct-city-sunset.jpg",
-  "/images/ct-clifton-beach.jpg",
-  "/images/ct-porsche-mountain.jpg",
-  "/images/ct-team-montage.jpg",
-  "/images/ct-tigers-team.png",
-  "/images/ct-paris-team.jpg",
-  "/images/ct-cbd-mountain.jpg",
+  "/images/ct-player-mountain-city.jpg",
+  "/images/ct-training-balls.jpg",
+  "/images/ct-team-mountain.jpg",
+  "/images/ct-players-mural.jpg",
+  "/images/ct-player-basket-mountain.jpg",
+  "/images/ct-tigers-jersey.jpg",
+  "/images/ct-player-rock-city.jpg",
+  "/images/ct-team-summit.jpg",
+  "/images/ct-player-mountain-kick.jpg",
 ];
 
 const stats = [
@@ -35,8 +35,8 @@ export default function HeroSection() {
       {/* Background photo */}
       <div className="absolute inset-0">
         <Image
-          src="/images/ct-stadium-aerial.png"
-          alt="Cape Town — aerial with DHL Newlands and Table Mountain"
+          src="/images/ct-player-mountain-city.jpg"
+          alt="Cape Town Tigers player overlooking Cape Town from Table Mountain"
           fill
           className="object-cover object-center"
           style={{ opacity: 0.55 }}

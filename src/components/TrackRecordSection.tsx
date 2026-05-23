@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const team = [
   {
     initials: "PB",
@@ -60,6 +62,20 @@ export default function TrackRecordSection() {
 
         {/* Paul Bragiel feature */}
         <div data-animate className="mb-16 rounded-sm overflow-hidden" style={{ background: "#080d14" }}>
+          <div className="relative h-56 lg:h-72 overflow-hidden">
+            <Image
+              src="/images/ct-paul-mountain.jpg"
+              alt="Paul Bragiel overlooking Cape Town from Table Mountain"
+              fill
+              className="object-cover object-center"
+              style={{ opacity: 0.55 }}
+            />
+            <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, transparent 30%, #080d14 100%)" }} />
+            <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(8,13,20,0.7) 0%, transparent 60%)" }} />
+            <div className="absolute bottom-6 left-8 lg:left-12">
+              <span className="text-[#c9a840]/60 text-[9px] tracking-[0.3em] uppercase">Cape Town, South Africa</span>
+            </div>
+          </div>
           <div className="p-8 lg:p-12">
             <div className="flex items-center gap-3 mb-8">
               <div className="h-[2px] w-8 bg-[#c9a840]" />
