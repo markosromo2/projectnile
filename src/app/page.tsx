@@ -9,6 +9,7 @@ import MarketSection from "@/components/MarketSection";
 import PhotoDividerSection from "@/components/PhotoDividerSection";
 import RevenueModelSection from "@/components/RevenueModelSection";
 import TrackRecordSection from "@/components/TrackRecordSection";
+import PlayerDevelopmentSection from "@/components/PlayerDevelopmentSection";
 import PhotoStripSection from "@/components/PhotoStripSection";
 import ArenaDividerSection from "@/components/ArenaDividerSection";
 import VenueSection from "@/components/VenueSection";
@@ -34,6 +35,7 @@ export default function Home() {
         <RevenueModelSection />
         <SectionDivider />
         <TrackRecordSection />
+        <PlayerDevelopmentSection />
         <PhotoStripSection />
         <ArenaDividerSection />
         <VenueSection />

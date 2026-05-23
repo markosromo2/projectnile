@@ -58,6 +58,57 @@ export default function TrackRecordSection() {
           </p>
         </div>
 
+        {/* Paul Bragiel feature */}
+        <div data-animate className="mb-16 rounded-sm overflow-hidden" style={{ background: "#080d14" }}>
+          <div className="p-8 lg:p-12">
+            <div className="flex items-center gap-3 mb-8">
+              <div className="h-[2px] w-8 bg-[#c9a840]" />
+              <span className="text-[#c9a840] text-[10px] tracking-[0.25em] uppercase font-medium">The Operator</span>
+            </div>
+            <div className="grid lg:grid-cols-2 gap-10 mb-10">
+              <div>
+                <h3 className="text-3xl lg:text-4xl text-white font-light mb-5 leading-snug" style={{ fontFamily: "var(--font-playfair)" }}>
+                  Paul Bragiel.<br />Six continents.<br />
+                  <span className="text-[#c9a840]">One operator.</span>
+                </h3>
+                <p className="text-white/45 text-sm leading-relaxed mb-4">
+                  Paul Bragiel is a serial entrepreneur and one of the most active cross-continental sports investors in the world. He founded venture capital funds across six continents — including one of the earliest VC operations on the African continent — before transitioning his focus to professional sports franchises.
+                </p>
+                <p className="text-white/45 text-sm leading-relaxed">
+                  In sports, his track record spans multiple leagues and continents: he co-founded the Cape Town Tigers from the BAL's inaugural season, building them into a 3-time BAL Finalist and 4-time South African national champion. He then co-founded Kriol Stars (Cape Verde), who reached the BAL Finals in their own right. He was an early investor in Dziki Warszawa — Polish basketball Cup champions — and has been involved in the Olympic baseball story connecting sport and international development.
+                </p>
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                {[
+                  { value: "6", label: "Continents", sub: "VC funds founded across US, Asia, Europe, Africa and beyond" },
+                  { value: "3×", label: "BAL Finalist", sub: "Cape Town Tigers — 3 BAL Finals appearances from Season 1" },
+                  { value: "4×", label: "SA Champion", sub: "National titles — most decorated franchise in South African basketball" },
+                  { value: "2", label: "BAL Franchises", sub: "Cape Town Tigers + Kriol Stars — both reached the BAL Finals" },
+                ].map((s) => (
+                  <div key={s.label} className="p-5 rounded-sm" style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.07)" }}>
+                    <div className="text-[#c9a840] text-2xl font-light mb-1 tabular-nums" style={{ fontFamily: "var(--font-playfair)" }}>{s.value}</div>
+                    <div className="text-white/80 text-xs font-medium mb-1">{s.label}</div>
+                    <div className="text-white/30 text-[10px] leading-relaxed">{s.sub}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="grid sm:grid-cols-3 gap-3 pt-8" style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+              {[
+                { org: "Cape Town Tigers", role: "Co-Founder & Chairman", note: "3× BAL Finalist · 4× SA Champion · BAL Season 1 to present" },
+                { org: "Kriol Stars", role: "Co-Founder", note: "Cape Verde · BAL Finalist · Road to BAL qualifier, Season 5" },
+                { org: "Dziki Warszawa", role: "Early Investor", note: "Polish Basketball Cup Champions" },
+              ].map((r) => (
+                <div key={r.org} className="p-4 rounded-sm" style={{ background: "rgba(201,168,64,0.05)", border: "1px solid rgba(201,168,64,0.12)" }}>
+                  <div className="text-[#c9a840] text-xs font-medium mb-0.5">{r.org}</div>
+                  <div className="text-white/60 text-[10px] mb-2">{r.role}</div>
+                  <div className="text-white/28 text-[9px] leading-relaxed">{r.note}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
         {/* Track record stats */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-16">
           {[
