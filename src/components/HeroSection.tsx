@@ -38,8 +38,8 @@ export default function HeroSection() {
           src="/images/ct-player-rock-city.jpg"
           alt="Cape Town Tigers player overlooking Cape Town from the mountain"
           fill
-          className="object-cover object-center"
-          style={{ opacity: 0.65 }}
+          className="object-cover"
+          style={{ opacity: 0.65, objectPosition: "72% 50%" }}
           priority
         />
         {/* Vignette layers — cinematic, not muddy */}
