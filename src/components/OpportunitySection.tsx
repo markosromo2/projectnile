@@ -7,7 +7,7 @@ const pillars = [
     target: "An economy the size of a mid-market NBA city",
     points: [
       "Cape Town's $46.1B GDP is comparable to Portland, Oregon — home of an NBA franchise — making it the strongest commercial market on the continent by a wide margin",
-      "Every major pan-African broadcaster is headquartered here: Naspers, DStv, Canal+, Media24 — the full ecosystem to monetise a professional basketball team is already in place",
+      "South Africa's media giants — Naspers and Media24 headquartered in Cape Town, MultiChoice/DStv and Canal+ operating across South Africa — create the full ecosystem to monetise a professional basketball team from day one",
     ],
   },
   {
@@ -29,7 +29,7 @@ const pillars = [
     target: "3 BAL Finals · Tier 1 Arena · 6 Seasons Continuous Operation",
     points: [
       "The Cape Town franchise is the most decorated in South African basketball history — four national titles and three continental Finals appearances across six uninterrupted seasons, built by the same ownership group now submitting this bid",
-      "The team trains permanently at Stellenbosch University's High Performance Sports Unit (HPSU), which in 2025 hosted 9 Olympic teams and 12 national teams — elite cross-pollination that no other BAL market can offer",
+      "The team trains permanently at Stellenbosch University's High Performance Sports Unit (HPSU) — one of Africa's premier sports science facilities, housing national team programs across multiple disciplines and providing elite training infrastructure no other BAL market can match",
     ],
   },
 ];

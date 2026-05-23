@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const mediaCompanies = [
   { name: "Naspers", desc: "Pan-African tech & media group — HQ'd in Cape Town" },
-  { name: "MultiChoice / DStv", desc: "Largest pay-TV operator in sub-Saharan Africa" },
+  { name: "MultiChoice / DStv", desc: "Largest pay-TV operator in sub-Saharan Africa — SA-based, now owned by Canal+" },
   { name: "Media24", desc: "Largest print & digital publisher in sub-Saharan Africa" },
   { name: "Canal+", desc: "Acquired MultiChoice 2025 — dominant French-language network" },
 ];
@@ -88,7 +88,7 @@ export default function MarketSection() {
             <div data-animate>
               <div className="text-white/40 text-xs tracking-widest uppercase mb-3">Africa&apos;s Media Capital</div>
               <h3 className="text-4xl lg:text-5xl text-white font-light mb-8 leading-[0.92]" style={{ fontFamily: "var(--font-playfair)" }}>
-                Every major<br />pan-African broadcaster<br />is headquartered here.
+                South Africa&apos;s media<br />industry is Africa&apos;s<br />largest — built here.
               </h3>
 
               {/* Market concentration bar */}

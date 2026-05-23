@@ -100,7 +100,7 @@ export default function RevenueModelSection() {
             </div>
             <div className="flex flex-col gap-2 lg:min-w-[180px]">
               <div className="text-[#8aa0b5] text-[10px] tracking-widest uppercase mb-1">Season 5 SA Sponsors</div>
-              {["Uber Eats", "Hyundai", "ServiceNow"].map((sponsor) => (
+              {["Uber", "Hyundai", "ServiceNow"].map((sponsor) => (
                 <div key={sponsor} className="px-4 py-3 text-sm text-[#0c1e32] font-medium text-center" style={{ background: "rgba(12,30,50,0.05)", border: "1px solid rgba(12,30,50,0.1)" }}>
                   {sponsor}
                 </div>

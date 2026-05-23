@@ -20,7 +20,7 @@ const pillars = [
   {
     n: "IV",
     title: "#2 NBA Pipeline City",
-    body: "Cape Town ranks second among all 24 BAL cities for NBA Summer League players produced. Evans Ganapamo (Milwaukee Bucks) and Samkelo Cele (New York Knicks) demonstrate a talent pipeline that directly underpins the buy-develop-sell player trading model.",
+    body: "Cape Town ranks second among all 24 BAL cities for NBA Summer League players produced. Evans Ganapamo (Milwaukee Bucks Summer League) and Samkelo Cele (New York Knicks Summer League) demonstrate a talent pipeline that directly underpins the buy-develop-sell player trading model.",
     stat: "#2 Pipeline",
   },
 ];

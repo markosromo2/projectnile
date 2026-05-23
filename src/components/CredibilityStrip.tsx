@@ -5,7 +5,7 @@ const partners = [
   { name: "Canal+",         role: "Broadcast — Africa"      },
   { name: "ESPN",           role: "Broadcast — Global"      },
   { name: "Tencent",        role: "Digital / Streaming"     },
-  { name: "Microsoft",      role: "Technology Partner"      },
+  { name: "AWS",             role: "Technology Partner"      },
   { name: "GrandWest Arena",role: "Venue Partner"           },
 ];
 
