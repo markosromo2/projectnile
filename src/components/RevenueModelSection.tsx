@@ -109,13 +109,18 @@ export default function RevenueModelSection() {
           </div>
           <div className="grid grid-cols-3" style={{ borderTop: "1px solid rgba(201,168,64,0.15)" }}>
             {saSponsors.map((s, i) => (
-              <div key={s.name} className="flex flex-col items-center justify-center gap-3 py-10 px-10" style={{
-                background: s.dark ? "#000" : "#fff",
+              <div key={s.name} style={{
+                background: "#fff",
                 borderRight: i < saSponsors.length - 1 ? "1px solid rgba(201,168,64,0.15)" : undefined,
+                padding: "32px 24px",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                gap: "12px",
               }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={s.logo} alt={s.name} style={{ maxWidth: "100%", maxHeight: "64px", objectFit: "contain", display: "block" }} />
-                <span className="text-[9px] tracking-widest uppercase font-medium" style={{ color: s.dark ? "rgba(255,255,255,0.35)" : "rgba(12,30,50,0.3)" }}>BAL Season 5</span>
+                <img src={s.logo} alt={s.name} style={{ width: "100%", height: "80px", objectFit: "contain", display: "block" }} />
+                <span style={{ fontSize: "9px", letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(12,30,50,0.3)" }}>BAL Season 5</span>
               </div>
             ))}
           </div>
