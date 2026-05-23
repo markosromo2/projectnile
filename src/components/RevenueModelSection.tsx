@@ -109,8 +109,10 @@ export default function RevenueModelSection() {
             <div className="flex flex-col gap-2 lg:min-w-[180px]">
               <div className="text-[#8aa0b5] text-[10px] tracking-widest uppercase mb-1">Season 5 SA Sponsors</div>
               {saSponsors.map((s) => (
-                <div key={s.name} className="flex items-center justify-center px-4 py-3 rounded-sm overflow-hidden" style={{ background: s.dark ? "#000" : "#fff", border: "1px solid rgba(12,30,50,0.1)", minHeight: "56px" }}>
-                  <Image src={s.logo} alt={s.name} width={100} height={36} className="object-contain max-h-9 w-auto" />
+                <div key={s.name} className="flex items-center justify-center px-5 rounded-sm overflow-hidden" style={{ background: s.dark ? "#000" : "#fff", border: "1px solid rgba(12,30,50,0.1)", height: "60px" }}>
+                  <div className="relative w-full" style={{ height: "36px" }}>
+                    <Image src={s.logo} alt={s.name} fill className="object-contain" />
+                  </div>
                 </div>
               ))}
             </div>
