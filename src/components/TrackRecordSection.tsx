@@ -84,11 +84,14 @@ export default function TrackRecordSection() {
             </p>
             <div className="grid grid-cols-3 gap-2 mt-auto">
               {[
-                { org: "Cape Town Tigers", role: "Co-Founder & Chairman", note: "3× BAL Finalist · 4× SA Champion" },
-                { org: "Kriol Stars", role: "Co-Founder", note: "Cape Verde · BAL Finalist" },
-                { org: "Dziki Warszawa", role: "Early Investor", note: "Polish Cup Champions" },
+                { org: "Cape Town Tigers", role: "Co-Founder & Chairman", note: "3× BAL Finalist · 4× SA Champion", logo: "/images/ct-tigers-logo.jpeg", dark: false },
+                { org: "Kriol Stars", role: "Co-Founder", note: "Cape Verde · BAL Finalist", logo: "/images/logo-kriol-stars.jpeg", dark: false },
+                { org: "Dziki Warszawa", role: "Early Investor", note: "Polish Cup Champions", logo: "/images/logo-dziki-warszawa.jpeg", dark: false },
               ].map((r) => (
-                <div key={r.org} className="p-3 rounded-sm" style={{ background: "rgba(201,168,64,0.05)", border: "1px solid rgba(201,168,64,0.12)" }}>
+                <div key={r.org} className="p-3 rounded-sm flex flex-col" style={{ background: "rgba(201,168,64,0.05)", border: "1px solid rgba(201,168,64,0.12)" }}>
+                  <div className="relative w-full mb-2" style={{ height: "48px" }}>
+                    <Image src={r.logo} alt={r.org} fill className="object-contain object-left" />
+                  </div>
                   <div className="text-[#c9a840] text-[10px] font-medium mb-0.5 leading-tight">{r.org}</div>
                   <div className="text-white/55 text-[9px] mb-1">{r.role}</div>
                   <div className="text-white/25 text-[9px] leading-tight">{r.note}</div>

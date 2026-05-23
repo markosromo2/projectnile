@@ -94,28 +94,31 @@ export default function RevenueModelSection() {
         </div>
 
         {/* SA local sponsorship already validated */}
-        <div data-animate className="mb-16 p-8 rounded-sm" style={{ background: "linear-gradient(135deg, rgba(201,168,64,0.06) 0%, #ffffff 70%)", border: "1px solid rgba(201,168,64,0.2)" }}>
-          <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
-            <div className="lg:max-w-lg">
-              <div className="text-[#c9a840] text-[10px] tracking-widest uppercase mb-3 font-medium">Local SA Sponsorship — Already Validated</div>
-              <h3 className="text-2xl text-[#0c1e32] font-light mb-3 leading-snug" style={{ fontFamily: "var(--font-playfair)" }}>
+        <div data-animate className="mb-16 rounded-sm overflow-hidden" style={{ border: "1px solid rgba(201,168,64,0.2)" }}>
+          <div className="p-8 lg:p-10" style={{ background: "linear-gradient(135deg, rgba(201,168,64,0.06) 0%, #ffffff 70%)" }}>
+            <div className="text-[#c9a840] text-[10px] tracking-widest uppercase mb-3 font-medium">Local SA Sponsorship — Already Validated</div>
+            <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
+              <h3 className="text-2xl text-[#0c1e32] font-light leading-snug" style={{ fontFamily: "var(--font-playfair)" }}>
                 SA corporates are already paying.<br />Before a permanent team exists.
               </h3>
-              <p className="text-[#3a5a78] text-sm leading-relaxed">
-                In Season 5 — with Cape Town still operating as a caravan franchise — three major global brands signed as BAL sponsors specifically targeting the South African market. The local sponsorship revenue line isn&apos;t a projection. The demand is already proven.
+              <p className="text-[#3a5a78] text-sm leading-relaxed lg:max-w-sm lg:text-right">
+                In Season 5 — with Cape Town still operating as a caravan franchise — three major global brands signed as BAL sponsors targeting the South African market.
               </p>
-              <p className="text-[#5a7898] text-[10px] mt-4">Source: BAL Historical Revenues · Moelis &amp; Company Data Room · Season 5</p>
             </div>
-            <div className="flex flex-col gap-2 lg:min-w-[180px]">
-              <div className="text-[#8aa0b5] text-[10px] tracking-widest uppercase mb-1">Season 5 SA Sponsors</div>
-              {saSponsors.map((s) => (
-                <div key={s.name} className="flex items-center justify-center px-5 rounded-sm overflow-hidden" style={{ background: s.dark ? "#000" : "#fff", border: "1px solid rgba(12,30,50,0.1)", height: "60px" }}>
-                  <div className="relative w-full" style={{ height: "36px" }}>
-                    <Image src={s.logo} alt={s.name} fill className="object-contain" />
-                  </div>
+            <p className="text-[#5a7898] text-[10px] mt-5">Source: BAL Historical Revenues · Moelis &amp; Company Data Room · Season 5</p>
+          </div>
+          <div className="grid grid-cols-3" style={{ borderTop: "1px solid rgba(201,168,64,0.15)" }}>
+            {saSponsors.map((s, i) => (
+              <div key={s.name} className="flex flex-col items-center justify-center gap-3 py-8 px-8" style={{
+                background: s.dark ? "#000" : "#fff",
+                borderRight: i < saSponsors.length - 1 ? "1px solid rgba(201,168,64,0.15)" : undefined,
+              }}>
+                <div className="relative w-full" style={{ height: "48px" }}>
+                  <Image src={s.logo} alt={s.name} fill className="object-contain" />
                 </div>
-              ))}
-            </div>
+                <span className="text-[9px] tracking-widest uppercase font-medium" style={{ color: s.dark ? "rgba(255,255,255,0.35)" : "rgba(12,30,50,0.3)" }}>BAL Season 5</span>
+              </div>
+            ))}
           </div>
         </div>
 
