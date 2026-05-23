@@ -93,9 +93,8 @@ export default function TrackRecordSection() {
                 ].map((r) => (
                   <div key={r.org} className="rounded-sm overflow-hidden" style={{ border: "1px solid rgba(201,168,64,0.15)" }}>
                     <div className="bg-white flex items-center justify-center px-4" style={{ height: "56px" }}>
-                      <div className="relative w-full h-10">
-                        <Image src={r.logo} alt={r.org} fill className="object-contain" />
-                      </div>
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={r.logo} alt={r.org} style={{ maxWidth: "100%", maxHeight: "40px", objectFit: "contain", display: "block" }} />
                     </div>
                     <div className="px-3 py-2" style={{ background: "rgba(201,168,64,0.05)" }}>
                       <div className="text-[#c9a840] text-xs font-medium leading-tight">{r.org}</div>
@@ -109,9 +108,8 @@ export default function TrackRecordSection() {
               <div className="text-white/25 text-[9px] tracking-[0.3em] uppercase mb-2">Europe</div>
               <div className="rounded-sm overflow-hidden" style={{ border: "1px solid rgba(201,168,64,0.15)" }}>
                 <div className="bg-white flex items-center justify-center px-4" style={{ height: "56px" }}>
-                  <div className="relative w-full h-10">
-                    <Image src="/images/logo-dziki-warszawa.jpeg" alt="Dziki Warszawa" fill className="object-contain" />
-                  </div>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/images/logo-dziki-warszawa.jpeg" alt="Dziki Warszawa" style={{ maxWidth: "100%", maxHeight: "40px", objectFit: "contain", display: "block" }} />
                 </div>
                 <div className="px-3 py-2" style={{ background: "rgba(201,168,64,0.05)" }}>
                   <div className="text-[#c9a840] text-xs font-medium leading-tight">Dziki Warszawa</div>
@@ -159,11 +157,10 @@ export default function TrackRecordSection() {
         {/* Track record — same screen */}
         <div className="pt-6" style={{ borderTop: "1px solid rgba(255,255,255,0.07)" }}>
           <div className="text-white/25 text-[9px] tracking-widest uppercase mb-4">Track Record — Franchise &amp; Founder</div>
-          <div className="grid grid-cols-4 sm:grid-cols-7 gap-2">
+          <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
             {[
               { value: "4×", num: 4, suf: "×", label: "SA Champion" },
               { value: "3×", num: 3, suf: "×", label: "BAL Finals" },
-              { value: "6+", num: 6, suf: "+", label: "Seasons" },
               { value: "2019", num: null, suf: "", label: "Founded" },
               { value: "6", num: null, suf: "", label: "Continents" },
               { value: "2", num: null, suf: "", label: "BAL Franchises" },

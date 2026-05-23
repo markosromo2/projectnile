@@ -113,9 +113,8 @@ export default function RevenueModelSection() {
                 background: s.dark ? "#000" : "#fff",
                 borderRight: i < saSponsors.length - 1 ? "1px solid rgba(201,168,64,0.15)" : undefined,
               }}>
-                <div className="relative w-full" style={{ height: "64px" }}>
-                  <Image src={s.logo} alt={s.name} fill className="object-contain" />
-                </div>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={s.logo} alt={s.name} style={{ maxWidth: "100%", maxHeight: "64px", objectFit: "contain", display: "block" }} />
                 <span className="text-[9px] tracking-widest uppercase font-medium" style={{ color: s.dark ? "rgba(255,255,255,0.35)" : "rgba(12,30,50,0.3)" }}>BAL Season 5</span>
               </div>
             ))}
