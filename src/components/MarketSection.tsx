@@ -160,6 +160,41 @@ export default function MarketSection() {
         </div>
       </div>
 
+      {/* Demand already proven */}
+      <div className="px-6 lg:px-10 pb-20">
+        <div className="max-w-7xl mx-auto">
+          <div className="rounded-sm overflow-hidden" style={{ border: "1px solid rgba(201,168,64,0.18)" }}>
+            <div className="px-8 py-5 flex items-center gap-3" style={{ background: "rgba(201,168,64,0.07)", borderBottom: "1px solid rgba(201,168,64,0.12)" }}>
+              <div className="h-px w-6 bg-[#c9a840]" />
+              <span className="text-[#c9a840] text-[10px] tracking-[0.3em] uppercase font-medium">Demand Already Proven</span>
+            </div>
+            <div className="grid md:grid-cols-2" style={{ background: "rgba(8,27,46,0.6)" }}>
+
+              {/* Stat 1 — #1 audience */}
+              <div className="px-8 py-8 md:border-r" style={{ borderColor: "rgba(201,168,64,0.12)" }}>
+                <div className="text-[5rem] font-light leading-none text-[#c9a840] tabular-nums mb-3" style={{ fontFamily: "var(--font-playfair)" }}>#1</div>
+                <div className="text-white text-sm font-medium mb-2">Country watching BAL games online</div>
+                <p className="text-white/45 text-sm leading-relaxed">
+                  South Africa ranked #1 among all nations for BAL online viewership — above Egypt, Rwanda, France, and the United States. The audience is already there, before a permanent team exists.
+                </p>
+                <p className="text-white/25 text-[9px] mt-4">Source: BAL Season 2 Recap · Digital Viewership by Country</p>
+              </div>
+
+              {/* Stat 2 — Playoffs hosted */}
+              <div className="px-8 py-8">
+                <div className="text-[5rem] font-light leading-none text-[#c9a840] tabular-nums mb-3" style={{ fontFamily: "var(--font-playfair)" }}>S5</div>
+                <div className="text-white text-sm font-medium mb-2">BAL Playoffs hosted in South Africa</div>
+                <p className="text-white/45 text-sm leading-relaxed">
+                  The BAL chose South Africa — specifically the SunBet Arena in Pretoria — to host the Season 5 Playoffs and Finals in June 2025. The league already trusts South Africa with its most important games.
+                </p>
+                <p className="text-white/25 text-[9px] mt-4">Source: BAL Season 5 Calendar · Playoffs, Pretoria, June 6–14 2025</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
     </section>
   );
 }

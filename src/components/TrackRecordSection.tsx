@@ -78,6 +78,39 @@ export default function TrackRecordSection() {
           ))}
         </div>
 
+        {/* NBA Pipeline */}
+        <div className="mb-16 rounded-sm overflow-hidden" style={{ background: "linear-gradient(135deg, rgba(201,168,64,0.06) 0%, #ffffff 70%)", border: "1px solid rgba(201,168,64,0.22)" }}>
+          <div className="p-8 lg:p-10">
+            <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8">
+              <div className="lg:max-w-lg">
+                <div className="text-[#c9a840] text-[10px] tracking-widest uppercase mb-3 font-medium">NBA Summer League Pipeline</div>
+                <h3 className="text-2xl text-[#0c1e32] font-light mb-3 leading-snug" style={{ fontFamily: "var(--font-playfair)" }}>
+                  #2 globally among all<br />BAL cities for NBA players.
+                </h3>
+                <p className="text-[#3a5a78] text-sm leading-relaxed">
+                  Of the 24 cities that have ever fielded a BAL team, only five have produced players who reached the NBA Summer League. Cape Town is one of them — ranked #2 globally, behind only Cairo. Two Cape Town Tigers players have made it to the league's most prestigious development showcase.
+                </p>
+                <p className="text-[#5a7898] text-[10px] mt-4">Source: Cape Town Player Development · BAL Cities NBA Summer League Rankings</p>
+              </div>
+              <div className="flex flex-col gap-3 lg:min-w-[220px]">
+                <div className="text-[#8aa0b5] text-[10px] tracking-widest uppercase mb-1">Cape Town → NBA Summer League</div>
+                {[
+                  { name: "Evans Ganapamo", team: "Milwaukee Bucks", year: "2022" },
+                  { name: "Samkelo Cele", team: "New York Knicks", year: "2024" },
+                ].map((p) => (
+                  <div key={p.name} className="px-5 py-4 rounded-sm" style={{ background: "rgba(12,30,50,0.04)", border: "1px solid rgba(201,168,64,0.18)" }}>
+                    <div className="text-[#0c1e32] text-sm font-medium">{p.name}</div>
+                    <div className="text-[#c9a840] text-xs mt-0.5">{p.year} · {p.team}</div>
+                  </div>
+                ))}
+                <div className="text-center mt-1">
+                  <span className="text-[10px] text-[#8aa0b5] tracking-wide">9+ total BAL players in NBA Summer League history</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Team cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 mb-12">
           {team.map((m, i) => (
