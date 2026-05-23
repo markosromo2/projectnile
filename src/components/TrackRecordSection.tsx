@@ -53,7 +53,7 @@ export default function TrackRecordSection() {
         </div>
 
         {/* 3-col: portrait | paul info | team 2×2 */}
-        <div className="grid lg:grid-cols-[180px_1fr_1fr] gap-6 mb-8 flex-1">
+        <div className="grid lg:grid-cols-[150px_1fr_1fr] gap-6 mb-8 flex-1">
 
           {/* Portrait — full height */}
           <div data-animate className="relative rounded-sm overflow-hidden self-stretch min-h-[320px]">
@@ -73,30 +73,53 @@ export default function TrackRecordSection() {
           <div data-animate className="flex flex-col">
             <div className="flex items-center gap-3 mb-4">
               <div className="h-[2px] w-6 bg-[#c9a840]" />
-              <span className="text-[#c9a840] text-[10px] tracking-[0.25em] uppercase font-medium">The Operator</span>
+              <span className="text-[#c9a840] text-xs tracking-[0.25em] uppercase font-medium">The Operator</span>
             </div>
-            <h3 className="text-2xl lg:text-3xl text-white font-light mb-4 leading-[0.92]" style={{ fontFamily: "var(--font-playfair)" }}>
+            <h3 className="text-3xl lg:text-4xl text-white font-light mb-4 leading-[0.92]" style={{ fontFamily: "var(--font-playfair)" }}>
               Paul Bragiel.<br />Six continents.<br />
               <span className="text-[#c9a840]">One operator.</span>
             </h3>
-            <p className="text-white/42 text-xs leading-relaxed mb-3 flex-1">
+            <p className="text-white/55 text-sm leading-relaxed mb-4 flex-1">
               Serial entrepreneur and one of the most active cross-continental sports investors in the world. Founded venture capital funds across six continents — including one of the earliest VC operations on the African continent — before transitioning to professional sports franchises. Co-founded Cape Town Tigers from the BAL&apos;s inaugural season (3× Finalist, 4× SA Champion), Kriol Stars (BAL Finalist), invested in Dziki Warszawa (Polish Cup Champions), and the Olympic baseball story connecting sport and international development.
             </p>
-            <div className="grid grid-cols-3 gap-2 mt-auto">
-              {[
-                { org: "Cape Town Tigers", role: "Co-Founder & Chairman", note: "3× BAL Finalist · 4× SA Champion", logo: "/images/ct-tigers-logo.jpeg", dark: false },
-                { org: "Kriol Stars", role: "Co-Founder", note: "Cape Verde · BAL Finalist", logo: "/images/logo-kriol-stars.jpeg", dark: false },
-                { org: "Dziki Warszawa", role: "Early Investor", note: "Polish Cup Champions", logo: "/images/logo-dziki-warszawa.jpeg", dark: false },
-              ].map((r) => (
-                <div key={r.org} className="p-3 rounded-sm flex flex-col" style={{ background: "rgba(201,168,64,0.05)", border: "1px solid rgba(201,168,64,0.12)" }}>
-                  <div className="relative w-full mb-2" style={{ height: "48px" }}>
-                    <Image src={r.logo} alt={r.org} fill className="object-contain object-left" />
+
+            {/* Africa franchises */}
+            <div className="mt-auto">
+              <div className="text-white/25 text-[9px] tracking-[0.3em] uppercase mb-2">Africa</div>
+              <div className="grid grid-cols-2 gap-2 mb-3">
+                {[
+                  { org: "Cape Town Tigers", role: "Co-Founder & Chairman", note: "3× BAL Finalist · 4× SA Champion", logo: "/images/ct-tigers-logo.jpeg" },
+                  { org: "Kriol Stars", role: "Co-Founder", note: "Cape Verde · BAL Finalist", logo: "/images/logo-kriol-stars.jpeg" },
+                ].map((r) => (
+                  <div key={r.org} className="rounded-sm overflow-hidden" style={{ border: "1px solid rgba(201,168,64,0.15)" }}>
+                    <div className="bg-white flex items-center justify-center px-4" style={{ height: "56px" }}>
+                      <div className="relative w-full h-10">
+                        <Image src={r.logo} alt={r.org} fill className="object-contain" />
+                      </div>
+                    </div>
+                    <div className="px-3 py-2" style={{ background: "rgba(201,168,64,0.05)" }}>
+                      <div className="text-[#c9a840] text-xs font-medium leading-tight">{r.org}</div>
+                      <div className="text-white/40 text-[10px] mt-0.5">{r.note}</div>
+                    </div>
                   </div>
-                  <div className="text-[#c9a840] text-[10px] font-medium mb-0.5 leading-tight">{r.org}</div>
-                  <div className="text-white/55 text-[9px] mb-1">{r.role}</div>
-                  <div className="text-white/25 text-[9px] leading-tight">{r.note}</div>
+                ))}
+              </div>
+
+              {/* Europe franchise */}
+              <div className="text-white/25 text-[9px] tracking-[0.3em] uppercase mb-2">Europe</div>
+              <div className="rounded-sm overflow-hidden" style={{ border: "1px solid rgba(201,168,64,0.15)" }}>
+                <div className="flex items-center gap-4 px-4" style={{ background: "rgba(201,168,64,0.05)" }}>
+                  <div className="bg-white flex items-center justify-center rounded-sm shrink-0 my-2" style={{ width: "72px", height: "52px" }}>
+                    <div className="relative w-16 h-10">
+                      <Image src="/images/logo-dziki-warszawa.jpeg" alt="Dziki Warszawa" fill className="object-contain" />
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-[#c9a840] text-xs font-medium leading-tight">Dziki Warszawa</div>
+                    <div className="text-white/40 text-[10px] mt-0.5">Early Investor · Polish Cup Champions</div>
+                  </div>
                 </div>
-              ))}
+              </div>
             </div>
           </div>
 
