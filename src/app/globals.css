@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-navy-950: #04090f;
-  --color-navy-900: #060e1c;
-  --color-navy-800: #091525;
-  --color-navy-700: #0d1e33;
+  --color-navy-950: #080d14;
+  --color-navy-900: #080d14;
+  --color-navy-800: #080d14;
+  --color-navy-700: #0c1e32;
   --font-sans: var(--font-dm-sans);
   --font-serif: var(--font-playfair);
 }
@@ -13,7 +13,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  background-color: #f2f6fb;
+  background-color: #f5f7fa;
   color: #0c1e32;
   font-family: var(--font-dm-sans), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -298,7 +298,7 @@ section[id] { scroll-margin-top: 64px; }
 }
 .card-hover:hover {
   border-color: rgba(201,168,64,0.25);
-  background-color: #0f2540;
+  background-color: #0c1e32;
   box-shadow:
     0 0 0 1px rgba(201,168,64,0.08),
     0 8px 40px rgba(0,0,0,0.45),
@@ -367,7 +367,7 @@ section[id] { scroll-margin-top: 64px; }
   transition: background-color 0.2s ease;
   cursor: default;
 }
-.stat-tile:hover { background-color: #0d1e33; }
+.stat-tile:hover { background-color: #0c1e32; }
 .stat-tile:hover .stat-tile-value { color: #e8d08a; }
 
 /* ── Scroll indicator ───────────────────────────────────────── */

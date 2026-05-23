@@ -14,7 +14,7 @@ export default function ArenaDividerSection() {
       <div className="absolute inset-0" style={{
         background: "linear-gradient(to right, rgba(6,14,28,0.92) 0%, rgba(6,14,28,0.55) 40%, rgba(6,14,28,0.1) 100%)"
       }} />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#060e1c]/50 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#080d14]/50 via-transparent to-transparent" />
 
       <div className="relative h-full max-w-7xl mx-auto px-6 lg:px-10 flex items-center">
         <div className="max-w-xl">

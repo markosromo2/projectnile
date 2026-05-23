@@ -8,7 +8,7 @@ const bottom = [
 
 export default function PhotoStripSection() {
   return (
-    <section className="py-24" style={{ background: "#040d1c" }}>
+    <section className="py-24" style={{ background: "#080d14" }}>
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-4">
 
         <div className="flex items-center gap-3 mb-10">

@@ -87,7 +87,7 @@ export default function InvestmentStructureSection() {
                   <div className="flex flex-col items-center">
                     <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center shrink-0 text-[9px] font-semibold ${
                       i === 0
-                        ? "bg-[#c9a840] border-[#c9a840] text-[#060e1c] shadow-[0_0_10px_rgba(201,168,64,0.4)]"
+                        ? "bg-[#c9a840] border-[#c9a840] text-[#080d14] shadow-[0_0_10px_rgba(201,168,64,0.4)]"
                         : "bg-white border-black/15 text-[#8aa0b5]"
                     }`}>
                       {i === 0 ? "✓" : m.n}

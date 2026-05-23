@@ -1,6 +1,6 @@
 export default function PlayerPipelineSection() {
   return (
-    <section className="bg-white">
+    <section className="bg-[#f5f7fa]">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-24 lg:py-32">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
           <div>
@@ -47,7 +47,7 @@ export default function PlayerPipelineSection() {
                 { v: "3", l: "Record: Single Season (2025)", s: "Most BAL players at one Summer League" },
                 { v: "24", l: "BAL Cities", s: "21 countries on the continent" },
               ].map((s) => (
-                <div key={s.l} className="bg-white p-6 hover:bg-[#f4f0e8] transition-colors">
+                <div key={s.l} className="bg-white p-6 hover:bg-[#f5f7fa] transition-colors">
                   <div className="text-3xl text-[#080d14] font-light mb-1" style={{ fontFamily: "var(--font-playfair)" }}>{s.v}</div>
                   <div className="text-[#080d14]/60 text-xs font-medium leading-snug">{s.l}</div>
                   <div className="text-[#080d14]/30 text-[10px] mt-0.5">{s.s}</div>

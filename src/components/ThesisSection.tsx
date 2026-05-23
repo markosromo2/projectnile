@@ -27,7 +27,7 @@ const pillars = [
 
 export default function ThesisSection() {
   return (
-    <section className="bg-white">
+    <section className="bg-[#f5f7fa]">
       {/* Full-width dark header band */}
       <div className="bg-[#080d14] px-6 lg:px-10 py-16 lg:py-20">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row lg:items-end gap-6 lg:gap-20">

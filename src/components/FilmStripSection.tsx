@@ -17,7 +17,7 @@ const all = [...photos, ...photos];
 
 export default function FilmStripSection() {
   return (
-    <div className="overflow-hidden py-10" style={{ background: "#040d1c" }}>
+    <div className="overflow-hidden py-10" style={{ background: "#080d14" }}>
       <div
         className="flex gap-3"
         style={{ animation: "marquee 56s linear infinite", width: "max-content", willChange: "transform" }}

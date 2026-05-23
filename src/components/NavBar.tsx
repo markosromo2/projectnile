@@ -98,7 +98,7 @@ export default function NavBar() {
           <div className="flex items-center gap-3">
             <button
               onClick={() => scrollTo("contact")}
-              className="hidden lg:block text-xs text-[#060e1c] bg-[#c9a840] hover:bg-[#e8d08a] px-4 py-2 rounded-sm transition-colors font-medium tracking-wide"
+              className="hidden lg:block text-xs text-[#080d14] bg-[#c9a840] hover:bg-[#e8d08a] px-4 py-2 rounded-sm transition-colors font-medium tracking-wide"
             >
               Contact Us
             </button>
@@ -117,7 +117,7 @@ export default function NavBar() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="fixed inset-0 z-40 bg-[#060e1c]/98 backdrop-blur-xl flex flex-col pt-16">
+        <div className="fixed inset-0 z-40 bg-[#080d14]/98 backdrop-blur-xl flex flex-col pt-16">
           <div className="flex-1 overflow-y-auto px-6 py-10 space-y-1">
             {SECTIONS.map((s) => (
               <button
@@ -136,7 +136,7 @@ export default function NavBar() {
             <div className="pt-8">
               <button
                 onClick={() => scrollTo("contact")}
-                className="w-full text-sm text-[#060e1c] bg-[#c9a840] hover:bg-[#e8d08a] py-4 rounded-sm transition-colors font-medium tracking-wide"
+                className="w-full text-sm text-[#080d14] bg-[#c9a840] hover:bg-[#e8d08a] py-4 rounded-sm transition-colors font-medium tracking-wide"
               >
                 Contact Us
               </button>

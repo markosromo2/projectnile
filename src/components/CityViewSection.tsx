@@ -14,7 +14,7 @@ export default function CityViewSection() {
       <div className="absolute inset-0" style={{
         background: "linear-gradient(to bottom right, rgba(4,9,15,0.5) 0%, rgba(4,9,15,0.15) 50%, rgba(4,9,15,0.6) 100%)"
       }} />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#04090f]/85" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#080d14]/85" />
 
       <div className="absolute bottom-12 left-0 right-0">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-end justify-between gap-8">

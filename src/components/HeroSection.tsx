@@ -31,7 +31,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative min-h-screen flex flex-col overflow-hidden" style={{ background: "#040d1c" }}>
+    <section className="relative min-h-screen flex flex-col overflow-hidden" style={{ background: "#080d14" }}>
       {/* Background photo */}
       <div className="absolute inset-0">
         <Image
@@ -44,10 +44,10 @@ export default function HeroSection() {
         />
         {/* Vignette layers — cinematic, not muddy */}
         <div className="absolute inset-0" style={{
-          background: "radial-gradient(ellipse 120% 100% at 50% 50%, transparent 30%, rgba(4,13,28,0.65) 100%)"
+          background: "radial-gradient(ellipse 120% 100% at 50% 50%, transparent 30%, rgba(8,13,20,0.65) 100%)"
         }} />
-        <div className="absolute inset-0" style={{ background: "linear-gradient(to top, #040d1c 0%, rgba(4,13,28,0.45) 40%, transparent 70%)" }} />
-        <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(4,13,28,0.78) 0%, transparent 55%, rgba(4,13,28,0.2) 100%)" }} />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to top, #080d14 0%, rgba(8,13,20,0.45) 40%, transparent 70%)" }} />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(8,13,20,0.78) 0%, transparent 55%, rgba(8,13,20,0.2) 100%)" }} />
       </div>
 
       {/* Subtle grid overlay */}
@@ -74,8 +74,8 @@ export default function HeroSection() {
 
         {/* Photos */}
         <div className="relative overflow-hidden" style={{ width: "220px" }}>
-          <div className="absolute inset-x-0 top-0 h-24 z-10" style={{ background: "linear-gradient(to bottom, #040d1c, transparent)" }} />
-          <div className="absolute inset-x-0 bottom-0 h-24 z-10" style={{ background: "linear-gradient(to top, #040d1c, transparent)" }} />
+          <div className="absolute inset-x-0 top-0 h-24 z-10" style={{ background: "linear-gradient(to bottom, #080d14, transparent)" }} />
+          <div className="absolute inset-x-0 bottom-0 h-24 z-10" style={{ background: "linear-gradient(to top, #080d14, transparent)" }} />
           <div style={{ animation: "marquee-vertical 42s linear infinite", willChange: "transform" }}>
             {[...stripPhotos, ...stripPhotos].map((src, i) => (
               <div key={i} className="relative mb-2 rounded-sm overflow-hidden" style={{ height: "175px" }}>
@@ -111,7 +111,7 @@ export default function HeroSection() {
           <div className="flex flex-wrap gap-3 mb-16">
             <button
               onClick={() => scrollTo("opportunity")}
-              className="btn-shimmer btn-magnetic text-xs text-[#060e1c] bg-[#c9a840] hover:bg-[#e8d08a] px-7 py-3 rounded-sm transition-colors font-medium tracking-wide"
+              className="btn-shimmer btn-magnetic text-xs text-[#080d14] bg-[#c9a840] hover:bg-[#e8d08a] px-7 py-3 rounded-sm transition-colors font-medium tracking-wide"
             >
               View the Opportunity
             </button>

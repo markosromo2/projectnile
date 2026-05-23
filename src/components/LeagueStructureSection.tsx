@@ -5,7 +5,7 @@ const streams = [
 
 export default function LeagueStructureSection() {
   return (
-    <section id="structure" className="bg-[#f4f0e8]">
+    <section id="structure" className="bg-[#f5f7fa]">
       {/* Header */}
       <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-24 pb-16">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-end">

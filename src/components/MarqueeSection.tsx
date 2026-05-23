@@ -15,7 +15,7 @@ export default function MarqueeSection() {
   const all = [...items, ...items];
 
   return (
-    <div className="overflow-hidden border-y border-white/[0.05] select-none" style={{ background: "#060e1c" }}>
+    <div className="overflow-hidden border-y border-white/[0.05] select-none" style={{ background: "#080d14" }}>
       <div className="py-3.5 flex" style={{ animation: "marquee 36s linear infinite" }}>
         {all.map((item, i) => (
           <div key={i} className="flex items-center shrink-0">

@@ -49,7 +49,7 @@ export default function PhotoCarouselSection() {
   };
 
   return (
-    <section className="relative overflow-hidden" style={{ height: "72vh", minHeight: "480px", maxHeight: "760px", background: "#040d1c" }}>
+    <section className="relative overflow-hidden" style={{ height: "72vh", minHeight: "480px", maxHeight: "760px", background: "#080d14" }}>
 
       {/* Slides */}
       {slides.map((s, i) => (
@@ -66,8 +66,8 @@ export default function PhotoCarouselSection() {
             priority={i === 0}
           />
           {/* Cinematic overlay */}
-          <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(4,13,28,0.85) 0%, rgba(4,13,28,0.3) 50%, rgba(4,13,28,0.45) 100%)" }} />
-          <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(4,13,28,0.5) 0%, transparent 60%)" }} />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(8,13,20,0.85) 0%, rgba(8,13,20,0.3) 50%, rgba(8,13,20,0.45) 100%)" }} />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(8,13,20,0.5) 0%, transparent 60%)" }} />
         </div>
       ))}
 

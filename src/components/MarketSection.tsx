@@ -9,7 +9,7 @@ const mediaCompanies = [
 
 export default function MarketSection() {
   return (
-    <section id="market" className="border-t border-white/[0.05] overflow-hidden" style={{ background: "#081b2e" }}>
+    <section id="market" className="border-t border-white/[0.05] overflow-hidden" style={{ background: "#080d14" }}>
 
       {/* Hero stat block — Cape Town aerial backdrop */}
       <div className="relative py-36 lg:py-44">
@@ -22,7 +22,7 @@ export default function MarketSection() {
             style={{ opacity: 0.13 }}
           />
           <div className="absolute inset-0" style={{
-            background: "radial-gradient(ellipse 100% 80% at 50% 50%, transparent 20%, #081b2e 85%)"
+            background: "radial-gradient(ellipse 100% 80% at 50% 50%, transparent 20%, #080d14 85%)"
           }} />
           <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(8,27,46,0.65) 0%, transparent 30%, rgba(8,27,46,0.95) 100%)" }} />
         </div>
@@ -79,7 +79,7 @@ export default function MarketSection() {
 
       {/* Media capital — full width */}
       <div className="px-6 lg:px-10 py-16 lg:py-20" style={{
-        background: "radial-gradient(ellipse 80% 60% at 100% 0%, rgba(26,107,168,0.09) 0%, transparent 60%), radial-gradient(ellipse 60% 40% at 0% 100%, rgba(0,122,77,0.06) 0%, transparent 50%), #081b2e"
+        background: "radial-gradient(ellipse 80% 60% at 100% 0%, rgba(26,107,168,0.09) 0%, transparent 60%), radial-gradient(ellipse 60% 40% at 0% 100%, rgba(0,122,77,0.06) 0%, transparent 50%), #080d14"
       }}>
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-start">

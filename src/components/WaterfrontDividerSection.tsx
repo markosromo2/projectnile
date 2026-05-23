@@ -11,9 +11,9 @@ export default function WaterfrontDividerSection() {
         style={{ transform: "scale(1.02)" }}
       />
       <div className="absolute inset-0" style={{
-        background: "linear-gradient(to right, rgba(9,21,37,0.88) 0%, rgba(9,21,37,0.45) 45%, rgba(9,21,37,0.1) 100%)"
+        background: "linear-gradient(to right, rgba(8,13,20,0.88) 0%, rgba(8,13,20,0.45) 45%, rgba(8,13,20,0.1) 100%)"
       }} />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#091525]/55 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#080d14]/55 via-transparent to-transparent" />
 
       <div className="relative h-full max-w-7xl mx-auto px-6 lg:px-10 flex items-center">
         <div className="max-w-lg" data-animate>
