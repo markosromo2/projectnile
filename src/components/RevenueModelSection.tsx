@@ -1,3 +1,11 @@
+import Image from "next/image";
+
+const saSponsors = [
+  { name: "Uber", logo: "/images/logo-uber.png", dark: true },
+  { name: "Hyundai", logo: "/images/logo-hyundai.png", dark: false },
+  { name: "ServiceNow", logo: "/images/logo-servicenow.png", dark: false },
+];
+
 const leagueStreams = [
   { source: "BAL Media Rights", desc: "Canal+, ESPN, pan-African & international broadcast" },
   { source: "League Sponsorship", desc: "16 sponsors in 2025 · 100% increase in partners YoY" },
@@ -100,9 +108,9 @@ export default function RevenueModelSection() {
             </div>
             <div className="flex flex-col gap-2 lg:min-w-[180px]">
               <div className="text-[#8aa0b5] text-[10px] tracking-widest uppercase mb-1">Season 5 SA Sponsors</div>
-              {["Uber", "Hyundai", "ServiceNow"].map((sponsor) => (
-                <div key={sponsor} className="px-4 py-3 text-sm text-[#0c1e32] font-medium text-center" style={{ background: "rgba(12,30,50,0.05)", border: "1px solid rgba(12,30,50,0.1)" }}>
-                  {sponsor}
+              {saSponsors.map((s) => (
+                <div key={s.name} className="flex items-center justify-center px-4 py-3 rounded-sm overflow-hidden" style={{ background: s.dark ? "#000" : "#fff", border: "1px solid rgba(12,30,50,0.1)", minHeight: "56px" }}>
+                  <Image src={s.logo} alt={s.name} width={100} height={36} className="object-contain max-h-9 w-auto" />
                 </div>
               ))}
             </div>
