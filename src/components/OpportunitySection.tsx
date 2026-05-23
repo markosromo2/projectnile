@@ -55,7 +55,7 @@ export default function OpportunitySection() {
 
         <div className="grid md:grid-cols-3 gap-5">
           {pillars.map((p, i) => (
-            <div key={p.num} data-animate data-delay={String(i + 1)} className="card-stat p-8 lg:p-10 flex flex-col rounded-sm">
+            <div key={p.num} data-animate data-delay={String(i + 1)} className="card-stat p-8 lg:p-10 flex flex-col rounded-sm" style={{ background: "#080d14" }}>
               <div className="flex items-start justify-between mb-8">
                 <div className="text-6xl font-bold leading-none select-none text-white/[0.06]" style={{ fontFamily: "var(--font-playfair)" }}>
                   {p.num}

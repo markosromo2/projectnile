@@ -44,7 +44,7 @@ export default function FinancialProjectionsSection() {
             { v: "31%", num: 31, pre: "", suf: "%", dec: 0, l: "Year 10 Operating Margin", s: "$5.4M operating profit on $17.4M revenue — equivalent to a healthy mid-market franchise" },
             { v: "$17.4M", num: 17.4, pre: "$", suf: "M", dec: 1, l: "2036E Total Revenue", s: "Driven by sponsorship (55%), league distributions (25%), merchandise, and ticketing" },
           ].map((s, i) => (
-            <div key={s.l} data-animate data-delay={String(i + 1)} className="card-stat rounded-sm px-7 py-6">
+            <div key={s.l} data-animate data-delay={String(i + 1)} className="card-stat rounded-sm px-7 py-6" style={{ background: "#080d14" }}>
               <div
                 className="text-3xl font-semibold text-[#c9a840] mb-1 tabular-nums"
                 style={{ fontFamily: "var(--font-playfair)" }}
