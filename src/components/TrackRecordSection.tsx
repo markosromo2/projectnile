@@ -61,23 +61,23 @@ export default function TrackRecordSection() {
         </div>
       </div>
 
-      {/* ── Paul + Team side by side ── */}
+      {/* ── Paul + Team + Track Record — all one section ── */}
       <div style={{ background: "#0d1520" }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-10 py-20 lg:py-24">
           <div className="grid lg:grid-cols-[1fr_380px] gap-10 items-start">
 
             {/* LEFT — Paul Bragiel */}
             <div data-animate>
-              {/* Profile photo */}
-              <div className="relative mb-8 rounded-sm overflow-hidden" style={{ height: "380px" }}>
+              {/* Profile photo — compact */}
+              <div className="relative mb-6 rounded-sm overflow-hidden" style={{ height: "220px" }}>
                 <Image
                   src="/images/ct-paul-headshot.png"
                   alt="Paul Bragiel — Chairman, Capewind Ltd."
                   fill
                   className="object-cover object-top"
                 />
-                <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, transparent 55%, #0d1520 100%)" }} />
-                <div className="absolute inset-x-0 bottom-0 px-6 pb-5">
+                <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, transparent 45%, #0d1520 100%)" }} />
+                <div className="absolute inset-x-0 bottom-0 px-5 pb-4">
                   <div className="text-[#c9a840]/60 text-[9px] tracking-[0.3em] uppercase">Paul Bragiel · Chairman, Capewind Ltd.</div>
                 </div>
               </div>
@@ -138,45 +138,44 @@ export default function TrackRecordSection() {
             </div>
 
           </div>
-        </div>
-      </div>
 
-      {/* ── All achievements together ── */}
-      <div style={{ background: "#080d14", borderTop: "1px solid rgba(255,255,255,0.05)" }}>
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16 lg:py-20">
-          <div className="text-white/28 text-[10px] tracking-widest uppercase mb-8">Track Record — Franchise &amp; Founder</div>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-3">
-            {[
-              { value: "4×", num: 4, suf: "×", label: "SA National Champion", sub: "Most decorated franchise in South African basketball history" },
-              { value: "3×", num: 3, suf: "×", label: "BAL Finals Appearances", sub: "Continental championship stage — Season 1 through Season 5" },
-              { value: "6+", num: 6, suf: "+", label: "Seasons Operating", sub: "Uninterrupted, same ownership group, same city" },
-              { value: "2019", num: null, suf: "", label: "Year Founded", sub: "In the BAL from day one — the only Cape Town franchise in league history" },
-            ].map((s, i) => (
-              <div key={s.label} data-animate data-delay={String(i + 1)} className="card-stat rounded-sm px-6 py-6">
-                <div
-                  className="text-3xl font-semibold text-[#c9a840] mb-1 tabular-nums"
-                  style={{ fontFamily: "var(--font-playfair)" }}
-                  {...(s.num !== null ? { "data-count": String(s.num), "data-count-prefix": "", "data-count-suffix": s.suf, "data-count-decimals": "0" } : {})}
-                >{s.value}</div>
-                <div className="text-white text-xs font-medium">{s.label}</div>
-                <div className="text-white/40 text-[10px] mt-0.5 leading-relaxed">{s.sub}</div>
-              </div>
-            ))}
+          {/* Track Record — on same page as Paul + Team */}
+          <div className="mt-14 pt-10" style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+            <div className="text-white/28 text-[10px] tracking-widest uppercase mb-6">Track Record — Franchise &amp; Founder</div>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-3">
+              {[
+                { value: "4×", num: 4, suf: "×", label: "SA National Champion", sub: "Most decorated franchise in South African basketball history" },
+                { value: "3×", num: 3, suf: "×", label: "BAL Finals Appearances", sub: "Continental championship stage — Season 1 through Season 5" },
+                { value: "6+", num: 6, suf: "+", label: "Seasons Operating", sub: "Uninterrupted, same ownership group, same city" },
+                { value: "2019", num: null, suf: "", label: "Year Founded", sub: "In the BAL from day one — the only Cape Town franchise in league history" },
+              ].map((s, i) => (
+                <div key={s.label} data-animate data-delay={String(i + 1)} className="card-stat rounded-sm px-6 py-5">
+                  <div
+                    className="text-3xl font-semibold text-[#c9a840] mb-1 tabular-nums"
+                    style={{ fontFamily: "var(--font-playfair)" }}
+                    {...(s.num !== null ? { "data-count": String(s.num), "data-count-prefix": "", "data-count-suffix": s.suf, "data-count-decimals": "0" } : {})}
+                  >{s.value}</div>
+                  <div className="text-white text-xs font-medium">{s.label}</div>
+                  <div className="text-white/40 text-[10px] mt-0.5 leading-relaxed">{s.sub}</div>
+                </div>
+              ))}
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              {[
+                { value: "6", label: "Continents", sub: "VC funds founded — US, Asia, Europe, Africa and beyond" },
+                { value: "2", label: "BAL Franchises", sub: "Cape Town Tigers + Kriol Stars — both reached the BAL Finals" },
+                { value: "#2", label: "NBA Pipeline City", sub: "Cape Town ranked #2 globally for NBA Summer League players produced" },
+                { value: "3", label: "Sports Leagues", sub: "NBA/BAL, European basketball, Olympic baseball" },
+              ].map((s, i) => (
+                <div key={s.label} data-animate data-delay={String(i + 1)} className="card-stat rounded-sm px-6 py-5">
+                  <div className="text-3xl font-semibold text-[#c9a840] mb-1 tabular-nums" style={{ fontFamily: "var(--font-playfair)" }}>{s.value}</div>
+                  <div className="text-white text-xs font-medium">{s.label}</div>
+                  <div className="text-white/40 text-[10px] mt-0.5 leading-relaxed">{s.sub}</div>
+                </div>
+              ))}
+            </div>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-            {[
-              { value: "6", label: "Continents", sub: "VC funds founded — US, Asia, Europe, Africa and beyond" },
-              { value: "2", label: "BAL Franchises", sub: "Cape Town Tigers + Kriol Stars — both reached the BAL Finals" },
-              { value: "#2", label: "NBA Pipeline City", sub: "Cape Town ranked #2 globally for NBA Summer League players produced" },
-              { value: "3", label: "Sports Leagues", sub: "NBA/BAL, European basketball, Olympic baseball" },
-            ].map((s, i) => (
-              <div key={s.label} data-animate data-delay={String(i + 1)} className="card-stat rounded-sm px-6 py-6">
-                <div className="text-3xl font-semibold text-[#c9a840] mb-1 tabular-nums" style={{ fontFamily: "var(--font-playfair)" }}>{s.value}</div>
-                <div className="text-white text-xs font-medium">{s.label}</div>
-                <div className="text-white/40 text-[10px] mt-0.5 leading-relaxed">{s.sub}</div>
-              </div>
-            ))}
-          </div>
+
         </div>
       </div>
 
