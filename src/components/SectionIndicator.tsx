@@ -72,16 +72,6 @@ export default function SectionIndicator() {
               }}
             />
 
-            {/* Label — only visible when active */}
-            <span
-              className="text-[9px] tracking-[0.2em] uppercase transition-all duration-300 whitespace-nowrap overflow-hidden"
-              style={{
-                color: isActive ? "#c9a840" : "transparent",
-                maxWidth: isActive ? "80px" : "0px",
-              }}
-            >
-              {s.label}
-            </span>
           </button>
         );
       })}

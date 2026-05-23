@@ -35,11 +35,11 @@ export default function HeroSection() {
       {/* Background photo */}
       <div className="absolute inset-0">
         <Image
-          src="/images/ct-player-mountain-city.jpg"
-          alt="Cape Town Tigers player overlooking Cape Town from Table Mountain"
+          src="/images/ct-player-rock-city.jpg"
+          alt="Cape Town Tigers player overlooking Cape Town from the mountain"
           fill
           className="object-cover object-center"
-          style={{ opacity: 0.55 }}
+          style={{ opacity: 0.65 }}
           priority
         />
         {/* Vignette layers — cinematic, not muddy */}
