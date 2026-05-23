@@ -5,10 +5,10 @@ const moelis = [
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="overflow-hidden" style={{
+    <section id="contact" className="overflow-hidden min-h-screen flex flex-col" style={{
       background: "repeating-linear-gradient(-55deg, transparent 0, transparent 18px, rgba(0,0,0,0.028) 18px, rgba(0,0,0,0.028) 19px), #f5f7fa"
     }}>
-      <div className="py-32 max-w-7xl mx-auto px-6 lg:px-10">
+      <div className="flex-1 py-28 lg:py-36 max-w-7xl mx-auto w-full px-6 lg:px-10 flex flex-col justify-center">
 
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16">
           <div>

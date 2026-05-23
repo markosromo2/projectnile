@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function WaterfrontDividerSection() {
   return (
-    <section className="relative h-[65vh] min-h-[440px] overflow-hidden">
+    <section className="relative h-[70vh] min-h-[480px] overflow-hidden">
       <Image
         src="/images/ct-tigers-jersey.jpg"
         alt="Cape Town Tigers player at the waterfront"

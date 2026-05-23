@@ -1,6 +1,6 @@
 export default function PhotoDividerSection() {
   return (
-    <section className="relative py-32 overflow-hidden border-t border-white/[0.05]" style={{
+    <section className="relative min-h-[75vh] flex flex-col items-center justify-center overflow-hidden border-t border-white/[0.05]" style={{
       background: "radial-gradient(ellipse 80% 70% at 50% 50%, rgba(201,168,64,0.06) 0%, transparent 60%), radial-gradient(ellipse 60% 40% at 0% 100%, rgba(0,122,77,0.05) 0%, transparent 50%), radial-gradient(ellipse 60% 40% at 100% 0%, rgba(26,107,168,0.06) 0%, transparent 50%), #06111f"
     }}>
       {/* Subtle dot grid */}
