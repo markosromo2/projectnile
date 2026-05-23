@@ -64,7 +64,7 @@ export default function ContactSection() {
       </div>
 
       <div className="sa-stripe" />
-      <div className="px-6 lg:px-10 py-5 flex items-center justify-between" style={{ background: "#0c1e32" }}>
+      <div className="px-6 lg:px-10 py-5 flex items-center justify-between" style={{ background: "#080d14" }}>
         <span className="text-white/30 text-[10px] tracking-widest uppercase">Capewind Ltd. · Highly Confidential &amp; Proprietary · 2026</span>
         <span className="text-white/30 text-[10px] tracking-widest uppercase">Cape Town BAL · Paul Bragiel &amp; Lari Kangas</span>
       </div>

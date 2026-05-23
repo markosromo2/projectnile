@@ -186,12 +186,13 @@ section[id] { scroll-margin-top: 64px; }
 
 /* ── Dark scoreboard stat card ──────────────────────────────── */
 .card-stat {
-  background: #0c1e32;
+  background: rgba(255,255,255,0.04);
   border: 1px solid rgba(201,168,64,0.22);
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
   cursor: default;
 }
 .card-stat:hover {
+  background: rgba(255,255,255,0.06);
   border-color: rgba(201,168,64,0.5);
   box-shadow: 0 4px 28px rgba(0,0,0,0.25), 0 0 0 1px rgba(201,168,64,0.12);
 }
