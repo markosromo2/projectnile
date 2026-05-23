@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 const saSponsors = [
-  { name: "Uber", logo: "/images/logo-uber.png", dark: true },
+  { name: "Uber", logo: "/images/logo-uber.png", dark: false },
   { name: "Hyundai", logo: "/images/logo-hyundai.png", dark: false },
   { name: "ServiceNow", logo: "/images/logo-servicenow.png", dark: false },
 ];
