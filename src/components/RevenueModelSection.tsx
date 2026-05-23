@@ -109,11 +109,11 @@ export default function RevenueModelSection() {
           </div>
           <div className="grid grid-cols-3" style={{ borderTop: "1px solid rgba(201,168,64,0.15)" }}>
             {saSponsors.map((s, i) => (
-              <div key={s.name} className="flex flex-col items-center justify-center gap-3 py-8 px-8" style={{
+              <div key={s.name} className="flex flex-col items-center justify-center gap-3 py-10 px-10" style={{
                 background: s.dark ? "#000" : "#fff",
                 borderRight: i < saSponsors.length - 1 ? "1px solid rgba(201,168,64,0.15)" : undefined,
               }}>
-                <div className="relative w-full" style={{ height: "48px" }}>
+                <div className="relative w-full" style={{ height: "64px" }}>
                   <Image src={s.logo} alt={s.name} fill className="object-contain" />
                 </div>
                 <span className="text-[9px] tracking-widest uppercase font-medium" style={{ color: s.dark ? "rgba(255,255,255,0.35)" : "rgba(12,30,50,0.3)" }}>BAL Season 5</span>

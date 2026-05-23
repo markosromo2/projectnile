@@ -108,16 +108,14 @@ export default function TrackRecordSection() {
               {/* Europe franchise */}
               <div className="text-white/25 text-[9px] tracking-[0.3em] uppercase mb-2">Europe</div>
               <div className="rounded-sm overflow-hidden" style={{ border: "1px solid rgba(201,168,64,0.15)" }}>
-                <div className="flex items-center gap-4 px-4" style={{ background: "rgba(201,168,64,0.05)" }}>
-                  <div className="bg-white flex items-center justify-center rounded-sm shrink-0 my-2" style={{ width: "72px", height: "52px" }}>
-                    <div className="relative w-16 h-10">
-                      <Image src="/images/logo-dziki-warszawa.jpeg" alt="Dziki Warszawa" fill className="object-contain" />
-                    </div>
+                <div className="bg-white flex items-center justify-center px-4" style={{ height: "56px" }}>
+                  <div className="relative w-full h-10">
+                    <Image src="/images/logo-dziki-warszawa.jpeg" alt="Dziki Warszawa" fill className="object-contain" />
                   </div>
-                  <div>
-                    <div className="text-[#c9a840] text-xs font-medium leading-tight">Dziki Warszawa</div>
-                    <div className="text-white/40 text-[10px] mt-0.5">Early Investor · Polish Cup Champions</div>
-                  </div>
+                </div>
+                <div className="px-3 py-2" style={{ background: "rgba(201,168,64,0.05)" }}>
+                  <div className="text-[#c9a840] text-xs font-medium leading-tight">Dziki Warszawa</div>
+                  <div className="text-white/40 text-[10px] mt-0.5">Polish Cup Champions</div>
                 </div>
               </div>
             </div>
@@ -146,9 +144,6 @@ export default function TrackRecordSection() {
 
             {/* Emblem strip */}
             <div className="mt-3 flex items-center gap-4 px-4 py-3 rounded-sm" style={{ background: "rgba(201,168,64,0.04)", border: "1px solid rgba(201,168,64,0.12)" }}>
-              <div className="relative w-10 h-10 shrink-0">
-                <Image src="/images/ct-tigers-logo.jpeg" alt="Cape Town Tigers" fill className="object-contain rounded-full" />
-              </div>
               <div className="flex-1 min-w-0">
                 <div className="text-[#c9a840] text-[10px] font-medium tracking-wide leading-tight">Cape Town Tigers</div>
                 <div className="text-white/30 text-[9px] tracking-widest uppercase mt-0.5">Basketball Africa League · Est. 2019</div>
