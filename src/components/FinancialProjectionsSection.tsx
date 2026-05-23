@@ -142,8 +142,8 @@ export default function FinancialProjectionsSection() {
         {/* Photo divider */}
         <div className="relative rounded-sm overflow-hidden mb-16" style={{ height: "320px" }}>
           <Image
-            src="/images/ct-player-mountain-kick.jpg"
-            alt="Cape Town Tigers athlete on Table Mountain"
+            src="/images/ct-city-sunset.jpg"
+            alt="Cape Town CBD and Table Mountain at golden hour"
             fill
             className="object-cover object-center"
             style={{ opacity: 0.75 }}
