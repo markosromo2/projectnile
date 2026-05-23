@@ -97,24 +97,39 @@ export default function TrackRecordSection() {
             </div>
           </div>
 
-          {/* Team — 2×2 compact grid */}
-          <div data-animate data-delay="2">
+          {/* Team — 2×2 grid with bio + emblem */}
+          <div data-animate data-delay="2" className="flex flex-col">
             <div className="text-white/30 text-[10px] tracking-widest uppercase mb-4">Leadership Team</div>
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid grid-cols-2 gap-2 flex-1">
               {team.filter((m) => m.name !== "Paul Bragiel").map((m) => (
-                <div key={m.name} className="rounded-sm p-3" style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.06)" }}>
-                  <div className="flex items-center gap-2 mb-2">
-                    <div className="w-7 h-7 rounded-full border border-[#c9a840]/30 flex items-center justify-center text-[#c9a840] text-[9px] font-medium shrink-0" style={{ background: "rgba(201,168,64,0.07)" }}>
+                <div key={m.name} className="rounded-sm p-4 flex flex-col" style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.06)" }}>
+                  <div className="flex items-center gap-2 mb-3">
+                    <div className="w-9 h-9 rounded-full border border-[#c9a840]/30 flex items-center justify-center text-[#c9a840] text-xs font-medium shrink-0" style={{ background: "rgba(201,168,64,0.07)" }}>
                       {m.initials}
                     </div>
                     <div>
-                      <div className="text-white text-xs font-medium leading-tight">{m.name}</div>
-                      <div className="text-[#c9a840] text-[9px] mt-0.5 leading-tight">{m.title}</div>
+                      <div className="text-white text-sm font-medium leading-tight">{m.name}</div>
+                      <div className="text-[#c9a840] text-[10px] mt-0.5 leading-tight">{m.title}</div>
                     </div>
                   </div>
-                  <div className="text-white/30 text-[9px] tracking-widest uppercase">{m.focus}</div>
+                  <p className="text-white/35 text-[9px] leading-relaxed flex-1">{m.bio}</p>
+                  <div className="text-white/20 text-[8px] tracking-widest uppercase mt-2 pt-2" style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}>{m.focus}</div>
                 </div>
               ))}
+            </div>
+
+            {/* Emblem strip */}
+            <div className="mt-3 flex items-center gap-4 px-4 py-3 rounded-sm" style={{ background: "rgba(201,168,64,0.04)", border: "1px solid rgba(201,168,64,0.12)" }}>
+              <div className="relative w-10 h-10 shrink-0">
+                <Image src="/images/ct-tigers-logo.jpeg" alt="Cape Town Tigers" fill className="object-contain rounded-full" />
+              </div>
+              <div className="flex-1 min-w-0">
+                <div className="text-[#c9a840] text-[10px] font-medium tracking-wide leading-tight">Cape Town Tigers</div>
+                <div className="text-white/30 text-[9px] tracking-widest uppercase mt-0.5">Basketball Africa League · Est. 2019</div>
+              </div>
+              <div className="relative w-8 h-8 shrink-0 opacity-40">
+                <Image src="/images/bal-logo.png" alt="BAL" fill className="object-contain" style={{ filter: "brightness(0) invert(1)" }} />
+              </div>
             </div>
           </div>
 
@@ -123,7 +138,7 @@ export default function TrackRecordSection() {
         {/* Track record — same screen */}
         <div className="pt-6" style={{ borderTop: "1px solid rgba(255,255,255,0.07)" }}>
           <div className="text-white/25 text-[9px] tracking-widest uppercase mb-4">Track Record — Franchise &amp; Founder</div>
-          <div className="grid grid-cols-4 sm:grid-cols-8 gap-2">
+          <div className="grid grid-cols-4 sm:grid-cols-7 gap-2">
             {[
               { value: "4×", num: 4, suf: "×", label: "SA Champion" },
               { value: "3×", num: 3, suf: "×", label: "BAL Finals" },
@@ -132,13 +147,12 @@ export default function TrackRecordSection() {
               { value: "6", num: null, suf: "", label: "Continents" },
               { value: "2", num: null, suf: "", label: "BAL Franchises" },
               { value: "#2", num: null, suf: "", label: "NBA Pipeline" },
-              { value: "3", num: null, suf: "", label: "Sports Leagues" },
             ].map((s, i) => (
-              <div key={s.label} data-animate data-delay={String(i + 1)} className="card-stat rounded-sm px-3 py-4 text-center">
-                <div className="text-xl font-semibold text-[#c9a840] mb-0.5 tabular-nums" style={{ fontFamily: "var(--font-playfair)" }}
+              <div key={s.label} data-animate data-delay={String(i + 1)} className="card-stat rounded-sm px-3 py-5 text-center">
+                <div className="text-2xl font-semibold text-[#c9a840] mb-1 tabular-nums" style={{ fontFamily: "var(--font-playfair)" }}
                   {...(s.num !== null ? { "data-count": String(s.num), "data-count-prefix": "", "data-count-suffix": s.suf, "data-count-decimals": "0" } : {})}
                 >{s.value}</div>
-                <div className="text-white/50 text-[9px] leading-tight">{s.label}</div>
+                <div className="text-white/50 text-[10px] leading-tight">{s.label}</div>
               </div>
             ))}
           </div>
