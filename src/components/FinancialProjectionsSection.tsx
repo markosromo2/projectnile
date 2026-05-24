@@ -142,8 +142,8 @@ export default function FinancialProjectionsSection() {
         {/* Photo divider */}
         <div className="relative rounded-sm overflow-hidden mb-16" style={{ height: "320px" }}>
           <Image
-            src="/images/ct-city-sunset.jpg"
-            alt="Cape Town CBD and Table Mountain at golden hour"
+            src="/images/ct-waterfront-mountain.png"
+            alt="Cape Town V&A Waterfront and Table Mountain aerial"
             fill
             className="object-cover object-center"
             style={{ opacity: 0.75 }}
