@@ -83,43 +83,41 @@ export default function TrackRecordSection() {
               Serial entrepreneur and one of the most active cross-continental sports investors in the world. Founded venture capital funds across six continents — including one of the earliest VC operations on the African continent — before transitioning to professional sports franchises. Co-founded Cape Town Tigers from the BAL&apos;s inaugural season (3× Finalist, 4× SA Champion), Kriol Stars (BAL Finalist), invested in Dziki Warszawa (Polish Cup Champions), and serves as General Manager of the Polish National Baseball Team.
             </p>
 
-            {/* Franchise logos — circular profile style */}
-            <div className="mt-auto">
-              <div className="flex items-end gap-6">
-                {/* Africa */}
-                <div>
-                  <div className="text-white/25 text-[9px] tracking-[0.3em] uppercase mb-3">Africa</div>
-                  <div className="flex items-start gap-4">
-                    {[
-                      { org: "Cape Town Tigers", note: "3× BAL Finalist · 4× SA Champion", logo: "/images/ct-tigers-logo.png" },
-                      { org: "Kriol Stars", note: "Cape Verde · BAL Finalist", logo: "/images/logo-kriol-stars.jpeg" },
-                    ].map((r) => (
-                      <div key={r.org} className="flex flex-col items-center gap-2" style={{ width: "72px" }}>
-                        <div className="rounded-full bg-white flex items-center justify-center shrink-0" style={{ width: "72px", height: "72px", border: "2px solid rgba(201,168,64,0.35)", padding: "4px", boxSizing: "border-box" }}>
-                          {/* eslint-disable-next-line @next/next/no-img-element */}
-                          <img src={r.logo} alt={r.org} style={{ width: "100%", height: "100%", objectFit: "contain", display: "block", borderRadius: "0" }} />
-                        </div>
-                        <div className="text-center">
-                          <div className="text-[#c9a840] text-[9px] font-medium leading-tight">{r.org}</div>
-                          <div className="text-white/35 text-[8px] mt-0.5 leading-tight">{r.note}</div>
-                        </div>
+            {/* Franchise logo cards */}
+            <div className="mt-auto space-y-3">
+              {/* Africa */}
+              <div>
+                <div className="text-white/25 text-[9px] tracking-[0.3em] uppercase mb-2">Africa</div>
+                <div className="grid grid-cols-2 gap-2">
+                  {[
+                    { org: "Cape Town Tigers", note: "3× BAL Finalist · 4× SA Champion", logo: "/images/ct-tigers-logo.png" },
+                    { org: "Kriol Stars", note: "Cape Verde · BAL Finalist", logo: "/images/logo-kriol-stars.jpeg" },
+                  ].map((r) => (
+                    <div key={r.org} className="rounded-sm overflow-hidden" style={{ border: "1px solid rgba(201,168,64,0.15)" }}>
+                      <div className="bg-white flex items-center justify-center" style={{ height: "72px", padding: "10px 14px" }}>
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src={r.logo} alt={r.org} style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain", display: "block" }} />
                       </div>
-                    ))}
-                  </div>
+                      <div className="px-3 py-2" style={{ background: "rgba(201,168,64,0.05)" }}>
+                        <div className="text-[#c9a840] text-[10px] font-medium leading-tight">{r.org}</div>
+                        <div className="text-white/40 text-[9px] mt-0.5 leading-tight">{r.note}</div>
+                      </div>
+                    </div>
+                  ))}
                 </div>
+              </div>
 
-                {/* Europe */}
-                <div>
-                  <div className="text-white/25 text-[9px] tracking-[0.3em] uppercase mb-3">Europe</div>
-                  <div className="flex flex-col items-center gap-2" style={{ width: "72px" }}>
-                    <div className="rounded-full bg-white flex items-center justify-center shrink-0" style={{ width: "72px", height: "72px", border: "2px solid rgba(201,168,64,0.35)", padding: "4px", boxSizing: "border-box" }}>
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src="/images/logo-dziki-warszawa.jpeg" alt="Dziki Warszawa" style={{ width: "100%", height: "100%", objectFit: "contain", display: "block" }} />
-                    </div>
-                    <div className="text-center">
-                      <div className="text-[#c9a840] text-[9px] font-medium leading-tight">Dziki Warszawa</div>
-                      <div className="text-white/35 text-[8px] mt-0.5 leading-tight">Polish Cup Champions</div>
-                    </div>
+              {/* Europe */}
+              <div>
+                <div className="text-white/25 text-[9px] tracking-[0.3em] uppercase mb-2">Europe</div>
+                <div className="rounded-sm overflow-hidden" style={{ border: "1px solid rgba(201,168,64,0.15)" }}>
+                  <div className="bg-white flex items-center justify-center" style={{ height: "72px", padding: "10px 14px" }}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/images/logo-dziki-warszawa.jpeg" alt="Dziki Warszawa" style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain", display: "block" }} />
+                  </div>
+                  <div className="px-3 py-2" style={{ background: "rgba(201,168,64,0.05)" }}>
+                    <div className="text-[#c9a840] text-[10px] font-medium leading-tight">Dziki Warszawa</div>
+                    <div className="text-white/40 text-[9px] mt-0.5 leading-tight">Polish Cup Champions</div>
                   </div>
                 </div>
               </div>
