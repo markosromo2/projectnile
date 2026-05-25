@@ -92,9 +92,9 @@ export default function TrackRecordSection() {
                   { org: "Kriol Stars", role: "Co-Founder", note: "Cape Verde · BAL Finalist", logo: "/images/logo-kriol-stars.jpeg" },
                 ].map((r) => (
                   <div key={r.org} className="rounded-sm overflow-hidden" style={{ border: "1px solid rgba(201,168,64,0.15)" }}>
-                    <div className="bg-white flex items-center justify-center px-3 py-3" style={{ height: "72px" }}>
+                    <div className="bg-white" style={{ height: "72px", padding: "8px 12px" }}>
                       {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={r.logo} alt={r.org} style={{ maxWidth: "100%", maxHeight: "52px", objectFit: "contain", display: "block" }} />
+                      <img src={r.logo} alt={r.org} style={{ width: "100%", height: "100%", objectFit: "contain", display: "block" }} />
                     </div>
                     <div className="px-3 py-2" style={{ background: "rgba(201,168,64,0.05)" }}>
                       <div className="text-[#c9a840] text-xs font-medium leading-tight">{r.org}</div>
@@ -107,9 +107,9 @@ export default function TrackRecordSection() {
               {/* Europe franchise */}
               <div className="text-white/25 text-[9px] tracking-[0.3em] uppercase mb-2">Europe</div>
               <div className="rounded-sm overflow-hidden" style={{ border: "1px solid rgba(201,168,64,0.15)" }}>
-                <div className="bg-white flex items-center justify-center px-3 py-3" style={{ height: "72px" }}>
+                <div className="bg-white" style={{ height: "72px", padding: "8px 12px" }}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/images/logo-dziki-warszawa.jpeg" alt="Dziki Warszawa" style={{ maxWidth: "100%", maxHeight: "52px", objectFit: "contain", display: "block" }} />
+                  <img src="/images/logo-dziki-warszawa.jpeg" alt="Dziki Warszawa" style={{ width: "100%", height: "100%", objectFit: "contain", display: "block" }} />
                 </div>
                 <div className="px-3 py-2" style={{ background: "rgba(201,168,64,0.05)" }}>
                   <div className="text-[#c9a840] text-xs font-medium leading-tight">Dziki Warszawa</div>
