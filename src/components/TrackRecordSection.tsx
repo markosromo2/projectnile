@@ -91,11 +91,11 @@ export default function TrackRecordSection() {
                   <div className="text-white/25 text-[9px] tracking-[0.3em] uppercase mb-3">Africa</div>
                   <div className="flex items-start gap-4">
                     {[
-                      { org: "Cape Town Tigers", note: "3× BAL Finalist · 4× SA Champion", logo: "/images/ct-tigers-logo.jpeg" },
+                      { org: "Cape Town Tigers", note: "3× BAL Finalist · 4× SA Champion", logo: "/images/ct-tigers-logo.png" },
                       { org: "Kriol Stars", note: "Cape Verde · BAL Finalist", logo: "/images/logo-kriol-stars.jpeg" },
                     ].map((r) => (
                       <div key={r.org} className="flex flex-col items-center gap-2" style={{ width: "72px" }}>
-                        <div className="rounded-full bg-white flex items-center justify-center shrink-0" style={{ width: "72px", height: "72px", border: "2px solid rgba(201,168,64,0.35)", padding: "8px", boxSizing: "border-box" }}>
+                        <div className="rounded-full bg-white flex items-center justify-center shrink-0" style={{ width: "72px", height: "72px", border: "2px solid rgba(201,168,64,0.35)", padding: "4px", boxSizing: "border-box" }}>
                           {/* eslint-disable-next-line @next/next/no-img-element */}
                           <img src={r.logo} alt={r.org} style={{ width: "100%", height: "100%", objectFit: "contain", display: "block", borderRadius: "0" }} />
                         </div>
@@ -112,7 +112,7 @@ export default function TrackRecordSection() {
                 <div>
                   <div className="text-white/25 text-[9px] tracking-[0.3em] uppercase mb-3">Europe</div>
                   <div className="flex flex-col items-center gap-2" style={{ width: "72px" }}>
-                    <div className="rounded-full bg-white flex items-center justify-center shrink-0" style={{ width: "72px", height: "72px", border: "2px solid rgba(201,168,64,0.35)", padding: "8px", boxSizing: "border-box" }}>
+                    <div className="rounded-full bg-white flex items-center justify-center shrink-0" style={{ width: "72px", height: "72px", border: "2px solid rgba(201,168,64,0.35)", padding: "4px", boxSizing: "border-box" }}>
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img src="/images/logo-dziki-warszawa.jpeg" alt="Dziki Warszawa" style={{ width: "100%", height: "100%", objectFit: "contain", display: "block" }} />
                     </div>
