@@ -80,7 +80,7 @@ export default function TrackRecordSection() {
               <span className="text-[#c9a840]">One operator.</span>
             </h3>
             <p className="text-white/55 text-sm leading-relaxed mb-4 flex-1">
-              Serial entrepreneur and one of the most active cross-continental sports investors in the world. Founded venture capital funds across six continents — including one of the earliest VC operations on the African continent — before transitioning to professional sports franchises. Co-founded Cape Town Tigers from the BAL&apos;s inaugural season (3× Finalist, 4× SA Champion), Kriol Stars (BAL Finalist), invested in Dziki Warszawa (Polish Cup Champions), and the Olympic baseball story connecting sport and international development.
+              Serial entrepreneur and one of the most active cross-continental sports investors in the world. Founded venture capital funds across six continents — including one of the earliest VC operations on the African continent — before transitioning to professional sports franchises. Co-founded Cape Town Tigers from the BAL&apos;s inaugural season (3× Finalist, 4× SA Champion), Kriol Stars (BAL Finalist), invested in Dziki Warszawa (Polish Cup Champions), and serves as General Manager of the Polish National Baseball Team.
             </p>
 
             {/* Africa franchises */}
