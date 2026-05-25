@@ -1,6 +1,6 @@
 const moelis = [
   { initials: "PB", name: "Paul Bragiel", title: "Chairman, Capewind Ltd.", email: "paul@bragielbros.com", phone: "+1 (312) 483-8458", gold: true },
-  { initials: "LK", name: "Lari Kangas", title: "Co-Founder & Advisor", email: "larikangas@gmail.com", phone: "+358 45 352 5035", gold: false },
+  { initials: "LK", name: "Lari Kangas", title: "Co-Founder & Advisor", email: "lari@feelette.com", phone: "+358 45 352 5035", gold: false },
 ];
 
 export default function ContactSection() {

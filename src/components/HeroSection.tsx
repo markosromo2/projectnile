@@ -105,7 +105,7 @@ export default function HeroSection() {
           </h1>
 
           <p className="text-white/72 text-base sm:text-lg max-w-2xl leading-relaxed mb-10 tracking-[0.01em]">
-            Africa&apos;s #1 purchasing-power market. A Tier 1, Finals-eligible arena already built and proven. Six seasons of uninterrupted operation by the same ownership group — submitting a permanent franchise bid backed by track record no other city in this process can match.
+            Africa&apos;s #1 purchasing-power market. A Tier 1, Finals-eligible arena already built and proven. Established six years ago and operational from Day 1 of the BAL — submitting a permanent franchise bid backed by track record no other city in this process can match.
           </p>
 
           <div className="flex flex-wrap gap-3 mb-16">
