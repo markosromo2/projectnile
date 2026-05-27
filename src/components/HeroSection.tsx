@@ -67,7 +67,7 @@ export default function HeroSection() {
             className="text-[#c9a840]/50 text-[8px] tracking-[0.35em] uppercase shrink-0"
             style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
           >
-            Cape Town Tigers
+            Cape Town
           </span>
           <div className="flex-1 w-px bg-gradient-to-b from-transparent via-[#c9a840]/50 to-transparent" />
         </div>
