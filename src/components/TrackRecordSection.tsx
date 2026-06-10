@@ -144,17 +144,6 @@ export default function TrackRecordSection() {
                 </div>
               ))}
             </div>
-
-            {/* Emblem strip */}
-            <div className="mt-3 flex items-center gap-4 px-4 py-3 rounded-sm" style={{ background: "rgba(201,168,64,0.04)", border: "1px solid rgba(201,168,64,0.12)" }}>
-              <div className="flex-1 min-w-0">
-                <div className="text-[#c9a840] text-[10px] font-medium tracking-wide leading-tight">Cape Town Tigers</div>
-                <div className="text-white/30 text-[9px] tracking-widest uppercase mt-0.5">Basketball Africa League · Est. 2019</div>
-              </div>
-              <div className="relative w-8 h-8 shrink-0 opacity-40">
-                <Image src="/images/bal-logo.png" alt="BAL" fill className="object-contain" style={{ filter: "brightness(0) invert(1)" }} />
-              </div>
-            </div>
           </div>
 
         </div>
