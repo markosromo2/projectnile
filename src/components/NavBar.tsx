@@ -49,26 +49,34 @@ export default function NavBar() {
 
   return (
     <>
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "bg-white/95 backdrop-blur-xl border-b border-black/[0.07] shadow-[0_1px_20px_rgba(0,0,0,0.06)]"
-          : "bg-transparent"
-      }`}>
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 h-16 flex items-center justify-between">
+      <nav className={`fixed left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "top-3" : "top-0"}`}>
+        <div className={`mx-auto transition-all duration-500 ${scrolled ? "max-w-6xl px-3" : "max-w-7xl px-0"}`}>
+          <div
+            className={`px-6 lg:px-8 h-16 flex items-center justify-between transition-all duration-500 ${
+              scrolled
+                ? "rounded-2xl border border-white/10 shadow-[0_18px_50px_-24px_rgba(0,0,0,0.8),inset_0_1px_0_rgba(255,255,255,0.12)]"
+                : "border border-transparent"
+            }`}
+            style={scrolled ? {
+              background: "linear-gradient(135deg, rgba(255,255,255,0.07), rgba(255,255,255,0.012)), rgba(8,14,24,0.62)",
+              backdropFilter: "blur(24px) saturate(1.7)",
+              WebkitBackdropFilter: "blur(24px) saturate(1.7)",
+            } : undefined}
+          >
 
           {/* Logo */}
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="flex items-center gap-3 group shrink-0"
           >
-            <div className="w-7 h-7 border border-[#c9a840]/40 flex items-center justify-center">
-              <div className="w-2 h-2 bg-[#c9a840]/60 rounded-full group-hover:bg-[#c9a840] transition-colors" />
+            <div className="w-8 h-8 rounded-lg border border-[#c9a840]/40 flex items-center justify-center transition-colors group-hover:border-[#c9a840]/70" style={{ background: "linear-gradient(135deg, rgba(201,168,64,0.14), rgba(201,168,64,0.02))" }}>
+              <div className="w-2 h-2 bg-[#c9a840]/70 rounded-sm rotate-45 group-hover:bg-[#c9a840] transition-colors" />
             </div>
             <div className="hidden sm:block text-left">
-              <div className={`text-sm font-medium leading-none tracking-wide transition-colors duration-500 ${scrolled ? "text-[#0c1e32]" : "text-white"}`} style={{ fontFamily: "var(--font-playfair)" }}>
+              <div className="text-sm font-medium leading-none tracking-wide text-white" style={{ fontFamily: "var(--font-playfair)" }}>
                 Cape Town Basketball
               </div>
-              <div className={`text-[9px] mt-0.5 tracking-widest uppercase transition-colors duration-500 ${scrolled ? "text-[#8aa0b5]" : "text-white/30"}`}>BAL Permanent Team</div>
+              <div className="text-[10px] mt-0.5 tracking-widest uppercase text-white/55">BAL Permanent Team</div>
             </div>
           </button>
 
@@ -78,17 +86,15 @@ export default function NavBar() {
               <button
                 key={s.id}
                 onClick={() => scrollTo(s.id)}
-                className={`relative text-[11px] px-4 py-2.5 transition-all duration-200 tracking-[0.06em] uppercase font-medium rounded-sm ${
+                className={`relative text-[11px] px-3.5 py-2.5 transition-all duration-200 tracking-[0.06em] uppercase font-medium rounded-lg ${
                   active === s.id
-                    ? "text-[#c9a840]"
-                    : scrolled
-                      ? "text-[#5a7898] hover:text-[#0c1e32] hover:bg-black/[0.04]"
-                      : "text-white/35 hover:text-white/80 hover:bg-white/[0.04]"
+                    ? "text-[#e8d08a]"
+                    : "text-white/62 hover:text-white/90 hover:bg-white/[0.06]"
                 }`}
               >
                 {s.label}
                 {active === s.id && (
-                  <span className="absolute bottom-0 left-3 right-3 h-[1.5px] bg-[#c9a840] rounded-full" />
+                  <span className="absolute bottom-1 left-3.5 right-3.5 h-[1.5px] bg-gradient-to-r from-[#c9a840] to-[#e8d08a] rounded-full" />
                 )}
               </button>
             ))}
@@ -98,7 +104,8 @@ export default function NavBar() {
           <div className="flex items-center gap-3">
             <button
               onClick={() => scrollTo("contact")}
-              className="hidden lg:block text-xs text-[#080d14] bg-[#c9a840] hover:bg-[#e8d08a] px-4 py-2 rounded-sm transition-colors font-medium tracking-wide"
+              className="btn-shimmer hidden lg:block text-xs text-[#080d14] px-4 py-2 rounded-lg transition-all font-medium tracking-wide hover:brightness-110"
+              style={{ background: "linear-gradient(135deg, #e8d08a, #c9a840)", boxShadow: "0 6px 20px -6px rgba(201,168,64,0.5)" }}
             >
               Contact Us
             </button>
@@ -107,10 +114,11 @@ export default function NavBar() {
               onClick={() => setMobileOpen(v => !v)}
               aria-label="Menu"
             >
-              <span className={`block h-px w-5 transition-all duration-200 origin-center ${scrolled ? "bg-[#0c1e32]" : "bg-white"} ${mobileOpen ? "rotate-45 translate-y-[0.38rem]" : ""}`} />
-              <span className={`block h-px w-5 transition-all duration-200 ${scrolled ? "bg-[#0c1e32]" : "bg-white"} ${mobileOpen ? "opacity-0" : ""}`} />
-              <span className={`block h-px w-5 transition-all duration-200 origin-center ${scrolled ? "bg-[#0c1e32]" : "bg-white"} ${mobileOpen ? "-rotate-45 -translate-y-[0.38rem]" : ""}`} />
+              <span className={`block h-px w-5 transition-all duration-200 origin-center bg-white ${mobileOpen ? "rotate-45 translate-y-[0.38rem]" : ""}`} />
+              <span className={`block h-px w-5 transition-all duration-200 bg-white ${mobileOpen ? "opacity-0" : ""}`} />
+              <span className={`block h-px w-5 transition-all duration-200 origin-center bg-white ${mobileOpen ? "-rotate-45 -translate-y-[0.38rem]" : ""}`} />
             </button>
+          </div>
           </div>
         </div>
       </nav>
@@ -128,7 +136,7 @@ export default function NavBar() {
                 <span className="text-white/60 text-lg font-light group-hover:text-white transition-colors" style={{ fontFamily: "var(--font-playfair)" }}>
                   {s.label}
                 </span>
-                <svg width="14" height="10" viewBox="0 0 14 10" fill="none" className="text-white/20 group-hover:text-[#c9a840] transition-colors">
+                <svg width="14" height="10" viewBox="0 0 14 10" fill="none" className="text-white/42 group-hover:text-[#c9a840] transition-colors">
                   <path d="M1 5h12M8 1l5 4-5 4" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </button>

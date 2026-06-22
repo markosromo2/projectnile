@@ -34,7 +34,7 @@ export default function LeagueStructureSection() {
             50<span className="text-[#c9a840]">%</span>
           </div>
           <div className="text-white text-base font-medium mb-3">of League Revenues Distributed to Permanent Teams</div>
-          <div className="text-white/35 text-sm leading-relaxed max-w-sm">
+          <div className="text-white/55 text-sm leading-relaxed max-w-sm">
             With a guaranteed floor of $2M per team from 2028 ($1M in year one under Caravan model) — a stable income foundation regardless of local commercial performance.
           </div>
         </div>

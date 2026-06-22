@@ -76,7 +76,7 @@ export default function PhotoCarouselSection() {
         <div className="flex items-end justify-between">
           <div>
             <p
-              className="text-white/40 text-[9px] tracking-[0.3em] uppercase mb-2 transition-opacity duration-500"
+              className="text-white/58 text-[10px] tracking-[0.3em] uppercase mb-2 transition-opacity duration-500"
               style={{ opacity: transitioning ? 0 : 1 }}
             >
               {slides[current].sub}

@@ -16,7 +16,7 @@ export default function PlayerDevelopmentSection() {
             <span className="text-[#c9a840]">African farm league.</span><br />
             Cape Town already has the proof.
           </h2>
-          <p className="text-white/45 text-sm max-w-sm leading-relaxed lg:text-right tracking-[0.01em]">
+          <p className="text-white/62 text-sm max-w-sm leading-relaxed lg:text-right tracking-[0.01em]">
             The NBA's stated ambition is to build a development pipeline from Africa into the league. A permanent Cape Town franchise sits at the centre of that pipeline — with two players already on the path.
           </p>
         </div>
@@ -33,7 +33,7 @@ export default function PlayerDevelopmentSection() {
             />
             <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(8,13,20,0.7) 0%, transparent 60%)" }} />
             <div className="absolute bottom-4 left-4">
-              <span className="text-white/45 text-[9px] tracking-[0.25em] uppercase">Training · Cape Town</span>
+              <span className="text-white/62 text-[10px] tracking-[0.25em] uppercase">Training · Cape Town</span>
             </div>
           </div>
           <div className="relative overflow-hidden rounded-sm">
@@ -46,7 +46,7 @@ export default function PlayerDevelopmentSection() {
             />
             <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(8,13,20,0.7) 0%, transparent 60%)" }} />
             <div className="absolute bottom-4 left-4">
-              <span className="text-white/45 text-[9px] tracking-[0.25em] uppercase">Development · Cape Town Tigers</span>
+              <span className="text-white/62 text-[10px] tracking-[0.25em] uppercase">Development · Cape Town Tigers</span>
             </div>
           </div>
         </div>
@@ -61,7 +61,7 @@ export default function PlayerDevelopmentSection() {
                 <h3 className="text-2xl lg:text-3xl text-white font-light leading-snug mb-4" style={{ fontFamily: "var(--font-playfair)" }}>
                   BAL player contracts<br />as appreciating assets.
                 </h3>
-                <p className="text-white/45 text-sm leading-relaxed max-w-lg">
+                <p className="text-white/62 text-sm leading-relaxed max-w-lg">
                   A permanent BAL franchise holds multi-year development contracts on African talent. Those contracts appreciate in value as players progress through the NBA pipeline — from BAL competition to Summer League invitations, two-way contracts, and G-League roster positions. Cape Town has already placed two players on that path. As the NBA scales its Africa development mandate, the supply of marketable pipeline assets from a proven franchise grows with it. It is the same model that built European football&apos;s transfer economy. The BAL is building it for African basketball.
                 </p>
               </div>
@@ -72,9 +72,9 @@ export default function PlayerDevelopmentSection() {
                   { label: "Monetise", value: "Transferable", note: "NBA / G-League contract demand" },
                 ].map((s) => (
                   <div key={s.label} className="text-center">
-                    <div className="text-[10px] text-white/30 tracking-widest uppercase mb-2">{s.label}</div>
+                    <div className="text-[10px] text-white/52 tracking-widest uppercase mb-2">{s.label}</div>
                     <div className="text-sm font-medium text-[#c9a840] mb-1 leading-snug">{s.value}</div>
-                    <div className="text-white/35 text-[9px] leading-snug">{s.note}</div>
+                    <div className="text-white/55 text-[10px] leading-snug">{s.note}</div>
                   </div>
                 ))}
               </div>
@@ -84,7 +84,7 @@ export default function PlayerDevelopmentSection() {
 
         {/* NBA Pipeline Proof — large cards */}
         <div className="mb-10">
-          <div className="text-white/40 text-[10px] tracking-widest uppercase mb-6">Cape Town Tigers — Players Placed in the NBA Pipeline</div>
+          <div className="text-white/58 text-[10px] tracking-widest uppercase mb-6">Cape Town Tigers — Players Placed in the NBA Pipeline</div>
           <div className="grid lg:grid-cols-2 gap-4 mb-6">
             {[
               {
@@ -105,16 +105,16 @@ export default function PlayerDevelopmentSection() {
                 <div className="text-white text-2xl font-light mb-2 leading-snug" style={{ fontFamily: "var(--font-playfair)" }}>{p.name}</div>
                 <div className="text-[#c9a840]/70 text-sm mb-5 leading-relaxed">{p.path}</div>
                 <div className="h-px mb-5" style={{ background: "rgba(201,168,64,0.15)" }} />
-                <p className="text-white/40 text-xs leading-relaxed">{p.note}</p>
+                <p className="text-white/58 text-xs leading-relaxed">{p.note}</p>
               </div>
             ))}
           </div>
-          <p className="text-white/25 text-[9px]">2025 saw a record 3 BAL players at a single NBA Summer League — Las Vegas. The pipeline is accelerating. · Source: Cape Town Player Development · BAL Cities NBA Summer League Rankings</p>
+          <p className="text-white/48 text-[10px]">2025 saw a record 3 BAL players at a single NBA Summer League — Las Vegas. The pipeline is accelerating. · Source: Cape Town Player Development · BAL Cities NBA Summer League Rankings</p>
         </div>
 
         {/* City ranking — full width */}
         <div data-animate className="rounded-sm p-8" style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)" }}>
-          <div className="text-white/40 text-[10px] tracking-widest uppercase mb-8">BAL Cities — NBA Summer League Players Produced · All 24 cities, only 5 have placed a player</div>
+          <div className="text-white/58 text-[10px] tracking-widest uppercase mb-8">BAL Cities — NBA Summer League Players Produced · All 24 cities, only 5 have placed a player</div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
             {[
               { city: "Cairo", country: "Egypt", count: 3, pct: 100, note: "Anas Mahmoud, Marawan Sarhan, Mostafa Kejo" },
@@ -124,13 +124,13 @@ export default function PlayerDevelopmentSection() {
               { city: "Dakar", country: "Senegal", count: 1, pct: 33, note: "Aliou Diarra — No. 1 G League Int'l Draft pick" },
             ].map((r) => (
               <div key={r.city} className={`p-5 rounded-sm ${r.highlight ? "" : ""}`} style={{ background: r.highlight ? "rgba(201,168,64,0.06)" : "rgba(255,255,255,0.02)", border: r.highlight ? "1px solid rgba(201,168,64,0.2)" : "1px solid rgba(255,255,255,0.05)" }}>
-                <div className={`text-3xl font-light tabular-nums mb-1 ${r.highlight ? "text-[#c9a840]" : "text-white/50"}`} style={{ fontFamily: "var(--font-playfair)" }}>{r.count}</div>
+                <div className={`text-3xl font-light tabular-nums mb-1 ${r.highlight ? "text-[#c9a840]" : "text-white/66"}`} style={{ fontFamily: "var(--font-playfair)" }}>{r.count}</div>
                 <div className={`text-sm font-medium mb-0.5 ${r.highlight ? "text-[#c9a840]" : "text-white/70"}`}>{r.city}</div>
-                <div className="text-white/30 text-[9px] mb-3">{r.country}</div>
+                <div className="text-white/52 text-[10px] mb-3">{r.country}</div>
                 <div className="h-[2px] rounded-full mb-3" style={{ background: "rgba(255,255,255,0.06)" }}>
                   <div className="h-full rounded-full" data-bar-pct={r.pct} style={{ width: "0%", background: r.highlight ? "linear-gradient(to right, #b8942e, #e8c84a)" : "rgba(255,255,255,0.2)" }} />
                 </div>
-                <div className="text-white/25 text-[9px] leading-relaxed">{r.note}</div>
+                <div className="text-white/48 text-[10px] leading-relaxed">{r.note}</div>
               </div>
             ))}
           </div>

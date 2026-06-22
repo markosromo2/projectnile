@@ -38,7 +38,7 @@ export default function CityViewSection() {
             ].map((s) => (
               <div key={s.l} className="px-7 py-6">
                 <div className="text-2xl font-light text-white tabular-nums" style={{ fontFamily: "var(--font-playfair)" }}>{s.v}</div>
-                <div className="text-white/38 text-[9px] tracking-widest uppercase mt-1">{s.l}</div>
+                <div className="text-white/58 text-[10px] tracking-widest uppercase mt-1">{s.l}</div>
               </div>
             ))}
           </div>

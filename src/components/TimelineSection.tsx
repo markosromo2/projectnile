@@ -52,7 +52,7 @@ export default function TimelineSection() {
               border: p.active ? "1px solid rgba(201,168,64,0.35)" : undefined
             }}>
               <div className="flex items-center justify-between mb-5">
-                <span className="text-[#8aa0b5] text-[10px] tracking-widest uppercase">{p.n}</span>
+                <span className="text-[#5d7a93] text-[10px] tracking-widest uppercase">{p.n}</span>
                 {p.active && (
                   <span className="text-[10px] text-[#c9a840] border border-[#c9a840]/35 px-2 py-0.5 rounded-sm tracking-widest uppercase">Active</span>
                 )}
@@ -60,13 +60,13 @@ export default function TimelineSection() {
               <h3 className={`text-sm font-medium mb-3 leading-snug ${p.active ? "text-[#0c1e32]" : "text-[#3a5a78]"}`} style={{ fontFamily: "var(--font-playfair)" }}>
                 {p.title}
               </h3>
-              <p className="text-[#8aa0b5] text-sm leading-relaxed flex-1">{p.desc}</p>
+              <p className="text-[#5d7a93] text-sm leading-relaxed flex-1">{p.desc}</p>
               {p.date && <div className="mt-4 text-[#c9a840] text-xs font-medium">{p.date}</div>}
             </div>
           ))}
         </div>
 
-        <p className="text-[#8aa0b5] text-sm leading-relaxed max-w-3xl">
+        <p className="text-[#5d7a93] text-sm leading-relaxed max-w-3xl">
           The Company reserves the right to evaluate the terms and conditions of any proposal, reject any proposal without specifying reasons, and alter or terminate this process at any time. The Company may negotiate with one or more potential purchasers and enter into definitive agreements without notice or obligation to other potential purchasers.
         </p>
 

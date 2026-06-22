@@ -57,6 +57,9 @@ export default function HeroSection() {
         maskImage: "linear-gradient(to bottom, transparent, rgba(0,0,0,0.4) 30%, rgba(0,0,0,0.4) 70%, transparent)",
       }} />
 
+      {/* Ambient aurora glow */}
+      <div className="aurora aurora-ice opacity-70" />
+
       {/* Vertical photo strip — right side, xl screens only */}
       <div className={`absolute top-16 right-10 bottom-28 hidden lg:flex items-stretch gap-3 z-10 pointer-events-none transition-opacity duration-1000 ${mounted ? "opacity-100" : "opacity-0"}`}>
 
@@ -64,7 +67,7 @@ export default function HeroSection() {
         <div className="flex flex-col items-center gap-4 py-8">
           <div className="flex-1 w-px bg-gradient-to-b from-transparent via-[#c9a840]/50 to-transparent" />
           <span
-            className="text-[#c9a840]/50 text-[8px] tracking-[0.35em] uppercase shrink-0"
+            className="text-[#c9a840]/50 text-[10px] tracking-[0.35em] uppercase shrink-0"
             style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
           >
             Cape Town
@@ -117,7 +120,7 @@ export default function HeroSection() {
             </button>
             <button
               onClick={() => scrollTo("contact")}
-              className="btn-magnetic text-xs text-white/45 border border-white/12 hover:border-white/28 hover:text-white/65 px-7 py-3 rounded-sm transition-all tracking-wide"
+              className="btn-magnetic text-xs text-white/62 border border-white/12 hover:border-white/28 hover:text-white/65 px-7 py-3 rounded-sm transition-all tracking-wide"
             >
               Contact Us
             </button>
@@ -125,14 +128,20 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Stats strip */}
-      <div className={`relative z-10 border-t border-white/[0.06] transition-all duration-1000 delay-300 ${mounted ? "opacity-100" : "opacity-0"}`}>
-        <div className="max-w-7xl mx-auto">
+      {/* Stats strip — glass bar */}
+      <div className={`relative z-10 transition-all duration-1000 delay-300 ${mounted ? "opacity-100" : "opacity-0"}`} style={{
+        background: "linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01)), rgba(7,11,20,0.55)",
+        backdropFilter: "blur(20px) saturate(1.5)",
+        WebkitBackdropFilter: "blur(20px) saturate(1.5)",
+        borderTop: "1px solid rgba(255,255,255,0.1)",
+        boxShadow: "inset 0 1px 0 rgba(255,255,255,0.1)",
+      }}>
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-2 sm:grid-cols-4">
             {stats.map((s, i) => (
               <div
                 key={s.label}
-                className={`px-6 py-5 hover:bg-white/[0.025] transition-colors cursor-default group ${i < stats.length - 1 ? "border-r border-white/[0.05]" : ""}`}
+                className={`px-6 py-5 hover:bg-white/[0.04] transition-colors cursor-default group ${i < stats.length - 1 ? "border-r border-white/[0.06]" : ""}`}
               >
                 <div
                   className="text-xl sm:text-2xl font-light text-white mb-0.5 tabular-nums group-hover:text-[#e8d08a] transition-colors"
@@ -144,7 +153,7 @@ export default function HeroSection() {
                     "data-count-decimals": String(s.dec),
                   } : {})}
                 >{s.value}</div>
-                <div className="text-white/28 text-[9px] tracking-[0.2em] uppercase">{s.label}</div>
+                <div className="text-white/50 text-[10px] tracking-[0.2em] uppercase">{s.label}</div>
               </div>
             ))}
           </div>

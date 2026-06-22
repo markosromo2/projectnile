@@ -27,7 +27,7 @@ export default function PhotoStripSection() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
             <div className="absolute bottom-5 left-5">
-              <span className="text-white/40 text-[9px] tracking-[0.3em] uppercase block mb-1">The City</span>
+              <span className="text-white/58 text-[10px] tracking-[0.3em] uppercase block mb-1">The City</span>
               <p className="text-white text-sm font-light leading-snug" style={{ fontFamily: "var(--font-playfair)" }}>
                 Cape Town · Table Mountain
               </p>
@@ -43,7 +43,7 @@ export default function PhotoStripSection() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
             <div className="absolute bottom-5 left-5">
-              <span className="text-white/40 text-[9px] tracking-[0.3em] uppercase block mb-1">The Team</span>
+              <span className="text-white/58 text-[10px] tracking-[0.3em] uppercase block mb-1">The Team</span>
               <p className="text-white/80 text-xs font-light">Cape Town Tigers · BAL</p>
             </div>
           </div>
@@ -61,7 +61,7 @@ export default function PhotoStripSection() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-transparent" />
               <div className="absolute bottom-4 left-4">
-                <span className="text-white/50 text-[9px] tracking-[0.25em] uppercase">{p.caption}</span>
+                <span className="text-white/66 text-[10px] tracking-[0.25em] uppercase">{p.caption}</span>
               </div>
             </div>
           ))}

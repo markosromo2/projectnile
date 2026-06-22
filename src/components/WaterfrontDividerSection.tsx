@@ -32,7 +32,7 @@ export default function WaterfrontDividerSection() {
             ].map((s) => (
               <div key={s.l} className="glass px-7 py-5">
                 <div className="text-2xl font-light text-white tabular-nums" style={{ fontFamily: "var(--font-playfair)" }}>{s.v}</div>
-                <div className="text-white/38 text-[9px] tracking-widest uppercase mt-0.5">{s.l}</div>
+                <div className="text-white/58 text-[10px] tracking-widest uppercase mt-0.5">{s.l}</div>
               </div>
             ))}
           </div>

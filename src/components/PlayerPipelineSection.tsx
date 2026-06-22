@@ -57,10 +57,10 @@ export default function PlayerPipelineSection() {
 
             <div className="bg-[#080d14] p-8">
               <div className="text-[#c9a840] text-[10px] tracking-[0.25em] uppercase mb-4 font-medium">Development Economics</div>
-              <p className="text-white/50 text-sm leading-relaxed">
+              <p className="text-white/66 text-sm leading-relaxed">
                 The BAL&apos;s permanent team model creates a direct revenue stream: identify Cape Town talent early, develop it through the world-class Stellenbosch HPSU infrastructure, and monetise through player trading or NBA pathway fees. Cape Town&apos;s #2 ranking is a compounding structural advantage — each NBA placement validates the model and raises franchise visibility internationally.
               </p>
-              <p className="text-white/20 text-[10px] mt-5">Source: Cape Town Player Development Report, Moelis &amp; Company</p>
+              <p className="text-white/42 text-[10px] mt-5">Source: Cape Town Player Development Report, Moelis &amp; Company</p>
             </div>
           </div>
         </div>

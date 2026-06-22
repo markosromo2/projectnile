@@ -57,7 +57,7 @@ export default function VenueSection() {
               </div>
             </div>
 
-            <div className="text-[#8aa0b5] text-xs tracking-widest uppercase mb-6">Arena Specifications</div>
+            <div className="text-[#5d7a93] text-xs tracking-widest uppercase mb-6">Arena Specifications</div>
             <table className="data-table-light panel-light mb-10">
               <tbody>
                 {[
@@ -71,7 +71,7 @@ export default function VenueSection() {
                   { label: "BAL Compliance Status", value: "Compliant — Season 1" },
                 ].map((s) => (
                   <tr key={s.label}>
-                    <td><span className="text-[#5a7898]">{s.label}</span></td>
+                    <td><span className="text-[#48657f]">{s.label}</span></td>
                     <td className="text-right">
                       <span className={`font-medium ${s.highlight ? "text-[#c9a840]" : "text-[#0c1e32]"}`}>{s.value}</span>
                     </td>
@@ -90,7 +90,7 @@ export default function VenueSection() {
               </p>
             </div>
 
-            <div className="text-[#8aa0b5] text-xs tracking-widest uppercase mb-5">Ticket Pricing (from 2028 Home/Away Model)</div>
+            <div className="text-[#5d7a93] text-xs tracking-widest uppercase mb-5">Ticket Pricing (from 2028 Home/Away Model)</div>
             <table className="data-table-light panel-light">
               <thead>
                 <tr>
@@ -106,14 +106,14 @@ export default function VenueSection() {
                   { zone: "Upper Level", price: "R150", usd: "~$8.10" },
                 ].map((z) => (
                   <tr key={z.zone}>
-                    <td><span className="text-[#5a7898]">{z.zone}</span></td>
+                    <td><span className="text-[#48657f]">{z.zone}</span></td>
                     <td className="text-right"><span className="text-[#0c1e32] font-medium" style={{ fontFamily: "var(--font-playfair)" }}>{z.price}</span></td>
                     <td className="text-right hidden sm:table-cell"><span className="text-[#3a5a78] text-xs">{z.usd}</span></td>
                   </tr>
                 ))}
               </tbody>
             </table>
-            <p className="text-[#5a7898] text-[10px] mt-3 tracking-wide">BAL average ticket 2025: $10.40 per game · Average BAL attendance: ~5,700 per game</p>
+            <p className="text-[#48657f] text-[10px] mt-3 tracking-wide">BAL average ticket 2025: $10.40 per game · Average BAL attendance: ~5,700 per game</p>
           </div>
         </div>
 

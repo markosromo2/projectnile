@@ -53,7 +53,7 @@ export default function SectionIndicator() {
           >
             {/* Number */}
             <span
-              className="text-[9px] tabular-nums transition-all duration-300 font-medium"
+              className="text-[10px] tabular-nums transition-all duration-300 font-medium"
               style={{
                 color: isActive ? "#c9a840" : "rgba(255,255,255,0.18)",
                 fontFamily: "var(--font-playfair)",

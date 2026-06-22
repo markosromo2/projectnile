@@ -54,14 +54,14 @@ export default function FinancialProjectionsSection() {
                 data-count-decimals={String(s.dec)}
               >{s.v}</div>
               <div className="text-white text-xs font-medium">{s.l}</div>
-              <div className="text-white/40 text-xs mt-0.5 leading-relaxed">{s.s}</div>
+              <div className="text-white/58 text-xs mt-0.5 leading-relaxed">{s.s}</div>
             </div>
           ))}
         </div>
 
         {/* Revenue trajectory chart */}
         <div className="mb-16 panel-light p-8">
-          <div className="text-[#8aa0b5] text-xs tracking-widest uppercase mb-8">Revenue Trajectory — 2027 to 2036</div>
+          <div className="text-[#5d7a93] text-xs tracking-widest uppercase mb-8">Revenue Trajectory — 2027 to 2036</div>
           <div className="flex items-end gap-3 sm:gap-5" style={{ height: "180px" }}>
             {[
               { year: "2027E", rev: "$1.6M", pct: 9,   note: "Caravan",     highlight: false },
@@ -73,7 +73,7 @@ export default function FinancialProjectionsSection() {
               <div key={b.year} className="flex flex-col items-center flex-1 h-full">
                 {/* Value label */}
                 <div className="flex-1 flex flex-col justify-end w-full">
-                  <div className={`text-center mb-2 font-light tabular-nums text-xs sm:text-sm ${b.highlight ? "text-[#c9a840]" : "text-[#5a7898]"}`}
+                  <div className={`text-center mb-2 font-light tabular-nums text-xs sm:text-sm ${b.highlight ? "text-[#c9a840]" : "text-[#48657f]"}`}
                     style={{ fontFamily: "var(--font-playfair)" }}>
                     {b.rev}
                   </div>
@@ -94,8 +94,8 @@ export default function FinancialProjectionsSection() {
                 </div>
                 {/* Year label */}
                 <div className="mt-2.5 text-center">
-                  <div className={`text-[10px] font-medium ${b.highlight ? "text-[#0c1e32]" : "text-[#8aa0b5]"}`}>{b.year}</div>
-                  <div className="text-[9px] text-[#5a7898] tracking-wide hidden sm:block">{b.note}</div>
+                  <div className={`text-[10px] font-medium ${b.highlight ? "text-[#0c1e32]" : "text-[#5d7a93]"}`}>{b.year}</div>
+                  <div className="text-[10px] text-[#48657f] tracking-wide hidden sm:block">{b.note}</div>
                 </div>
               </div>
             ))}
@@ -112,7 +112,7 @@ export default function FinancialProjectionsSection() {
                 <h3 className="text-2xl lg:text-3xl text-white font-light leading-snug mb-3" style={{ fontFamily: "var(--font-playfair)" }}>
                   Year 4.<br />The turn to profit.
                 </h3>
-                <p className="text-white/45 text-sm leading-relaxed max-w-lg">
+                <p className="text-white/62 text-sm leading-relaxed max-w-lg">
                   The 2028 first year of Home/Away operations carries an expected ($0.6M) launch deficit — upfront investment in arena, staffing, and market establishment. By Year 4 the franchise turns its first operating surplus, then compounds to a 31% margin by Year 10.
                 </p>
               </div>
@@ -131,7 +131,7 @@ export default function FinancialProjectionsSection() {
                       }}
                     >{m.value}</div>
                     <div className="text-white/55 text-[10px] font-medium uppercase tracking-wide mb-0.5">{m.label}</div>
-                    <div className="text-white/25 text-[9px]">{m.note}</div>
+                    <div className="text-white/48 text-[10px]">{m.note}</div>
                   </div>
                 ))}
               </div>
@@ -163,7 +163,7 @@ export default function FinancialProjectionsSection() {
         <div className="grid lg:grid-cols-2 gap-14 mb-16">
           {/* P&L table */}
           <div>
-            <div className="text-[#8aa0b5] text-xs tracking-widest uppercase mb-5">Illustrative P&amp;L — Key Years</div>
+            <div className="text-[#5d7a93] text-xs tracking-widest uppercase mb-5">Illustrative P&amp;L — Key Years</div>
             <table className="data-table-light panel-light">
               <thead>
                 <tr>
@@ -186,13 +186,13 @@ export default function FinancialProjectionsSection() {
                 ))}
               </tbody>
             </table>
-            <p className="text-[#5a7898] text-[10px] mt-3">Source: BCG analysis, NBA Africa management, Moelis &amp; Company Fall 2025</p>
+            <p className="text-[#48657f] text-[10px] mt-3">Source: BCG analysis, NBA Africa management, Moelis &amp; Company Fall 2025</p>
           </div>
 
           {/* Revenue breakdown */}
           <div>
             <div className="panel-light p-6">
-              <div className="text-[#8aa0b5] text-[10px] tracking-widest uppercase mb-5">2036E Revenue by Category</div>
+              <div className="text-[#5d7a93] text-[10px] tracking-widest uppercase mb-5">2036E Revenue by Category</div>
               <div className="space-y-5">
                 {breakdown.map((r) => (
                   <div key={r.label}>

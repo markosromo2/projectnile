@@ -67,7 +67,7 @@ export default function InvestmentStructureSection() {
             {terms.map((t, i) => (
               <div key={t.label} className={`grid sm:grid-cols-[1fr_auto] gap-4 items-start px-7 py-5 ${i < terms.length - 1 ? "border-b border-black/[0.05]" : ""} hover:bg-black/[0.015] transition-colors`}>
                 <div>
-                  <div className="text-[#8aa0b5] text-[10px] tracking-widest uppercase mb-1">{t.label}</div>
+                  <div className="text-[#5d7a93] text-[10px] tracking-widest uppercase mb-1">{t.label}</div>
                   <div className="text-[#3a5a78] text-sm leading-relaxed">{t.detail}</div>
                 </div>
                 <div className="text-right shrink-0">
@@ -79,16 +79,16 @@ export default function InvestmentStructureSection() {
 
           {/* Process timeline */}
           <div>
-            <div className="text-[#8aa0b5] text-xs tracking-widest uppercase mb-6">Closing Process</div>
+            <div className="text-[#5d7a93] text-xs tracking-widest uppercase mb-6">Closing Process</div>
             <div className="space-y-0">
               {milestones.map((m, i) => (
                 <div key={m.n} className="flex gap-5">
                   {/* Line + dot */}
                   <div className="flex flex-col items-center">
-                    <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center shrink-0 text-[9px] font-semibold ${
+                    <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center shrink-0 text-[10px] font-semibold ${
                       i === 0
                         ? "bg-[#c9a840] border-[#c9a840] text-[#080d14] shadow-[0_0_10px_rgba(201,168,64,0.4)]"
-                        : "bg-white border-black/15 text-[#8aa0b5]"
+                        : "bg-white border-black/15 text-[#5d7a93]"
                     }`}>
                       {i === 0 ? "✓" : m.n}
                     </div>
@@ -99,9 +99,9 @@ export default function InvestmentStructureSection() {
                   {/* Content */}
                   <div className="pb-6">
                     <div className={`text-sm font-medium leading-snug ${i === 0 ? "text-[#0c1e32]" : "text-[#3a5a78]"}`}>{m.label}</div>
-                    <div className="text-[#8aa0b5] text-xs mt-0.5">{m.sub}</div>
+                    <div className="text-[#5d7a93] text-xs mt-0.5">{m.sub}</div>
                     {i === 0 && (
-                      <span className="inline-block mt-2 text-[9px] text-[#c9a840] border border-[#c9a840]/35 px-2 py-0.5 rounded-sm tracking-widest uppercase">You Are Here</span>
+                      <span className="inline-block mt-2 text-[10px] text-[#c9a840] border border-[#c9a840]/35 px-2 py-0.5 rounded-sm tracking-widest uppercase">You Are Here</span>
                     )}
                   </div>
                 </div>

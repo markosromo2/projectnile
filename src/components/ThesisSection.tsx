@@ -43,7 +43,7 @@ export default function ThesisSection() {
               <span className="italic text-[#c9a840]">why now</span>
             </h2>
           </div>
-          <p className="lg:w-5/12 text-white/40 text-sm leading-relaxed font-light">
+          <p className="lg:w-5/12 text-white/58 text-sm leading-relaxed font-light">
             Four compounding advantages that make Cape Town the strongest permanent franchise application on the continent — each one already in place before this bid was filed.
           </p>
         </div>

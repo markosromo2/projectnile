@@ -19,7 +19,7 @@ export default function MarketSection() {
             alt="Cape Town, South Africa"
             fill
             className="object-cover object-center"
-            style={{ opacity: 0.13 }}
+            style={{ opacity: 0.22, filter: "contrast(1.08) saturate(1.05)" }}
           />
           <div className="absolute inset-0" style={{
             background: "radial-gradient(ellipse 100% 80% at 50% 50%, transparent 20%, #080d14 85%)"
@@ -47,7 +47,7 @@ export default function MarketSection() {
 
             {/* Glass stat block */}
             <div className="grad-border glass rounded-sm p-10" data-animate data-delay="2">
-              <div className="text-white/28 text-xs tracking-widest uppercase mb-4">Per Capita Purchasing Power</div>
+              <div className="text-white/50 text-xs tracking-widest uppercase mb-4">Per Capita Purchasing Power</div>
               <div className="font-light leading-none text-gold tabular-nums mb-3" style={{
                 fontFamily: "var(--font-playfair)",
                 fontSize: "clamp(4rem,8vw,6rem)",
@@ -55,8 +55,8 @@ export default function MarketSection() {
                 $9,276
               </div>
               <div className="flex items-center gap-3 mb-6">
-                <span className="text-[9px] text-[#c9a840] border border-[#c9a840]/30 px-2 py-1 rounded-sm tracking-widest uppercase">#1 in Africa</span>
-                <span className="text-white/30 text-sm">Ahead of Johannesburg, Lagos, Cairo</span>
+                <span className="text-[10px] text-[#c9a840] border border-[#c9a840]/30 px-2 py-1 rounded-sm tracking-widest uppercase">#1 in Africa</span>
+                <span className="text-white/52 text-sm">Ahead of Johannesburg, Lagos, Cairo</span>
               </div>
               <div className="h-px bg-white/[0.07] mb-6" />
               <div className="grid grid-cols-3 gap-4">
@@ -67,8 +67,8 @@ export default function MarketSection() {
                 ].map((s) => (
                   <div key={s.l}>
                     <div className="text-xl font-light text-white tabular-nums" style={{ fontFamily: "var(--font-playfair)" }}>{s.v}</div>
-                    <div className="text-white/32 text-[10px] mt-0.5 tracking-wide">{s.l}</div>
-                    <div className="text-white/20 text-[9px] mt-0.5">{s.s}</div>
+                    <div className="text-white/54 text-[10px] mt-0.5 tracking-wide">{s.l}</div>
+                    <div className="text-white/42 text-[10px] mt-0.5">{s.s}</div>
                   </div>
                 ))}
               </div>
@@ -86,21 +86,21 @@ export default function MarketSection() {
 
             {/* Left: heading + concentration + Nigeria */}
             <div data-animate>
-              <div className="text-white/40 text-xs tracking-widest uppercase mb-3">Africa&apos;s Media Capital</div>
+              <div className="text-white/58 text-xs tracking-widest uppercase mb-3">Africa&apos;s Media Capital</div>
               <h3 className="text-4xl lg:text-5xl text-white font-light mb-8 leading-[0.92]" style={{ fontFamily: "var(--font-playfair)" }}>
                 South Africa&apos;s media<br />industry is Africa&apos;s<br />largest — built here.
               </h3>
 
               {/* Market concentration bar */}
               <div className="mb-6 p-5 rounded-sm" style={{ background: "rgba(10,25,46,0.65)", border: "1px solid rgba(80,140,200,0.12)" }}>
-                <div className="text-white/40 text-[9px] tracking-widest uppercase mb-3">South Africa share of total $699M BAL media market</div>
+                <div className="text-white/58 text-[10px] tracking-widest uppercase mb-3">South Africa share of total $699M BAL media market</div>
                 <div className="flex items-center gap-3 mb-2">
                   <div className="flex-1 h-[6px] rounded-full overflow-hidden" style={{ background: "rgba(255,255,255,0.07)" }}>
                     <div className="h-full rounded-full" data-bar-pct="58" style={{ width: "0%", background: "linear-gradient(to right, #b8942e, #e8c84a)" }} />
                   </div>
                   <span className="text-[#c9a840] text-sm font-light tabular-nums shrink-0" style={{ fontFamily: "var(--font-playfair)" }}>58%</span>
                 </div>
-                <div className="flex justify-between text-[9px] text-white/40">
+                <div className="flex justify-between text-[10px] text-white/58">
                   <span>South Africa — $403M</span>
                   <span>All other 10 BAL markets — $296M</span>
                 </div>
@@ -108,24 +108,24 @@ export default function MarketSection() {
 
               {/* Nigeria quality-over-quantity contrast */}
               <div>
-                <div className="text-white/40 text-[9px] tracking-widest uppercase mb-3">Quality market — not just large market</div>
+                <div className="text-white/58 text-[10px] tracking-widest uppercase mb-3">Quality market — not just large market</div>
                 <div className="grid grid-cols-2 gap-2 mb-2">
                   <div className="p-4 rounded-sm" style={{ background: "rgba(10,25,46,0.5)", border: "1px solid rgba(255,255,255,0.06)" }}>
-                    <div className="text-white/40 text-[9px] tracking-widest uppercase mb-2">Nigeria</div>
+                    <div className="text-white/58 text-[10px] tracking-widest uppercase mb-2">Nigeria</div>
                     <div className="text-white/70 text-xl font-light tabular-nums" style={{ fontFamily: "var(--font-playfair)" }}>242M</div>
-                    <div className="text-white/40 text-[9px]">population</div>
+                    <div className="text-white/58 text-[10px]">population</div>
                     <div className="mt-3 text-white/55 text-base font-light tabular-nums" style={{ fontFamily: "var(--font-playfair)" }}>$67M</div>
-                    <div className="text-white/40 text-[9px]">media revenue</div>
+                    <div className="text-white/58 text-[10px]">media revenue</div>
                   </div>
                   <div className="p-4 rounded-sm" style={{ background: "rgba(201,168,64,0.07)", border: "1px solid rgba(201,168,64,0.25)" }}>
-                    <div className="text-[#c9a840] text-[9px] tracking-widest uppercase mb-2">South Africa</div>
+                    <div className="text-[#c9a840] text-[10px] tracking-widest uppercase mb-2">South Africa</div>
                     <div className="text-[#c9a840] text-xl font-light tabular-nums" style={{ fontFamily: "var(--font-playfair)" }}>65M</div>
-                    <div className="text-white/40 text-[9px]">population</div>
+                    <div className="text-white/58 text-[10px]">population</div>
                     <div className="mt-3 text-[#c9a840] text-base font-light tabular-nums" style={{ fontFamily: "var(--font-playfair)" }}>$403M</div>
-                    <div className="text-white/40 text-[9px]">media revenue</div>
+                    <div className="text-white/58 text-[10px]">media revenue</div>
                   </div>
                 </div>
-                <div className="text-white/35 text-[9px] text-center leading-snug">6× the media revenue · ¼ the population · Source: BCG Analysis, Winter 2026</div>
+                <div className="text-white/55 text-[10px] text-center leading-snug">6× the media revenue · ¼ the population · Source: BCG Analysis, Winter 2026</div>
               </div>
             </div>
 
@@ -140,7 +140,7 @@ export default function MarketSection() {
                   <div key={m.l}>
                     <div className="text-[#c9a840] text-2xl font-light tabular-nums" style={{ fontFamily: "var(--font-playfair)" }}>{m.v}</div>
                     <div className="text-white/60 text-[10px] mt-1 leading-tight">{m.l}</div>
-                    <div className="text-white/40 text-[9px] mt-0.5">{m.s}</div>
+                    <div className="text-white/58 text-[10px] mt-0.5">{m.s}</div>
                   </div>
                 ))}
               </div>
@@ -149,12 +149,12 @@ export default function MarketSection() {
                 {mediaCompanies.map((m) => (
                   <div key={m.name} className="card-hover p-5 rounded-sm" style={{ background: "rgba(10,25,46,0.7)", border: "1px solid rgba(80,140,200,0.1)" }}>
                     <div className="text-white/85 text-sm font-medium mb-1">{m.name}</div>
-                    <div className="text-white/50 text-xs leading-relaxed">{m.desc}</div>
+                    <div className="text-white/66 text-xs leading-relaxed">{m.desc}</div>
                   </div>
                 ))}
               </div>
 
-              <p className="text-white/35 text-[9px] mt-6 tracking-wide">Source: African Sports Market Intelligence Report · BCG Analysis · Key Market Statistics, Winter 2026</p>
+              <p className="text-white/55 text-[10px] mt-6 tracking-wide">Source: African Sports Market Intelligence Report · BCG Analysis · Key Market Statistics, Winter 2026</p>
             </div>
           </div>
         </div>
@@ -174,20 +174,20 @@ export default function MarketSection() {
               <div className="px-8 py-8 md:border-r" style={{ borderColor: "rgba(201,168,64,0.12)" }}>
                 <div className="text-[5rem] font-light leading-none text-[#c9a840] tabular-nums mb-3" style={{ fontFamily: "var(--font-playfair)" }}>#1</div>
                 <div className="text-white text-sm font-medium mb-2">Country watching BAL games online</div>
-                <p className="text-white/45 text-sm leading-relaxed">
+                <p className="text-white/62 text-sm leading-relaxed">
                   South Africa ranked #1 among all nations for BAL online viewership — above Egypt, Rwanda, France, and the United States. The audience is already there, before a permanent team exists.
                 </p>
-                <p className="text-white/25 text-[9px] mt-4">Source: BAL Season 2 Recap · Digital Viewership by Country</p>
+                <p className="text-white/48 text-[10px] mt-4">Source: BAL Season 2 Recap · Digital Viewership by Country</p>
               </div>
 
               {/* Stat 2 — Playoffs hosted */}
               <div className="px-8 py-8">
                 <div className="text-[5rem] font-light leading-none text-[#c9a840] tabular-nums mb-3" style={{ fontFamily: "var(--font-playfair)" }}>S5</div>
                 <div className="text-white text-sm font-medium mb-2">BAL Playoffs hosted in South Africa</div>
-                <p className="text-white/45 text-sm leading-relaxed">
+                <p className="text-white/62 text-sm leading-relaxed">
                   The BAL chose South Africa — specifically the SunBet Arena in Pretoria — to host the Season 5 Playoffs and Finals in June 2025. The league already trusts South Africa with its most important games.
                 </p>
-                <p className="text-white/25 text-[9px] mt-4">Source: BAL Season 5 Calendar · Playoffs, Pretoria, June 6–14 2025</p>
+                <p className="text-white/48 text-[10px] mt-4">Source: BAL Season 5 Calendar · Playoffs, Pretoria, June 6–14 2025</p>
               </div>
 
             </div>

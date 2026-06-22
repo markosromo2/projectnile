@@ -104,14 +104,14 @@ export default function CompetitivePositionSection() {
           <table className="w-full border-collapse" style={{ minWidth: "700px" }}>
             <thead>
               <tr className="border-b border-black/[0.06]">
-                <th className="text-left px-6 py-4 text-[#8aa0b5] text-[10px] tracking-widest uppercase font-normal w-[28%]">Criteria</th>
+                <th className="text-left px-6 py-4 text-[#5d7a93] text-[10px] tracking-widest uppercase font-normal w-[28%]">Criteria</th>
                 <th className="px-5 py-4 text-center w-[18%]">
                   <div className="inline-flex items-center gap-1.5 bg-[#c9a840]/10 border border-[#c9a840]/30 px-3 py-1.5 rounded-sm">
                     <span className="text-[#c9a840] text-[10px] tracking-widest uppercase font-semibold">Cape Town</span>
                   </div>
                 </th>
                 {["Lagos", "Cairo", "Nairobi", "Casablanca"].map((city) => (
-                  <th key={city} className="px-4 py-4 text-center text-[#8aa0b5] text-[10px] tracking-widest uppercase font-normal">{city}</th>
+                  <th key={city} className="px-4 py-4 text-center text-[#5d7a93] text-[10px] tracking-widest uppercase font-normal">{city}</th>
                 ))}
               </tr>
             </thead>
@@ -120,7 +120,7 @@ export default function CompetitivePositionSection() {
                 <tr key={r.criteria} className={`border-b border-black/[0.04] ${i % 2 === 0 ? "" : "bg-black/[0.015]"}`}>
                   <td className="px-6 py-4">
                     <div className="text-[#0c1e32] text-sm font-medium">{r.criteria}</div>
-                    <div className="text-[#8aa0b5] text-xs mt-0.5 leading-relaxed">{r.sub}</div>
+                    <div className="text-[#5d7a93] text-xs mt-0.5 leading-relaxed">{r.sub}</div>
                   </td>
                   <td className="px-5 py-4 text-center">
                     <div className="flex flex-col items-center gap-1">

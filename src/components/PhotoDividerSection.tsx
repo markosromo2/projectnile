@@ -14,7 +14,7 @@ export default function PhotoDividerSection() {
         {/* Top rule */}
         <div className="flex items-center gap-6 mb-16">
           <div className="flex-1 h-px bg-gradient-to-r from-transparent to-[#c9a840]/30" />
-          <span className="text-[#c9a840] text-[9px] tracking-[0.4em] uppercase shrink-0">Cape Town, South Africa</span>
+          <span className="text-[#c9a840] text-[10px] tracking-[0.4em] uppercase shrink-0">Cape Town, South Africa</span>
           <div className="flex-1 h-px bg-gradient-to-l from-transparent to-[#c9a840]/30" />
         </div>
 

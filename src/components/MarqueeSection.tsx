@@ -19,7 +19,7 @@ export default function MarqueeSection() {
       <div className="py-3.5 flex" style={{ animation: "marquee 36s linear infinite" }}>
         {all.map((item, i) => (
           <div key={i} className="flex items-center shrink-0">
-            <span className="text-white/38 text-[10px] tracking-[0.22em] uppercase font-light whitespace-nowrap px-7">
+            <span className="text-white/58 text-[10px] tracking-[0.22em] uppercase font-light whitespace-nowrap px-7">
               {item}
             </span>
             <span className="text-[#c9a840]/45 text-[6px] shrink-0">◆</span>

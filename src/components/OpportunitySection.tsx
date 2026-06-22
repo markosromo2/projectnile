@@ -70,7 +70,7 @@ export default function OpportunitySection() {
                 }}>
                   {p.kpi}
                 </div>
-                <div className="text-white/40 text-xs tracking-widest uppercase">{p.kpiLabel}</div>
+                <div className="text-white/58 text-xs tracking-widest uppercase">{p.kpiLabel}</div>
               </div>
 
               <h3 className="text-white text-base font-semibold mb-1 leading-snug">{p.title}</h3>

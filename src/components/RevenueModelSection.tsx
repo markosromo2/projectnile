@@ -1,11 +1,5 @@
 import Image from "next/image";
 
-const saSponsors = [
-  { name: "Uber", logo: "/images/logo-uber.png", dark: false },
-  { name: "Hyundai", logo: "/images/logo-hyundai.png", dark: false },
-  { name: "ServiceNow", logo: "/images/logo-servicenow.png", dark: false },
-];
-
 const leagueStreams = [
   { source: "BAL Media Rights", desc: "Canal+, ESPN, pan-African & international broadcast" },
   { source: "League Sponsorship", desc: "16 sponsors in 2025 · 100% increase in partners YoY" },
@@ -49,13 +43,13 @@ export default function RevenueModelSection() {
             <p className="text-[#3a5a78] text-sm leading-relaxed mb-8 tracking-[0.01em]">
               $2M guaranteed annual floor from 2028 — stable foundation regardless of local performance.
             </p>
-            <div className="text-[#8aa0b5] text-xs tracking-widest uppercase mb-3">League Revenue Sources</div>
+            <div className="text-[#5d7a93] text-xs tracking-widest uppercase mb-3">League Revenue Sources</div>
             <div className="panel-light">
               {leagueStreams.map((s) => (
                 <div key={s.source} className="flex items-start gap-4 px-5 py-4 border-b border-black/[0.05] last:border-b-0 hover:bg-black/[0.02] transition-colors">
                   <div className="flex-1">
                     <div className="text-[#0c1e32] text-sm font-medium">{s.source}</div>
-                    <div className="text-[#5a7898] text-sm mt-0.5 leading-relaxed">{s.desc}</div>
+                    <div className="text-[#48657f] text-sm mt-0.5 leading-relaxed">{s.desc}</div>
                   </div>
                 </div>
               ))}
@@ -79,13 +73,13 @@ export default function RevenueModelSection() {
             <p className="text-[#3a5a78] text-sm leading-relaxed mb-8 tracking-[0.01em]">
               Sponsorship, ticketing, merchandise, and local media rights — kept in full.
             </p>
-            <div className="text-[#8aa0b5] text-xs tracking-widest uppercase mb-3">Team Revenue Sources</div>
+            <div className="text-[#5d7a93] text-xs tracking-widest uppercase mb-3">Team Revenue Sources</div>
             <div className="rounded-sm overflow-hidden" style={{ border: "1px solid rgba(201,168,64,0.2)" }}>
               {teamStreams.map((s) => (
                 <div key={s.source} className="flex items-start gap-4 px-5 py-4 border-b last:border-b-0 hover:bg-[#c9a840]/[0.04] transition-colors" style={{ borderColor: "rgba(201,168,64,0.12)" }}>
                   <div className="flex-1">
                     <div className="text-[#0c1e32] text-sm font-medium">{s.source}</div>
-                    <div className="text-[#5a7898] text-sm mt-0.5 leading-relaxed">{s.desc}</div>
+                    <div className="text-[#48657f] text-sm mt-0.5 leading-relaxed">{s.desc}</div>
                   </div>
                 </div>
               ))}
@@ -93,44 +87,11 @@ export default function RevenueModelSection() {
           </div>
         </div>
 
-        {/* SA local sponsorship already validated */}
-        <div data-animate className="mb-16 rounded-sm overflow-hidden" style={{ border: "1px solid rgba(201,168,64,0.2)" }}>
-          <div className="p-8 lg:p-10" style={{ background: "linear-gradient(135deg, rgba(201,168,64,0.06) 0%, #ffffff 70%)" }}>
-            <div className="text-[#c9a840] text-[10px] tracking-widest uppercase mb-3 font-medium">Local SA Sponsorship — Already Validated</div>
-            <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
-              <h3 className="text-2xl text-[#0c1e32] font-light leading-snug" style={{ fontFamily: "var(--font-playfair)" }}>
-                SA corporates are already paying.<br />Before a permanent team exists.
-              </h3>
-              <p className="text-[#3a5a78] text-sm leading-relaxed lg:max-w-sm lg:text-right">
-                In Season 5 — with Cape Town still operating as a caravan franchise — three major global brands signed as BAL sponsors targeting the South African market.
-              </p>
-            </div>
-            <p className="text-[#5a7898] text-[10px] mt-5">Source: BAL Historical Revenues · Moelis &amp; Company Data Room · Season 5</p>
-          </div>
-          <div className="grid grid-cols-3" style={{ borderTop: "1px solid rgba(201,168,64,0.15)" }}>
-            {saSponsors.map((s, i) => (
-              <div key={s.name} style={{
-                background: "#fff",
-                borderRight: i < saSponsors.length - 1 ? "1px solid rgba(201,168,64,0.15)" : undefined,
-                padding: "32px 24px",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                gap: "12px",
-              }}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={s.logo} alt={s.name} style={{ width: "100%", height: "80px", objectFit: "contain", display: "block" }} />
-                <span style={{ fontSize: "9px", letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(12,30,50,0.3)" }}>BAL Season 5</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
         {/* BAL Revenue history */}
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           <div>
             <div className="panel-light p-6">
-              <div className="text-[#8aa0b5] text-[10px] tracking-widest uppercase mb-5">BAL League Revenue Growth (2021–2025)</div>
+              <div className="text-[#5d7a93] text-[10px] tracking-widest uppercase mb-5">BAL League Revenue Growth (2021–2025)</div>
               <div className="space-y-4">
                 {[
                   { year: "2021", value: 5.8, max: 12.6 },
@@ -141,8 +102,8 @@ export default function RevenueModelSection() {
                 ].map((r) => (
                   <div key={r.year}>
                     <div className="flex items-center justify-between mb-1.5">
-                      <span className={`text-xs ${r.highlight ? "text-[#0c1e32] font-medium" : "text-[#5a7898]"}`}>{r.year}</span>
-                      <span className={`text-sm font-light tabular-nums ${r.highlight ? "text-[#c9a840]" : "text-[#5a7898]"}`} style={{ fontFamily: "var(--font-playfair)" }}>${r.value}M</span>
+                      <span className={`text-xs ${r.highlight ? "text-[#0c1e32] font-medium" : "text-[#48657f]"}`}>{r.year}</span>
+                      <span className={`text-sm font-light tabular-nums ${r.highlight ? "text-[#c9a840]" : "text-[#48657f]"}`} style={{ fontFamily: "var(--font-playfair)" }}>${r.value}M</span>
                     </div>
                     <div className="h-[2px] bg-black/[0.07] rounded-full overflow-hidden">
                       <div className={`h-full rounded-full ${r.highlight ? "bg-gradient-to-r from-[#c9a840] to-[#e8c84a]" : "bg-[#1a5f8e]/30"}`} data-bar-pct={Math.round((r.value / r.max) * 100)} />
@@ -150,12 +111,12 @@ export default function RevenueModelSection() {
                   </div>
                 ))}
               </div>
-              <p className="text-[#5a7898] text-[10px] mt-5 tracking-wide">Source: NBA Africa management financials · Fiscal year ends September 30</p>
+              <p className="text-[#48657f] text-[10px] mt-5 tracking-wide">Source: NBA Africa management financials · Fiscal year ends September 30</p>
             </div>
           </div>
 
           <div>
-            <div className="text-[#8aa0b5] text-xs tracking-widest uppercase mb-6">2025 Season Momentum</div>
+            <div className="text-[#5d7a93] text-xs tracking-widest uppercase mb-6">2025 Season Momentum</div>
             <table className="data-table-light panel-light">
               <tbody>
                 {[
@@ -189,10 +150,10 @@ export default function RevenueModelSection() {
               <h3 className="text-2xl lg:text-3xl text-white font-light mb-4 leading-snug" style={{ fontFamily: "var(--font-playfair)" }}>
                 The NBA&apos;s operating<br />infrastructure comes<br />with the franchise.
               </h3>
-              <p className="text-white/45 text-sm leading-relaxed">
+              <p className="text-white/62 text-sm leading-relaxed">
                 The BAL league office delivers centralized NBA-grade support across every major commercial function. No hiring playbook from scratch, no guessing on pricing strategy — the infrastructure that built the NBA is handed to permanent teams from Day 1.
               </p>
-              <p className="text-white/18 text-[10px] mt-5">Source: NBA – BAL Expertise Sharing · Moelis &amp; Company Data Room</p>
+              <p className="text-white/40 text-[10px] mt-5">Source: NBA – BAL Expertise Sharing · Moelis &amp; Company Data Room</p>
             </div>
             <div className="grid grid-cols-2 gap-2">
               {[
@@ -205,7 +166,7 @@ export default function RevenueModelSection() {
               ].map((item) => (
                 <div key={item.label} className="p-4 rounded-sm" style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.07)" }}>
                   <div className="text-white/75 text-xs font-medium mb-1">{item.label}</div>
-                  <div className="text-white/28 text-[10px] leading-relaxed">{item.desc}</div>
+                  <div className="text-white/50 text-[10px] leading-relaxed">{item.desc}</div>
                 </div>
               ))}
             </div>

@@ -27,7 +27,7 @@ export default function ArenaDividerSection() {
             <span className="text-gold">Tier 1.</span><br />
             Ready now.
           </h2>
-          <p className="text-white/48 text-base leading-relaxed max-w-md mb-8">
+          <p className="text-white/64 text-base leading-relaxed max-w-md mb-8">
             The only Finals-eligible BAL arena already operational in any bid market. No construction timeline. No compliance risk.
           </p>
           {/* Glass stat strip */}
@@ -39,7 +39,7 @@ export default function ArenaDividerSection() {
             ].map((s) => (
               <div key={s.l} className="glass px-6 py-4">
                 <div className="text-xl font-light text-white tabular-nums" style={{ fontFamily: "var(--font-playfair)" }}>{s.v}</div>
-                <div className="text-white/34 text-[9px] tracking-widest uppercase mt-0.5">{s.l}</div>
+                <div className="text-white/55 text-[10px] tracking-widest uppercase mt-0.5">{s.l}</div>
               </div>
             ))}
           </div>
