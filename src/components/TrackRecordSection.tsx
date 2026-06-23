@@ -61,7 +61,7 @@ export default function TrackRecordSection() {
         </div>
 
         {/* Equal principals — photo + full bio */}
-        <div className="grid md:grid-cols-2 gap-5 mb-10 max-w-4xl">
+        <div className="grid md:grid-cols-2 gap-6 mb-10 max-w-4xl mx-auto">
           {principals.map((p, i) => (
             <div key={p.name} data-animate data-delay={String(i + 1)} className="flex flex-col rounded-sm overflow-hidden" style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)" }}>
               {/* Portrait — equal frame for all three */}
