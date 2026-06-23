@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-// Three equal principals — featured with full bios
+// Equal principals — featured with full bios
 const principals = [
   {
     initials: "PB",
@@ -19,15 +19,6 @@ const principals = [
     objectPosition: "center top",
     bio: "Co-founder of the Cape Town franchise alongside Paul Bragiel. Five years of direct operational experience building the team across the South African Basketball League and the BAL — player recruitment, league relationships, day-to-day management. The on-the-ground architect of the franchise from its inaugural BAL season.",
     focus: "Operations · International Partnerships",
-  },
-  {
-    initials: "KS",
-    name: "Kornelia Semmelink",
-    title: "Chief Executive Officer",
-    photo: "",
-    objectPosition: "center top",
-    bio: "Leads commercial and operational strategy for the Cape Town franchise. Based in Cape Town and operating from the first BAL season, Kornelia has been the driving force behind the franchise's commercial and operational success, bringing deep expertise in professional basketball management across Africa.",
-    focus: "Operations · Commercial · Africa Markets",
   },
 ];
 
@@ -69,8 +60,8 @@ export default function TrackRecordSection() {
           <span className="text-white/48 text-xs tracking-widest uppercase hidden sm:block">Built from day one · No ramp-up</span>
         </div>
 
-        {/* Three equal principals — photo + full bio */}
-        <div className="grid md:grid-cols-3 gap-5 mb-10">
+        {/* Equal principals — photo + full bio */}
+        <div className="grid md:grid-cols-2 gap-5 mb-10 max-w-4xl">
           {principals.map((p, i) => (
             <div key={p.name} data-animate data-delay={String(i + 1)} className="flex flex-col rounded-sm overflow-hidden" style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)" }}>
               {/* Portrait — equal frame for all three */}
@@ -80,7 +71,7 @@ export default function TrackRecordSection() {
                     src={p.photo}
                     alt={`${p.name} — ${p.title}`}
                     fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover"
                     style={{ objectPosition: p.objectPosition }}
                   />
