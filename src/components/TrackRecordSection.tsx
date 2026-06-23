@@ -14,7 +14,7 @@ const principals = [
   {
     initials: "LK",
     name: "Lari Kangas",
-    title: "Co-Founder & Advisor",
+    title: "Co-Founder & CEO",
     photo: "/images/ct-lari-headshot.jpg",
     objectPosition: "center top",
     bio: "Co-founder of the Cape Town franchise alongside Paul Bragiel. Five years of direct operational experience building the team across the South African Basketball League and the BAL — player recruitment, league relationships, day-to-day management. The on-the-ground architect of the franchise from its inaugural BAL season.",
